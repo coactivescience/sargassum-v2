@@ -1,0 +1,111 @@
+{
+  "occurrences": [
+    {
+      "date": "2020-06-01",
+      "lonlat": [
+        -94.15,
+        32.71
+      ],
+      "source": "Synthetic occurrence for contract testing; not operational data"
+    }
+  ],
+  "edrr_cost": {
+    "per_acre_year_low": 200,
+    "per_acre_year_high": 2000,
+    "source": "Maine DEP; Choices Magazine (Florida EDRR), archived legacy reference",
+    "boundary": "Historical annual aquatic-weed control planning range, not a current quotation, species-specific cost, predicted savings or treatment recommendation."
+  },
+  "santee": {
+    "annual_trend": [
+      {
+        "year": 2020,
+        "salvinia_ha": 112.6,
+        "crested_floating_heart_ha": 20,
+        "waterhyacinth_ha": 4,
+        "duckweed_ha": 3
+      },
+      {
+        "year": 2025,
+        "salvinia_ha": 1215.4,
+        "crested_floating_heart_ha": 30,
+        "waterhyacinth_ha": 5,
+        "duckweed_ha": 4
+      }
+    ],
+    "assets": [
+      {
+        "name": "Cross Generating Station (cooling intake)",
+        "type": "cooling-water intake",
+        "lat": 33.37,
+        "lon": -80.1128,
+        "confidence": "exact",
+        "criticality": 1.0
+      },
+      {
+        "name": "Santee Cooper Regional WTP (Lake Moultrie, 40 MGD)",
+        "type": "drinking-water plant",
+        "lat": 33.23,
+        "lon": -80.01,
+        "confidence": "rough",
+        "criticality": 0.95
+      },
+      {
+        "name": "Lake Marion Regional WTP (intake)",
+        "type": "drinking-water intake",
+        "lat": 33.5,
+        "lon": -80.46,
+        "confidence": "rough",
+        "criticality": 0.95
+      },
+      {
+        "name": "Bushy Park Reservoir intake (Charleston Water)",
+        "type": "water-supply intake",
+        "lat": 32.9798,
+        "lon": -79.9412,
+        "confidence": "approximate",
+        "criticality": 0.9
+      },
+      {
+        "name": "Pinopolis Dam / Jefferies Hydro / Pinopolis Lock",
+        "type": "hydropower",
+        "lat": 33.2437,
+        "lon": -79.9924,
+        "confidence": "approximate",
+        "criticality": 0.82
+      },
+      {
+        "name": "St. Stephen Dam / Powerhouse",
+        "type": "hydropower",
+        "lat": 33.4268,
+        "lon": -79.9311,
+        "confidence": "approximate",
+        "criticality": 0.82
+      },
+      {
+        "name": "Santee (Wilson) Dam / Spillway",
+        "type": "dam",
+        "lat": 33.4544,
+        "lon": -80.1639,
+        "confidence": "approximate",
+        "criticality": 0.8
+      },
+      {
+        "name": "Diversion Canal (Marion <-> Moultrie)",
+        "type": "canal",
+        "lat": 33.36,
+        "lon": -80.06,
+        "confidence": "rough",
+        "criticality": 0.62
+      },
+      {
+        "name": "Santee State Park ramp (Lake Marion)",
+        "type": "boat ramp",
+        "lat": 33.5519,
+        "lon": -80.5016,
+        "confidence": "approximate",
+        "criticality": 0.5
+      }
+    ],
+    "boundary": "ReMetrix annual image-interpretation labels are reference context, not field ground truth. Asset coordinates are archived public-source reference locations with mixed confidence; verify against authoritative GIS before use. No Santee operational detection or infrastructure threat is inferred."
+  }
+}

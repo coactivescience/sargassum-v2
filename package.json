@@ -1,0 +1,21 @@
+{
+  "name": "sargassum-v2",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+  	"test": "node --test tests",
+  	"test:integration": "node --test tests/integration",
+  	"test:e2e": "node --test tests/browser",
+  	"check": "tsc --noEmit",
+  	"build": "node scripts/verify-assets.mjs",
+  	"deploy": "npm run build && wrangler deploy",
+  	"deploy:staging": "npm run build && wrangler deploy --env staging"
+	},
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260818.1",
+    "playwright-core": "^1.62.1",
+    "typescript": "^5.9.0",
+    "wrangler": "^4.74.0"
+  }
+}

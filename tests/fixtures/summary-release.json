@@ -1,0 +1,13 @@
+{
+  "site": "caddo",
+  "inventory": {
+    "acquisitionCount": 1,
+    "acquisitions": [{ "date": "2026-07-15" }]
+  },
+  "analysis": {
+    "detectedAreaHa": 0.32,
+    "detectedPixels": 8,
+    "domainPixels": 16,
+    "algorithm": "Caddo NDVI/MNDWI"
+  }
+}

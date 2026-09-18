@@ -1,0 +1,760 @@
+{
+  "fixture": "Hermetic legacy evaluation and presentation fixture; never production evidence",
+  "payload": {
+    "available": true,
+    "date": "2025-11-13",
+    "title": "Hyperspectral Potential",
+    "claim": "In the 13 November 2025 Pixxel capture, two mapped Kolkata water areas containing likely aquatic vegetation have measurably different spectral profiles across visible, red-edge, and near-infrared wavelengths. The vegetation was not field-labeled, so these data do not identify the cause or species. Co-located labels would let us test whether hyperspectral imagery can distinguish Salvinia from other vegetation.",
+    "sites": [
+      {
+        "window_id": "survey_e646500_n2493500",
+        "label": "Area A",
+        "lonlat": [
+          88.42465833225901,
+          22.541827591704727
+        ],
+        "bounds": [
+          [
+            22.54114379602476,
+            88.42392220966374
+          ],
+          [
+            22.542511385610442,
+            88.42539446207391
+          ]
+        ],
+        "vegetation_patches": 3,
+        "open_water_patches": 3,
+        "spectrum": [
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 550.0,
+            "normalized_median": 0.10591114625038343,
+            "normalized_q25": 0.10591114625038343,
+            "normalized_q75": 0.10591114625038343
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 560.0,
+            "normalized_median": 0.12831542718796454,
+            "normalized_q25": 0.12831542718796454,
+            "normalized_q75": 0.12831542718796454
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 660.0,
+            "normalized_median": 0.15071970812554566,
+            "normalized_q25": 0.15071970812554566,
+            "normalized_q75": 0.15071970812554566
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 670.0,
+            "normalized_median": 0.1731239890631268,
+            "normalized_q25": 0.1731239890631268,
+            "normalized_q75": 0.1731239890631268
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 680.0,
+            "normalized_median": 0.19552827000070785,
+            "normalized_q25": 0.19552827000070785,
+            "normalized_q75": 0.19552827000070785
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 700.0,
+            "normalized_median": 0.21793255093828898,
+            "normalized_q25": 0.21793255093828898,
+            "normalized_q75": 0.21793255093828898
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 710.0,
+            "normalized_median": 0.2403368318758701,
+            "normalized_q25": 0.2403368318758701,
+            "normalized_q75": 0.2403368318758701
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 720.0,
+            "normalized_median": 0.26274111281345125,
+            "normalized_q25": 0.26274111281345125,
+            "normalized_q75": 0.26274111281345125
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 730.0,
+            "normalized_median": 0.28514539375103237,
+            "normalized_q25": 0.28514539375103237,
+            "normalized_q75": 0.28514539375103237
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 740.0,
+            "normalized_median": 0.3075496746886135,
+            "normalized_q25": 0.3075496746886135,
+            "normalized_q75": 0.3075496746886135
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 750.0,
+            "normalized_median": 0.3299539556261946,
+            "normalized_q25": 0.3299539556261946,
+            "normalized_q75": 0.3299539556261946
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 868.0,
+            "normalized_median": 0.35235823656377563,
+            "normalized_q25": 0.35235823656377563,
+            "normalized_q75": 0.35235823656377563
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 873.0,
+            "normalized_median": 0.37476251750135675,
+            "normalized_q25": 0.37476251750135675,
+            "normalized_q75": 0.37476251750135675
+          },
+          {
+            "window_id": "survey_e646500_n2493500",
+            "patches": 3,
+            "wavelength_nm": 876.0,
+            "normalized_median": 0.3971667984389379,
+            "normalized_q25": 0.3971667984389379,
+            "normalized_q75": 0.3971667984389379
+          }
+        ],
+        "natural_color": {
+          "file": "hyperspectral/site-a-natural.webp"
+        },
+        "aquatic_cover": {
+          "file": "hyperspectral/site-a-cover.png"
+        }
+      },
+      {
+        "window_id": "survey_e653000_n2492500",
+        "label": "Area B",
+        "lonlat": [
+          88.48775563264972,
+          22.532224597115547
+        ],
+        "bounds": [
+          [
+            22.5315405364556,
+            88.48701927658634
+          ],
+          [
+            22.53290865602131,
+            88.48849199593295
+          ]
+        ],
+        "vegetation_patches": 3,
+        "open_water_patches": 3,
+        "spectrum": [
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 550.0,
+            "normalized_median": 0.3971667984389379,
+            "normalized_q25": 0.3971667984389379,
+            "normalized_q75": 0.3971667984389379
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 560.0,
+            "normalized_median": 0.37476251750135675,
+            "normalized_q25": 0.37476251750135675,
+            "normalized_q75": 0.37476251750135675
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 660.0,
+            "normalized_median": 0.35235823656377563,
+            "normalized_q25": 0.35235823656377563,
+            "normalized_q75": 0.35235823656377563
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 670.0,
+            "normalized_median": 0.3299539556261946,
+            "normalized_q25": 0.3299539556261946,
+            "normalized_q75": 0.3299539556261946
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 680.0,
+            "normalized_median": 0.3075496746886135,
+            "normalized_q25": 0.3075496746886135,
+            "normalized_q75": 0.3075496746886135
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 700.0,
+            "normalized_median": 0.28514539375103237,
+            "normalized_q25": 0.28514539375103237,
+            "normalized_q75": 0.28514539375103237
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 710.0,
+            "normalized_median": 0.26274111281345125,
+            "normalized_q25": 0.26274111281345125,
+            "normalized_q75": 0.26274111281345125
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 720.0,
+            "normalized_median": 0.2403368318758701,
+            "normalized_q25": 0.2403368318758701,
+            "normalized_q75": 0.2403368318758701
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 730.0,
+            "normalized_median": 0.21793255093828898,
+            "normalized_q25": 0.21793255093828898,
+            "normalized_q75": 0.21793255093828898
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 740.0,
+            "normalized_median": 0.19552827000070785,
+            "normalized_q25": 0.19552827000070785,
+            "normalized_q75": 0.19552827000070785
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 750.0,
+            "normalized_median": 0.1731239890631268,
+            "normalized_q25": 0.1731239890631268,
+            "normalized_q75": 0.1731239890631268
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 868.0,
+            "normalized_median": 0.15071970812554566,
+            "normalized_q25": 0.15071970812554566,
+            "normalized_q75": 0.15071970812554566
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 873.0,
+            "normalized_median": 0.12831542718796454,
+            "normalized_q25": 0.12831542718796454,
+            "normalized_q75": 0.12831542718796454
+          },
+          {
+            "window_id": "survey_e653000_n2492500",
+            "patches": 3,
+            "wavelength_nm": 876.0,
+            "normalized_median": 0.10591114625038343,
+            "normalized_q25": 0.10591114625038343,
+            "normalized_q75": 0.10591114625038343
+          }
+        ],
+        "natural_color": {
+          "file": "hyperspectral/site-b-natural.webp"
+        },
+        "aquatic_cover": {
+          "file": "hyperspectral/site-b-cover.png"
+        }
+      }
+    ],
+    "map_bounds": [
+      [
+        22.5315405364556,
+        88.42392220966374
+      ],
+      [
+        22.542511385610442,
+        88.48849199593295
+      ]
+    ],
+    "spectra_chart": {
+      "file": "hyperspectral/site-spectra.png"
+    },
+    "evidence_gate": {
+      "passes": true,
+      "conditions": [
+        {
+          "condition": "three_patches_per_area_in_primary_and_shoreline_comparisons",
+          "passes": true,
+          "evidence": {
+            "baseline": {
+              "survey_e646500_n2493500": 3,
+              "survey_e653000_n2492500": 3
+            },
+            "shoreline_inset_10_m": {
+              "survey_e646500_n2493500": 3,
+              "survey_e653000_n2492500": 3
+            },
+            "shoreline_inset_20_m": {
+              "survey_e646500_n2493500": 3,
+              "survey_e653000_n2492500": 3
+            }
+          }
+        },
+        {
+          "condition": "positive_vegetation_excess_separation",
+          "passes": true,
+          "evidence": {
+            "baseline_degrees": 39.501139848100614,
+            "shoreline_inset_10_m_degrees": 39.501139848100614,
+            "shoreline_inset_20_m_degrees": 39.501139848100614
+          }
+        },
+        {
+          "condition": "positive_band_subset_separation",
+          "passes": true,
+          "evidence": [
+            {
+              "subset": "alternating_targets_a",
+              "bands": 7,
+              "supported": true,
+              "site_patch_counts": {
+                "survey_e646500_n2493500": 3,
+                "survey_e653000_n2492500": 3
+              },
+              "minimum_patches_per_site": 3,
+              "median_between_site_degrees": 39.28330052345142,
+              "balanced_within_site_degrees": 4.2688682312579694e-07,
+              "within_site_median_degrees": {
+                "survey_e646500_n2493500": 8.537736462515939e-07,
+                "survey_e653000_n2492500": 0.0
+              },
+              "excess_separation_degrees": 39.2833000965646,
+              "between_site_pairs": 9,
+              "within_site_pairs": 6,
+              "within_site_pairs_by_site": {
+                "survey_e646500_n2493500": 3,
+                "survey_e653000_n2492500": 3
+              }
+            },
+            {
+              "subset": "alternating_targets_b",
+              "bands": 7,
+              "supported": true,
+              "site_patch_counts": {
+                "survey_e646500_n2493500": 3,
+                "survey_e653000_n2492500": 3
+              },
+              "minimum_patches_per_site": 3,
+              "median_between_site_degrees": 39.28330052345144,
+              "balanced_within_site_degrees": 4.2688682312579694e-07,
+              "within_site_median_degrees": {
+                "survey_e646500_n2493500": 0.0,
+                "survey_e653000_n2492500": 8.537736462515939e-07
+              },
+              "excess_separation_degrees": 39.283300096564616,
+              "between_site_pairs": 9,
+              "within_site_pairs": 6,
+              "within_site_pairs_by_site": {
+                "survey_e646500_n2493500": 3,
+                "survey_e653000_n2492500": 3
+              }
+            },
+            {
+              "subset": "without_near_infrared",
+              "bands": 11,
+              "supported": true,
+              "site_patch_counts": {
+                "survey_e646500_n2493500": 3,
+                "survey_e653000_n2492500": 3
+              },
+              "minimum_patches_per_site": 3,
+              "median_between_site_degrees": 31.96245137412072,
+              "balanced_within_site_degrees": 0.0,
+              "within_site_median_degrees": {
+                "survey_e646500_n2493500": 0.0,
+                "survey_e653000_n2492500": 0.0
+              },
+              "excess_separation_degrees": 31.96245137412072,
+              "between_site_pairs": 9,
+              "within_site_pairs": 6,
+              "within_site_pairs_by_site": {
+                "survey_e646500_n2493500": 3,
+                "survey_e653000_n2492500": 3
+              }
+            }
+          ]
+        },
+        {
+          "condition": "red_edge_slope_and_non_red_edge_effects",
+          "passes": true,
+          "evidence": {
+            "red_edge_slope": {
+              "family": "red_edge",
+              "feature": "red_edge_slope",
+              "first_site": "survey_e646500_n2493500",
+              "second_site": "survey_e653000_n2492500",
+              "first_site_patches": 3,
+              "second_site_patches": 3,
+              "first_site_median": 0.001,
+              "second_site_median": 0.003,
+              "robust_effect": 1.0,
+              "passes": true
+            },
+            "visible_ratio": {
+              "features": {
+                "green_to_red": 1.0
+              },
+              "passes": true
+            },
+            "near_infrared": {
+              "features": {
+                "nir_level": 0.0,
+                "nir_to_red": 1.0,
+                "nir_minus_red": 0.0,
+                "ndvi": 0.0
+              },
+              "passes": true
+            }
+          }
+        },
+        {
+          "condition": "valid_qualifying_reflectance",
+          "passes": true,
+          "evidence": {
+            "patches": 6,
+            "valid_patches": 6
+          }
+        }
+      ],
+      "label": "Exploratory evidence gate passed"
+    },
+    "vegetation_separation": {
+      "supported": true,
+      "site_patch_counts": {
+        "survey_e646500_n2493500": 3,
+        "survey_e653000_n2492500": 3
+      },
+      "minimum_patches_per_site": 3,
+      "median_between_site_degrees": 39.501139848100614,
+      "balanced_within_site_degrees": 0.0,
+      "within_site_median_degrees": {
+        "survey_e646500_n2493500": 0.0,
+        "survey_e653000_n2492500": 0.0
+      },
+      "excess_separation_degrees": 39.501139848100614,
+      "between_site_pairs": 9,
+      "within_site_pairs": 6,
+      "within_site_pairs_by_site": {
+        "survey_e646500_n2493500": 3,
+        "survey_e653000_n2492500": 3
+      }
+    },
+    "open_water_control": {
+      "supported": true,
+      "site_patch_counts": {
+        "survey_e646500_n2493500": 3,
+        "survey_e653000_n2492500": 3
+      },
+      "minimum_patches_per_site": 3,
+      "median_between_site_degrees": 1.4787793334710982e-06,
+      "balanced_within_site_degrees": 1.4787793334710982e-06,
+      "within_site_median_degrees": {
+        "survey_e646500_n2493500": 1.4787793334710982e-06,
+        "survey_e653000_n2492500": 1.4787793334710982e-06
+      },
+      "excess_separation_degrees": 0.0,
+      "between_site_pairs": 9,
+      "within_site_pairs": 6,
+      "within_site_pairs_by_site": {
+        "survey_e646500_n2493500": 3,
+        "survey_e653000_n2492500": 3
+      }
+    },
+    "feature_families": [
+      {
+        "family": "visible_ratio",
+        "label": "Visible color ratio",
+        "feature": "green_to_red",
+        "first_site_median": 0.8,
+        "second_site_median": 1.2000000000000002,
+        "robust_effect": 1.0,
+        "passes": true
+      },
+      {
+        "family": "red_edge",
+        "label": "Red-edge slope",
+        "feature": "red_edge_slope",
+        "first_site_median": 0.001,
+        "second_site_median": 0.003,
+        "robust_effect": 1.0,
+        "passes": true
+      },
+      {
+        "family": "near_infrared",
+        "label": "Near-infrared reflectance",
+        "feature": "nir_level",
+        "first_site_median": 0.3,
+        "second_site_median": 0.3,
+        "robust_effect": 0.0,
+        "passes": false
+      }
+    ],
+    "robustness": {
+      "shoreline_inset_10_m": {
+        "supported": true,
+        "site_patch_counts": {
+          "survey_e646500_n2493500": 3,
+          "survey_e653000_n2492500": 3
+        },
+        "minimum_patches_per_site": 3,
+        "median_between_site_degrees": 39.501139848100614,
+        "balanced_within_site_degrees": 0.0,
+        "within_site_median_degrees": {
+          "survey_e646500_n2493500": 0.0,
+          "survey_e653000_n2492500": 0.0
+        },
+        "excess_separation_degrees": 39.501139848100614,
+        "between_site_pairs": 9,
+        "within_site_pairs": 6,
+        "within_site_pairs_by_site": {
+          "survey_e646500_n2493500": 3,
+          "survey_e653000_n2492500": 3
+        }
+      },
+      "shoreline_inset_20_m": {
+        "supported": true,
+        "site_patch_counts": {
+          "survey_e646500_n2493500": 3,
+          "survey_e653000_n2492500": 3
+        },
+        "minimum_patches_per_site": 3,
+        "median_between_site_degrees": 39.501139848100614,
+        "balanced_within_site_degrees": 0.0,
+        "within_site_median_degrees": {
+          "survey_e646500_n2493500": 0.0,
+          "survey_e653000_n2492500": 0.0
+        },
+        "excess_separation_degrees": 39.501139848100614,
+        "between_site_pairs": 9,
+        "within_site_pairs": 6,
+        "within_site_pairs_by_site": {
+          "survey_e646500_n2493500": 3,
+          "survey_e653000_n2492500": 3
+        }
+      },
+      "brightness_cover_matched": {
+        "supported": false,
+        "site_patch_counts": {
+          "survey_e646500_n2493500": 0,
+          "survey_e653000_n2492500": 0
+        },
+        "minimum_patches_per_site": 3,
+        "median_between_site_degrees": null,
+        "balanced_within_site_degrees": null,
+        "within_site_median_degrees": {
+          "survey_e646500_n2493500": null,
+          "survey_e653000_n2492500": null
+        },
+        "excess_separation_degrees": null,
+        "between_site_pairs": 0,
+        "within_site_pairs": 0,
+        "within_site_pairs_by_site": {
+          "survey_e646500_n2493500": 0,
+          "survey_e653000_n2492500": 0
+        }
+      },
+      "screening_selections": [
+        {
+          "selection_id": "selection_1",
+          "thresholds": [
+            {
+              "vegetation_ndvi_min": 0.15,
+              "vegetation_dvi_min": 0.01
+            },
+            {
+              "vegetation_ndvi_min": 0.15,
+              "vegetation_dvi_min": 0.015
+            },
+            {
+              "vegetation_ndvi_min": 0.15,
+              "vegetation_dvi_min": 0.02
+            },
+            {
+              "vegetation_ndvi_min": 0.2,
+              "vegetation_dvi_min": 0.01
+            },
+            {
+              "vegetation_ndvi_min": 0.2,
+              "vegetation_dvi_min": 0.015
+            },
+            {
+              "vegetation_ndvi_min": 0.2,
+              "vegetation_dvi_min": 0.02
+            },
+            {
+              "vegetation_ndvi_min": 0.25,
+              "vegetation_dvi_min": 0.01
+            },
+            {
+              "vegetation_ndvi_min": 0.25,
+              "vegetation_dvi_min": 0.015
+            },
+            {
+              "vegetation_ndvi_min": 0.25,
+              "vegetation_dvi_min": 0.02
+            }
+          ],
+          "supported": true,
+          "site_patch_counts": {
+            "survey_e646500_n2493500": 3,
+            "survey_e653000_n2492500": 3
+          },
+          "minimum_patches_per_site": 3,
+          "median_between_site_degrees": 39.501139848100614,
+          "balanced_within_site_degrees": 0.0,
+          "within_site_median_degrees": {
+            "survey_e646500_n2493500": 0.0,
+            "survey_e653000_n2492500": 0.0
+          },
+          "excess_separation_degrees": 39.501139848100614,
+          "between_site_pairs": 9,
+          "within_site_pairs": 6,
+          "within_site_pairs_by_site": {
+            "survey_e646500_n2493500": 3,
+            "survey_e653000_n2492500": 3
+          },
+          "passes": true
+        }
+      ],
+      "band_subsets": [
+        {
+          "subset": "alternating_targets_a",
+          "bands": 7,
+          "supported": true,
+          "site_patch_counts": {
+            "survey_e646500_n2493500": 3,
+            "survey_e653000_n2492500": 3
+          },
+          "minimum_patches_per_site": 3,
+          "median_between_site_degrees": 39.28330052345142,
+          "balanced_within_site_degrees": 4.2688682312579694e-07,
+          "within_site_median_degrees": {
+            "survey_e646500_n2493500": 8.537736462515939e-07,
+            "survey_e653000_n2492500": 0.0
+          },
+          "excess_separation_degrees": 39.2833000965646,
+          "between_site_pairs": 9,
+          "within_site_pairs": 6,
+          "within_site_pairs_by_site": {
+            "survey_e646500_n2493500": 3,
+            "survey_e653000_n2492500": 3
+          }
+        },
+        {
+          "subset": "alternating_targets_b",
+          "bands": 7,
+          "supported": true,
+          "site_patch_counts": {
+            "survey_e646500_n2493500": 3,
+            "survey_e653000_n2492500": 3
+          },
+          "minimum_patches_per_site": 3,
+          "median_between_site_degrees": 39.28330052345144,
+          "balanced_within_site_degrees": 4.2688682312579694e-07,
+          "within_site_median_degrees": {
+            "survey_e646500_n2493500": 0.0,
+            "survey_e653000_n2492500": 8.537736462515939e-07
+          },
+          "excess_separation_degrees": 39.283300096564616,
+          "between_site_pairs": 9,
+          "within_site_pairs": 6,
+          "within_site_pairs_by_site": {
+            "survey_e646500_n2493500": 3,
+            "survey_e653000_n2492500": 3
+          }
+        },
+        {
+          "subset": "without_near_infrared",
+          "bands": 11,
+          "supported": true,
+          "site_patch_counts": {
+            "survey_e646500_n2493500": 3,
+            "survey_e653000_n2492500": 3
+          },
+          "minimum_patches_per_site": 3,
+          "median_between_site_degrees": 31.96245137412072,
+          "balanced_within_site_degrees": 0.0,
+          "within_site_median_degrees": {
+            "survey_e646500_n2493500": 0.0,
+            "survey_e653000_n2492500": 0.0
+          },
+          "excess_separation_degrees": 31.96245137412072,
+          "between_site_pairs": 9,
+          "within_site_pairs": 6,
+          "within_site_pairs_by_site": {
+            "survey_e646500_n2493500": 3,
+            "survey_e653000_n2492500": 3
+          }
+        }
+      ],
+      "summary": [
+        "Exact 10 m and 20 m shoreline-inset separation: +39.50\u00b0 and +39.50\u00b0.",
+        "Preregistered band-subset separation: +31.96\u00b0 to +39.28\u00b0."
+      ]
+    },
+    "limitations": [
+      {
+        "key": "ecological_labels",
+        "text": "The likely vegetation was not field-labeled."
+      },
+      {
+        "key": "site_context",
+        "text": "Open water also differs between the areas (0.00\u00b0), so water and site conditions may contribute."
+      },
+      {
+        "key": "matching_support",
+        "text": "Brightness/cover matching retains too few patches for comparison (Area A: 0, Area B: 0)."
+      },
+      {
+        "key": "screening_sensitivity",
+        "text": "The broader NDVI 0.15 screen has +39.50\u00b0 excess separation; the stricter NDVI 0.25 screen has +39.50\u00b0 excess separation."
+      },
+      {
+        "key": "sample_support",
+        "text": "Median internal variation is 0.00\u00b0 in Area A and 0.00\u00b0 in Area B, versus 39.50\u00b0 between areas; patches are not independent ecological sites."
+      },
+      {
+        "key": "raw_quality",
+        "text": "Raw pixel-class values are preserved, but their definitions are unverified."
+      }
+    ],
+    "state": "available",
+    "context": {
+      "location_label": "Kolkata, India",
+      "sensor_label": "Pixxel FF01",
+      "capture_date": "2025-11-13",
+      "purpose_label": "Reference evaluation"
+    }
+  }
+}

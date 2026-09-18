@@ -1,0 +1,1270 @@
+{
+  "schema": "giant-salvinia-intelligence-v1",
+  "generated_at": "2026-01-15",
+  "sites": [
+    {
+      "key": "caddo",
+      "label": "Caddo Lake, TX/LA",
+      "status": "operational",
+      "provenance": "Cove products derive only from this release's verified Caddo source-manifest inputs.",
+      "claim_boundary": "Caddo detections are floating vegetation; species is unresolved pending field confirmation.",
+      "metadata": {
+        "acquisition_count": 5,
+        "cove_count": 4,
+        "record_start": "2024-01-15",
+        "record_end": "2026-01-15",
+        "forecast_origin": "20260115T000000_R026",
+        "basin_series": [
+          [
+            "2024-01-15",
+            15.0
+          ],
+          [
+            "2024-07-15",
+            15.0
+          ],
+          [
+            "2025-01-15",
+            15.5
+          ],
+          [
+            "2025-07-15",
+            16.0
+          ],
+          [
+            "2026-01-15",
+            18.5
+          ]
+        ]
+      },
+      "totals": {
+        "detected_ha": 18.5,
+        "infested_coves": 3,
+        "cove_count": 4,
+        "basin_area_ha": 80.0
+      },
+      "coves": [
+        {
+          "id": 1,
+          "name": "Cove 001",
+          "lon": -94.16,
+          "lat": 32.7,
+          "area_ha": 20.0,
+          "current_ha": 8.0,
+          "obs_date": "2026-01-15",
+          "peak_ha": 8.0,
+          "current_pct": 40.0,
+          "growth_ha_yr": 2.01,
+          "recent_mean_ha": 3.6,
+          "persistence": 1.0,
+          "n_recent_obs": 5,
+          "uncertainty": 0.1,
+          "survey_score": 0.2,
+          "gp_ucb": 0.4,
+          "collapse_flag": false,
+          "series": [
+            [
+              "2024-01-15",
+              1.0
+            ],
+            [
+              "2024-07-15",
+              2.0
+            ],
+            [
+              "2025-01-15",
+              3.0
+            ],
+            [
+              "2025-07-15",
+              4.0
+            ],
+            [
+              "2026-01-15",
+              8.0
+            ]
+          ],
+          "severity_pct": 100.0,
+          "growth_pct": 100.0,
+          "uncertainty_pct": 0.0,
+          "spread_pressure": 1.43,
+          "spread_outward": 0.44,
+          "distance_to_outlet_km": 22.99,
+          "spread_pct": 33.3,
+          "nearest_asset": "Caddo Lake State Park ramp",
+          "nearest_asset_km": 1.62,
+          "infrastructure_risk": 1.78,
+          "infrastructure_pct": 100.0,
+          "priority_components": {
+            "severity": 1.0,
+            "growth": 1.0,
+            "spread": 0.2933,
+            "infrastructure": 1.0,
+            "treatability": 1.0
+          },
+          "priority": 85.9
+        },
+        {
+          "id": 2,
+          "name": "Cove 002",
+          "lon": -94.14,
+          "lat": 32.71,
+          "area_ha": 20.0,
+          "current_ha": 6.0,
+          "obs_date": "2026-01-15",
+          "peak_ha": 10.0,
+          "current_pct": 30.0,
+          "growth_ha_yr": -2.0,
+          "recent_mean_ha": 8.0,
+          "persistence": 1.0,
+          "n_recent_obs": 5,
+          "uncertainty": 0.8,
+          "survey_score": 0.7,
+          "gp_ucb": 0.6,
+          "collapse_flag": true,
+          "series": [
+            [
+              "2024-01-15",
+              10.0
+            ],
+            [
+              "2024-07-15",
+              9.0
+            ],
+            [
+              "2025-01-15",
+              8.0
+            ],
+            [
+              "2025-07-15",
+              7.0
+            ],
+            [
+              "2026-01-15",
+              6.0
+            ]
+          ],
+          "severity_pct": 66.7,
+          "growth_pct": 0.0,
+          "uncertainty_pct": 66.7,
+          "spread_pressure": 3.34,
+          "spread_outward": 1.41,
+          "distance_to_outlet_km": 21.09,
+          "spread_pct": 66.7,
+          "nearest_asset": "Shady Glade / Johnson's Ranch ramp \u2014 Uncertain, Texas",
+          "nearest_asset_km": 1.84,
+          "infrastructure_risk": 1.19,
+          "infrastructure_pct": 66.7,
+          "priority_components": {
+            "severity": 0.7333,
+            "growth": 0.0,
+            "spread": 0.94,
+            "infrastructure": 0.6402,
+            "treatability": 0.0
+          },
+          "priority": 50.4
+        },
+        {
+          "id": 3,
+          "name": "Cove 003",
+          "lon": -94.12,
+          "lat": 32.72,
+          "area_ha": 20.0,
+          "current_ha": 0.5,
+          "obs_date": "2026-01-15",
+          "peak_ha": 1.0,
+          "current_pct": 2.5,
+          "growth_ha_yr": 0.42,
+          "recent_mean_ha": 0.4,
+          "persistence": 0.2,
+          "n_recent_obs": 5,
+          "uncertainty": 0.9,
+          "survey_score": 1.0,
+          "gp_ucb": 1.2,
+          "collapse_flag": false,
+          "series": [
+            [
+              "2024-01-15",
+              0.0
+            ],
+            [
+              "2024-07-15",
+              0.0
+            ],
+            [
+              "2025-01-15",
+              0.5
+            ],
+            [
+              "2025-07-15",
+              1.0
+            ],
+            [
+              "2026-01-15",
+              0.5
+            ]
+          ],
+          "severity_pct": 0.0,
+          "growth_pct": 66.7,
+          "uncertainty_pct": 100.0,
+          "spread_pressure": 3.89,
+          "spread_outward": 0.0,
+          "distance_to_outlet_km": 19.25,
+          "spread_pct": 100.0,
+          "nearest_asset": "Shady Glade / Johnson's Ranch ramp \u2014 Uncertain, Texas",
+          "nearest_asset_km": 1.17,
+          "infrastructure_risk": 0.14,
+          "infrastructure_pct": 0.0,
+          "priority_components": {
+            "severity": 0.0,
+            "growth": 0.209,
+            "spread": 0.0,
+            "infrastructure": 0.0,
+            "treatability": 0.234
+          },
+          "priority": 7.6
+        },
+        {
+          "id": 4,
+          "name": "Cove 004",
+          "lon": -94.1,
+          "lat": 32.73,
+          "area_ha": 20.0,
+          "current_ha": 4.0,
+          "obs_date": "2026-01-15",
+          "peak_ha": 4.0,
+          "current_pct": 20.0,
+          "growth_ha_yr": 0.0,
+          "recent_mean_ha": 4.0,
+          "persistence": 1.0,
+          "n_recent_obs": 5,
+          "uncertainty": 0.2,
+          "survey_score": 0.3,
+          "gp_ucb": 0.3,
+          "collapse_flag": false,
+          "series": [
+            [
+              "2024-01-15",
+              4.0
+            ],
+            [
+              "2024-07-15",
+              4.0
+            ],
+            [
+              "2025-01-15",
+              4.0
+            ],
+            [
+              "2025-07-15",
+              4.0
+            ],
+            [
+              "2026-01-15",
+              4.0
+            ]
+          ],
+          "severity_pct": 33.3,
+          "growth_pct": 33.3,
+          "uncertainty_pct": 33.3,
+          "spread_pressure": 0.71,
+          "spread_outward": 1.5,
+          "distance_to_outlet_km": 17.48,
+          "spread_pct": 0.0,
+          "nearest_asset": "Shady Glade / Johnson's Ranch ramp \u2014 Uncertain, Texas",
+          "nearest_asset_km": 2.97,
+          "infrastructure_risk": 0.45,
+          "infrastructure_pct": 33.3,
+          "priority_components": {
+            "severity": 0.4667,
+            "growth": 0.0,
+            "spread": 1.0,
+            "infrastructure": 0.189,
+            "treatability": 0.0851
+          },
+          "priority": 37.7
+        }
+      ],
+      "rankings": {
+        "hotspots": [
+          {
+            "id": 1,
+            "name": "Cove 001",
+            "lonlat": [
+              -94.16,
+              32.7
+            ],
+            "current_ha": 8.0,
+            "growth_ha_yr": 2.01,
+            "spread_pressure": 1.43,
+            "infrastructure_risk": 1.78,
+            "priority": 85.9
+          },
+          {
+            "id": 2,
+            "name": "Cove 002",
+            "lonlat": [
+              -94.14,
+              32.71
+            ],
+            "current_ha": 6.0,
+            "growth_ha_yr": -2.0,
+            "spread_pressure": 3.34,
+            "infrastructure_risk": 1.19,
+            "priority": 50.4
+          },
+          {
+            "id": 4,
+            "name": "Cove 004",
+            "lonlat": [
+              -94.1,
+              32.73
+            ],
+            "current_ha": 4.0,
+            "growth_ha_yr": 0.0,
+            "spread_pressure": 0.71,
+            "infrastructure_risk": 0.45,
+            "priority": 37.7
+          },
+          {
+            "id": 3,
+            "name": "Cove 003",
+            "lonlat": [
+              -94.12,
+              32.72
+            ],
+            "current_ha": 0.5,
+            "growth_ha_yr": 0.42,
+            "spread_pressure": 3.89,
+            "infrastructure_risk": 0.14,
+            "priority": 7.6
+          }
+        ],
+        "fastest_growing": [
+          {
+            "id": 1,
+            "name": "Cove 001",
+            "lonlat": [
+              -94.16,
+              32.7
+            ],
+            "current_ha": 8.0,
+            "growth_ha_yr": 2.01,
+            "spread_pressure": 1.43,
+            "infrastructure_risk": 1.78,
+            "priority": 85.9
+          },
+          {
+            "id": 3,
+            "name": "Cove 003",
+            "lonlat": [
+              -94.12,
+              32.72
+            ],
+            "current_ha": 0.5,
+            "growth_ha_yr": 0.42,
+            "spread_pressure": 3.89,
+            "infrastructure_risk": 0.14,
+            "priority": 7.6
+          },
+          {
+            "id": 4,
+            "name": "Cove 004",
+            "lonlat": [
+              -94.1,
+              32.73
+            ],
+            "current_ha": 4.0,
+            "growth_ha_yr": 0.0,
+            "spread_pressure": 0.71,
+            "infrastructure_risk": 0.45,
+            "priority": 37.7
+          },
+          {
+            "id": 2,
+            "name": "Cove 002",
+            "lonlat": [
+              -94.14,
+              32.71
+            ],
+            "current_ha": 6.0,
+            "growth_ha_yr": -2.0,
+            "spread_pressure": 3.34,
+            "infrastructure_risk": 1.19,
+            "priority": 50.4
+          }
+        ],
+        "spread_risk": [
+          {
+            "id": 3,
+            "name": "Cove 003",
+            "lonlat": [
+              -94.12,
+              32.72
+            ],
+            "current_ha": 0.5,
+            "growth_ha_yr": 0.42,
+            "spread_pressure": 3.89,
+            "infrastructure_risk": 0.14,
+            "priority": 7.6
+          },
+          {
+            "id": 2,
+            "name": "Cove 002",
+            "lonlat": [
+              -94.14,
+              32.71
+            ],
+            "current_ha": 6.0,
+            "growth_ha_yr": -2.0,
+            "spread_pressure": 3.34,
+            "infrastructure_risk": 1.19,
+            "priority": 50.4
+          },
+          {
+            "id": 1,
+            "name": "Cove 001",
+            "lonlat": [
+              -94.16,
+              32.7
+            ],
+            "current_ha": 8.0,
+            "growth_ha_yr": 2.01,
+            "spread_pressure": 1.43,
+            "infrastructure_risk": 1.78,
+            "priority": 85.9
+          },
+          {
+            "id": 4,
+            "name": "Cove 004",
+            "lonlat": [
+              -94.1,
+              32.73
+            ],
+            "current_ha": 4.0,
+            "growth_ha_yr": 0.0,
+            "spread_pressure": 0.71,
+            "infrastructure_risk": 0.45,
+            "priority": 37.7
+          }
+        ],
+        "infrastructure_risk": [
+          {
+            "id": 1,
+            "name": "Cove 001",
+            "lonlat": [
+              -94.16,
+              32.7
+            ],
+            "current_ha": 8.0,
+            "growth_ha_yr": 2.01,
+            "spread_pressure": 1.43,
+            "infrastructure_risk": 1.78,
+            "priority": 85.9
+          },
+          {
+            "id": 2,
+            "name": "Cove 002",
+            "lonlat": [
+              -94.14,
+              32.71
+            ],
+            "current_ha": 6.0,
+            "growth_ha_yr": -2.0,
+            "spread_pressure": 3.34,
+            "infrastructure_risk": 1.19,
+            "priority": 50.4
+          },
+          {
+            "id": 4,
+            "name": "Cove 004",
+            "lonlat": [
+              -94.1,
+              32.73
+            ],
+            "current_ha": 4.0,
+            "growth_ha_yr": 0.0,
+            "spread_pressure": 0.71,
+            "infrastructure_risk": 0.45,
+            "priority": 37.7
+          },
+          {
+            "id": 3,
+            "name": "Cove 003",
+            "lonlat": [
+              -94.12,
+              32.72
+            ],
+            "current_ha": 0.5,
+            "growth_ha_yr": 0.42,
+            "spread_pressure": 3.89,
+            "infrastructure_risk": 0.14,
+            "priority": 7.6
+          }
+        ],
+        "priority": [
+          {
+            "id": 1,
+            "name": "Cove 001",
+            "lonlat": [
+              -94.16,
+              32.7
+            ],
+            "current_ha": 8.0,
+            "growth_ha_yr": 2.01,
+            "spread_pressure": 1.43,
+            "infrastructure_risk": 1.78,
+            "priority": 85.9
+          },
+          {
+            "id": 2,
+            "name": "Cove 002",
+            "lonlat": [
+              -94.14,
+              32.71
+            ],
+            "current_ha": 6.0,
+            "growth_ha_yr": -2.0,
+            "spread_pressure": 3.34,
+            "infrastructure_risk": 1.19,
+            "priority": 50.4
+          },
+          {
+            "id": 4,
+            "name": "Cove 004",
+            "lonlat": [
+              -94.1,
+              32.73
+            ],
+            "current_ha": 4.0,
+            "growth_ha_yr": 0.0,
+            "spread_pressure": 0.71,
+            "infrastructure_risk": 0.45,
+            "priority": 37.7
+          },
+          {
+            "id": 3,
+            "name": "Cove 003",
+            "lonlat": [
+              -94.12,
+              32.72
+            ],
+            "current_ha": 0.5,
+            "growth_ha_yr": 0.42,
+            "spread_pressure": 3.89,
+            "infrastructure_risk": 0.14,
+            "priority": 7.6
+          }
+        ]
+      },
+      "spread_edges": [],
+      "assets": [
+        {
+          "name": "Caddo Lake Dam / Spillway",
+          "type": "dam",
+          "lat": 32.7101,
+          "lon": -93.9146,
+          "confidence": "exact",
+          "criticality": 0.8
+        },
+        {
+          "name": "Caddo Lake State Park ramp",
+          "type": "boat ramp",
+          "lat": 32.6938,
+          "lon": -94.1757,
+          "confidence": "approximate",
+          "criticality": 0.5
+        },
+        {
+          "name": "Hwy 43 Public Boat Ramp (Karnack)",
+          "type": "boat ramp",
+          "lat": 32.6964,
+          "lon": -94.188,
+          "confidence": "approximate",
+          "criticality": 0.5
+        },
+        {
+          "name": "Shady Glade / Johnson's Ranch ramp \u2014 Uncertain, Texas",
+          "type": "boat ramp",
+          "lat": 32.7095,
+          "lon": -94.1203,
+          "confidence": "approximate",
+          "criticality": 0.5
+        },
+        {
+          "name": "Earl G. Williamson Landing",
+          "type": "boat ramp",
+          "lat": 32.727,
+          "lon": -93.9722,
+          "confidence": "approximate",
+          "criticality": 0.5
+        },
+        {
+          "name": "Caddo Lake WSC intake (verify surface-water role)",
+          "type": "water-supply intake",
+          "lat": 32.66,
+          "lon": -94.18,
+          "confidence": "rough",
+          "criticality": 0.9
+        }
+      ],
+      "asset_threat": [
+        {
+          "name": "Caddo Lake State Park ramp",
+          "type": "boat ramp",
+          "lat": 32.6938,
+          "lon": -94.1757,
+          "confidence": "approximate",
+          "criticality": 0.5,
+          "exposure_ha_weighted": 4.45,
+          "threat_score": 2.23,
+          "coves_within_radius": 2
+        },
+        {
+          "name": "Shady Glade / Johnson's Ranch ramp \u2014 Uncertain, Texas",
+          "type": "boat ramp",
+          "lat": 32.7095,
+          "lon": -94.1203,
+          "confidence": "approximate",
+          "criticality": 0.5,
+          "exposure_ha_weighted": 4.45,
+          "threat_score": 2.23,
+          "coves_within_radius": 3
+        },
+        {
+          "name": "Hwy 43 Public Boat Ramp (Karnack)",
+          "type": "boat ramp",
+          "lat": 32.6964,
+          "lon": -94.188,
+          "confidence": "approximate",
+          "criticality": 0.5,
+          "exposure_ha_weighted": 2.13,
+          "threat_score": 1.06,
+          "coves_within_radius": 1
+        },
+        {
+          "name": "Caddo Lake Dam / Spillway",
+          "type": "dam",
+          "lat": 32.7101,
+          "lon": -93.9146,
+          "confidence": "exact",
+          "criticality": 0.8,
+          "exposure_ha_weighted": 0.0,
+          "threat_score": 0.0,
+          "coves_within_radius": 0
+        },
+        {
+          "name": "Caddo Lake WSC intake (verify surface-water role)",
+          "type": "water-supply intake",
+          "lat": 32.66,
+          "lon": -94.18,
+          "confidence": "rough",
+          "criticality": 0.9,
+          "exposure_ha_weighted": 0.0,
+          "threat_score": 0.0,
+          "coves_within_radius": 0
+        },
+        {
+          "name": "Earl G. Williamson Landing",
+          "type": "boat ramp",
+          "lat": 32.727,
+          "lon": -93.9722,
+          "confidence": "approximate",
+          "criticality": 0.5,
+          "exposure_ha_weighted": 0.0,
+          "threat_score": 0.0,
+          "coves_within_radius": 0
+        }
+      ],
+      "sensor_plan": [
+        {
+          "rank": 1,
+          "cove_id": 2,
+          "name": "Cove 002",
+          "lonlat": [
+            -94.14,
+            32.71
+          ],
+          "value_of_information": 61.3,
+          "uncertainty_percentile": 66.7,
+          "rationale": "Forecast uncertainty and operational consequence, spatially separated across the lake."
+        },
+        {
+          "rank": 2,
+          "cove_id": 3,
+          "name": "Cove 003",
+          "lonlat": [
+            -94.12,
+            32.72
+          ],
+          "value_of_information": 35.0,
+          "uncertainty_percentile": 100.0,
+          "rationale": "Forecast uncertainty and operational consequence, spatially separated across the lake."
+        },
+        {
+          "rank": 3,
+          "cove_id": 4,
+          "name": "Cove 004",
+          "lonlat": [
+            -94.1,
+            32.73
+          ],
+          "value_of_information": 5.6,
+          "uncertainty_percentile": 33.3,
+          "rationale": "Forecast uncertainty and operational consequence, spatially separated across the lake."
+        },
+        {
+          "rank": 4,
+          "cove_id": 1,
+          "name": "Cove 001",
+          "lonlat": [
+            -94.16,
+            32.7
+          ],
+          "value_of_information": 0.0,
+          "uncertainty_percentile": 0.0,
+          "rationale": "Forecast uncertainty and operational consequence, spatially separated across the lake."
+        }
+      ],
+      "sampling_plan": [
+        {
+          "rank": 1,
+          "cove_id": 1,
+          "name": "Cove 001",
+          "lonlat": [
+            -94.16,
+            32.7
+          ],
+          "detected_ha": 8.0,
+          "species_status": "unresolved",
+          "rationale": "Confirm species and mat stage at the detected mat edge; imagery alone is not species confirmation."
+        },
+        {
+          "rank": 2,
+          "cove_id": 2,
+          "name": "Cove 002",
+          "lonlat": [
+            -94.14,
+            32.71
+          ],
+          "detected_ha": 6.0,
+          "species_status": "unresolved",
+          "rationale": "Confirm species and mat stage at the detected mat edge; imagery alone is not species confirmation."
+        },
+        {
+          "rank": 3,
+          "cove_id": 4,
+          "name": "Cove 004",
+          "lonlat": [
+            -94.1,
+            32.73
+          ],
+          "detected_ha": 4.0,
+          "species_status": "unresolved",
+          "rationale": "Confirm species and mat stage at the detected mat edge; imagery alone is not species confirmation."
+        }
+      ],
+      "crew_plan": {
+        "budget": 3,
+        "start": {
+          "name": "Caddo Lake State Park ramp",
+          "lonlat": [
+            -94.1757,
+            32.6938
+          ]
+        },
+        "route_km": 16.3,
+        "stops": [
+          {
+            "order": 1,
+            "cove_id": 1,
+            "name": "Cove 001",
+            "lonlat": [
+              -94.16,
+              32.7
+            ],
+            "leg_km": 1.62,
+            "priority": 85.9,
+            "action": "Inspect active margins and record species and mat stage before selecting control."
+          },
+          {
+            "order": 2,
+            "cove_id": 2,
+            "name": "Cove 002",
+            "lonlat": [
+              -94.14,
+              32.71
+            ],
+            "leg_km": 2.18,
+            "priority": 50.4,
+            "action": "Verify the rapid change against inspection and treatment records before attributing cause."
+          },
+          {
+            "order": 3,
+            "cove_id": 4,
+            "name": "Cove 004",
+            "lonlat": [
+              -94.1,
+              32.73
+            ],
+            "leg_km": 4.35,
+            "priority": 37.7,
+            "action": "Monitor on the next clear pass and field-confirm before species-specific action."
+          }
+        ]
+      },
+      "edrr": [
+        {
+          "cove_id": 1,
+          "name": "Cove 001",
+          "lonlat": [
+            -94.16,
+            32.7
+          ],
+          "current_ha": 8.0,
+          "growth_ha_yr": 2.01,
+          "projected_ha_90d": 8.5,
+          "leverage": 0.4511,
+          "projection_boundary": "Linear 90-day extrapolation of the release-derived recent trend; not a biological forecast."
+        }
+      ],
+      "early_warning": {
+        "surges": [
+          {
+            "cove_id": 1,
+            "name": "Cove 001",
+            "growth_ha_yr": 2.01,
+            "current_ha": 8.0
+          }
+        ],
+        "emerging_front": [
+          {
+            "cove_id": 3,
+            "name": "Cove 003",
+            "spread_pressure": 3.89
+          }
+        ],
+        "rapid_decline_candidates": [
+          {
+            "cove_id": 2,
+            "name": "Cove 002",
+            "area_before_ha": 10.0,
+            "area_after_ha": 6.0,
+            "elapsed_days": 90,
+            "interpretation": "Candidate rapid change signal; compare with field and treatment records before attributing cause."
+          }
+        ]
+      },
+      "priority_weights": {
+        "defaults": {
+          "severity": 0.3,
+          "growth": 0.25,
+          "spread": 0.2,
+          "infrastructure": 0.15,
+          "treatability": 0.1
+        },
+        "allowed_range": {
+          "severity": [
+            0.0,
+            1.0
+          ],
+          "growth": [
+            0.0,
+            1.0
+          ],
+          "spread": [
+            0.0,
+            1.0
+          ],
+          "infrastructure": [
+            0.0,
+            1.0
+          ],
+          "treatability": [
+            0.0,
+            1.0
+          ]
+        },
+        "formula": "100 * weighted_mean(severity,growth,spread,infrastructure,treatability)"
+      },
+      "briefing": "As of 2026-01-15, the release shows 18.5 ha of detected floating vegetation across 3 of 4 Caddo cove units. Species remains unresolved pending field confirmation. The largest current hotspot is Cove 001 (8 ha). The bounded crew plan contains 3 of 3 available visits."
+    },
+    {
+      "key": "santee",
+      "label": "Santee Cooper, SC",
+      "status": "reference",
+      "provenance": "Approved ReMetrix image-interpretation reference context; no Santee tenant imagery is compiled in this release.",
+      "claim_boundary": "Santee context is reference-label evidence, not field ground truth or an operational Caddo-detector result.",
+      "reference_context": {
+        "evidence_type": "ReMetrix image-interpretation labels",
+        "operational": false,
+        "allowed_use": "Portfolio context only"
+      }
+    }
+  ],
+  "santee_reference": {
+    "operational": false,
+    "trend": {
+      "first_year": 2020,
+      "latest_year": 2025,
+      "first_extent_ha": 112.6,
+      "latest_extent_ha": 1215.4,
+      "cagr": 0.6093
+    },
+    "citations": [
+      {
+        "id": "santee-remetrix-2020-2025",
+        "text": "ReMetrix 2020\u20132025 annual image-interpretation reference-label aggregates: 112.6 ha in 2020 and 1215.4 ha in 2025."
+      },
+      {
+        "id": "santee-reference-boundary",
+        "text": "Santee is reference-only contextual evidence, not an operational detection product."
+      }
+    ],
+    "boundary": "Reference-only ReMetrix image-interpretation context; not an operational detection product."
+  },
+  "portfolio": {
+    "crew_budget": 3,
+    "cards": [
+      {
+        "key": "caddo",
+        "label": "Caddo Lake, TX/LA",
+        "status": "operational",
+        "headline_ha": 18.5,
+        "unit": "ha detected floating vegetation"
+      },
+      {
+        "key": "santee",
+        "label": "Santee Cooper, SC",
+        "status": "reference",
+        "headline_ha": 1215.4,
+        "unit": "ha reference-label extent"
+      }
+    ],
+    "recommendation": {
+      "site_key": "caddo",
+      "status": "operational",
+      "priority_cove_id": 1,
+      "priority_score": 85.9,
+      "santee_status": "reference-only",
+      "sam_rayburn_status": "excluded",
+      "recommendation": "Keep Caddo operational tasking focused on Cove 001 at priority 85.9. Santee is reference-only, and Sam Rayburn is excluded.",
+      "citations": [
+        "caddo-detector",
+        "santee-reference-boundary",
+        "sam-rayburn-transfer"
+      ],
+      "boundary": "Caddo is operational; Santee is reference-only; Sam Rayburn is excluded."
+    },
+    "site_evaluations": {
+      "sam-rayburn": {
+        "label": "Sam Rayburn Reservoir, TX",
+        "status": "excluded",
+        "operational": false,
+        "answer": "Sam Rayburn was assessed but is excluded because the Caddo detector did not transfer credibly. No Sam Rayburn monitoring result is claimed.",
+        "boundary": "Excluded site; no Sam Rayburn extent, species, accuracy, or monitoring result is claimed."
+      }
+    }
+  },
+  "deterministic_answers": {
+    "extent": {
+      "question": "How much is detected now?",
+      "answer": "18.5 ha of floating vegetation is detected across 3 Caddo coves.",
+      "source_paths": [
+        "sites.caddo.totals"
+      ],
+      "citations": [
+        "caddo-detector"
+      ],
+      "boundary": "Caddo detections are floating vegetation; species is unresolved pending field confirmation."
+    },
+    "hotspot": {
+      "question": "Where is the largest hotspot?",
+      "answer": "Cove 001 ranks first at 8 detected ha.",
+      "source_paths": [
+        "sites.caddo.rankings.hotspots"
+      ],
+      "citations": [
+        "caddo-detector"
+      ],
+      "boundary": "Caddo detections are floating vegetation; species is unresolved pending field confirmation."
+    },
+    "fastest_growth": {
+      "question": "Which cove is growing fastest?",
+      "answer": "Cove 001 ranks first at 2.01 ha per year in the release-derived recent trend.",
+      "source_paths": [
+        "sites.caddo.rankings.fastest_growing"
+      ],
+      "citations": [
+        "caddo-detector"
+      ],
+      "boundary": "Caddo detections are floating vegetation; species is unresolved pending field confirmation."
+    },
+    "spread_front": {
+      "question": "Where is the emerging spread front?",
+      "answer": "Cove 003 is the leading currently clear front at spread pressure 3.89.",
+      "source_paths": [
+        "sites.caddo.early_warning.emerging_front"
+      ],
+      "citations": [
+        "caddo-detector"
+      ],
+      "boundary": "Caddo detections are floating vegetation; species is unresolved pending field confirmation."
+    },
+    "infrastructure_risk": {
+      "question": "What has the highest infrastructure risk?",
+      "answer": "Caddo Lake State Park ramp has the highest bounded threat score at 2.23.",
+      "source_paths": [
+        "sites.caddo.asset_threat"
+      ],
+      "citations": [
+        "caddo-detector"
+      ],
+      "boundary": "Caddo detections are floating vegetation; species is unresolved pending field confirmation."
+    },
+    "sensor_placement": {
+      "question": "Where should monitoring sensors be placed?",
+      "answer": "Place the first monitoring sensor or transect at Cove 002 (value of information 61.3).",
+      "source_paths": [
+        "sites.caddo.sensor_plan"
+      ],
+      "citations": [
+        "caddo-detector"
+      ],
+      "boundary": "Caddo detections are floating vegetation; species is unresolved pending field confirmation."
+    },
+    "sampling": {
+      "question": "Where should species confirmation be sampled?",
+      "answer": "Sample Cove 001 first at 8 detected ha.",
+      "source_paths": [
+        "sites.caddo.sampling_plan"
+      ],
+      "citations": [
+        "caddo-detector"
+      ],
+      "boundary": "Caddo detections are floating vegetation; species is unresolved pending field confirmation."
+    },
+    "crew_deployment": {
+      "question": "Where should the crew deploy next?",
+      "answer": "Start the 3-stop route at Cove 001; the first leg is 1.62 km.",
+      "source_paths": [
+        "sites.caddo.crew_plan",
+        "csv_exports.crew_route"
+      ],
+      "citations": [
+        "caddo-detector"
+      ],
+      "boundary": "Caddo detections are floating vegetation; species is unresolved pending field confirmation."
+    },
+    "edrr_early_wins": {
+      "question": "Where are the highest-leverage early wins?",
+      "answer": "Cove 001 ranks first for EDRR leverage at 0.4511, from 8 ha now to 8.5 ha in the bounded 90-day scenario.",
+      "source_paths": [
+        "sites.caddo.edrr"
+      ],
+      "citations": [
+        "caddo-detector"
+      ],
+      "boundary": "EDRR projections are linear planning scenarios, not biological forecasts."
+    },
+    "early_warning": {
+      "question": "What early-warning signals are present?",
+      "answer": "The release lists 1 surges, 1 emerging-front coves, and 1 rapid-decline candidates.",
+      "source_paths": [
+        "sites.caddo.early_warning"
+      ],
+      "citations": [
+        "caddo-detector"
+      ],
+      "boundary": "Rapid decline is a candidate change signal, never asserted as treatment impact."
+    },
+    "portfolio_recommendation": {
+      "question": "Where should the portfolio focus next?",
+      "answer": "Keep Caddo operational tasking focused on Cove 001 at priority 85.9. Santee is reference-only, and Sam Rayburn is excluded.",
+      "source_paths": [
+        "portfolio.recommendation"
+      ],
+      "citations": [
+        "caddo-detector",
+        "santee-reference-boundary",
+        "sam-rayburn-transfer"
+      ],
+      "boundary": "Caddo is operational; Santee is reference-only; Sam Rayburn is excluded."
+    },
+    "santee_boundary": {
+      "question": "What does the release say about Santee Cooper?",
+      "answer": "Santee reference-label extent changes from 112.6 ha in 2020 to 1215.4 ha in 2025; it is reference-only and not an operational detection.",
+      "source_paths": [
+        "santee_reference"
+      ],
+      "citations": [
+        "santee-remetrix-2020-2025",
+        "santee-reference-boundary"
+      ],
+      "boundary": "Reference-only ReMetrix image-interpretation context; not an operational detection product."
+    },
+    "sam_rayburn_exclusion": {
+      "question": "Why is Sam Rayburn excluded?",
+      "answer": "Sam Rayburn was assessed but is excluded because the Caddo detector did not transfer credibly. No Sam Rayburn monitoring result is claimed.",
+      "source_paths": [
+        "portfolio.site_evaluations.sam-rayburn"
+      ],
+      "citations": [
+        "sam-rayburn-transfer"
+      ],
+      "boundary": "Excluded site; no Sam Rayburn extent, species, accuracy, or monitoring result is claimed."
+    },
+    "claim_boundary": {
+      "question": "What claims are outside this release?",
+      "answer": "Caddo detections are floating vegetation; species is unresolved pending field confirmation. Reference-only ReMetrix image-interpretation context; not an operational detection product. Rapid decline is a candidate change signal, never asserted as treatment impact. EDRR projections are linear planning scenarios, not biological forecasts.",
+      "source_paths": [
+        "claim_boundaries"
+      ],
+      "citations": [
+        "caddo-detector",
+        "santee-reference-boundary",
+        "sam-rayburn-transfer"
+      ],
+      "boundary": "Caddo detections are floating vegetation; species is unresolved pending field confirmation. Reference-only ReMetrix image-interpretation context; not an operational detection product. Rapid decline is a candidate change signal, never asserted as treatment impact. EDRR projections are linear planning scenarios, not biological forecasts."
+    }
+  },
+  "csv_exports": {
+    "cove_priorities": {
+      "filename": "caddo-cove-priorities.csv",
+      "columns": [
+        "cove_id",
+        "name",
+        "longitude",
+        "latitude",
+        "current_ha",
+        "growth_ha_yr",
+        "spread_pressure",
+        "infrastructure_risk",
+        "priority",
+        "species_status"
+      ],
+      "rows": [
+        {
+          "cove_id": 1,
+          "name": "Cove 001",
+          "longitude": -94.16,
+          "latitude": 32.7,
+          "current_ha": 8.0,
+          "growth_ha_yr": 2.01,
+          "spread_pressure": 1.43,
+          "infrastructure_risk": 1.78,
+          "priority": 85.9,
+          "species_status": "unresolved"
+        },
+        {
+          "cove_id": 2,
+          "name": "Cove 002",
+          "longitude": -94.14,
+          "latitude": 32.71,
+          "current_ha": 6.0,
+          "growth_ha_yr": -2.0,
+          "spread_pressure": 3.34,
+          "infrastructure_risk": 1.19,
+          "priority": 50.4,
+          "species_status": "unresolved"
+        },
+        {
+          "cove_id": 3,
+          "name": "Cove 003",
+          "longitude": -94.12,
+          "latitude": 32.72,
+          "current_ha": 0.5,
+          "growth_ha_yr": 0.42,
+          "spread_pressure": 3.89,
+          "infrastructure_risk": 0.14,
+          "priority": 7.6,
+          "species_status": "unresolved"
+        },
+        {
+          "cove_id": 4,
+          "name": "Cove 004",
+          "longitude": -94.1,
+          "latitude": 32.73,
+          "current_ha": 4.0,
+          "growth_ha_yr": 0.0,
+          "spread_pressure": 0.71,
+          "infrastructure_risk": 0.45,
+          "priority": 37.7,
+          "species_status": "unresolved"
+        }
+      ],
+      "claim_boundary": "Detected floating vegetation; species unresolved pending field confirmation."
+    },
+    "crew_route": {
+      "filename": "caddo-crew-route.csv",
+      "columns": [
+        "order",
+        "cove_id",
+        "leg_distance_km",
+        "current_extent_ha",
+        "growth_ha_per_year",
+        "priority",
+        "action"
+      ],
+      "rows": [
+        {
+          "order": 1,
+          "cove_id": 1,
+          "leg_distance_km": 1.62,
+          "current_extent_ha": 8.0,
+          "growth_ha_per_year": 2.01,
+          "priority": 85.9,
+          "action": "Inspect active margins and record species and mat stage before selecting control."
+        },
+        {
+          "order": 2,
+          "cove_id": 2,
+          "leg_distance_km": 2.18,
+          "current_extent_ha": 6.0,
+          "growth_ha_per_year": -2.0,
+          "priority": 50.4,
+          "action": "Verify the rapid change against inspection and treatment records before attributing cause."
+        },
+        {
+          "order": 3,
+          "cove_id": 4,
+          "leg_distance_km": 4.35,
+          "current_extent_ha": 4.0,
+          "growth_ha_per_year": 0.0,
+          "priority": 37.7,
+          "action": "Monitor on the next clear pass and field-confirm before species-specific action."
+        }
+      ],
+      "claim_boundary": "Release-derived route for Caddo field confirmation; not a species-specific treatment order."
+    }
+  },
+  "reference": {
+    "detector": "Caddo NDVI/MNDWI water-capable-domain",
+    "source_products": 5,
+    "provenance": "Release manifest, derived cove measurements, approved Caddo infrastructure reference constants.",
+    "citations": [
+      {
+        "id": "caddo-detector",
+        "text": "Caddo floating-vegetation analysis from verified release inputs."
+      },
+      {
+        "id": "santee-remetrix-2020-2025",
+        "text": "ReMetrix 2020\u20132025 annual image-interpretation reference-label aggregates: 112.6 ha in 2020 and 1215.4 ha in 2025."
+      },
+      {
+        "id": "santee-reference-boundary",
+        "text": "Santee is reference-only contextual evidence, not an operational detection product."
+      },
+      {
+        "id": "sam-rayburn-transfer",
+        "text": "Bounded transfer assessment excluding Sam Rayburn from operational monitoring."
+      }
+    ]
+  },
+  "claim_boundaries": [
+    "Caddo detections are floating vegetation; species is unresolved pending field confirmation.",
+    "Reference-only ReMetrix image-interpretation context; not an operational detection product.",
+    "Rapid decline is a candidate change signal, never asserted as treatment impact.",
+    "EDRR projections are linear planning scenarios, not biological forecasts."
+  ]
+}

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lake Operations Intelligence</title>
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <main id="public-landing" class="public-landing" aria-labelledby="landing-title">
+    <header class="landing-header">
+      <a class="landing-brand" href="/" aria-label="Coactive Lake Operations Intelligence home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span class="brand-copy"><span class="eyebrow">COACTIVE · USACE CONCEPT</span><strong>Lake Operations Intelligence</strong></span>
+      </a>
+      <div class="landing-header-status">
+        <div id="landing-user-identity" class="landing-user-identity" aria-label="Signed-in user" hidden>
+          <strong id="landing-user-name"></strong><span id="landing-user-role"></span>
+        </div>
+        <span class="landing-header-note"><i></i>Authorized workspace access</span>
+      </div>
+    </header>
+
+    <section class="landing-hero">
+      <div class="landing-copy">
+        <p class="landing-kicker">Operational lake intelligence</p>
+        <h1 id="landing-title">Lake Intelligence</h1>
+        <p class="landing-lede">A secure workspace for monitoring lake conditions and coordinating response.</p>
+        <div class="landing-actions">
+          <button id="landing-sign-in" class="landing-sign-in" type="button" hidden>Sign in to your workspace <span aria-hidden="true">→</span></button>
+          <p id="landing-release-status" class="landing-status" role="status">Checking your workspace access…</p>
+        </div>
+        <section id="landing-auth" class="landing-auth" aria-labelledby="landing-auth-title" hidden>
+          <form id="landing-sign-in-form" class="landing-auth-form">
+            <h2 id="landing-auth-title">Sign in to your workspace</h2>
+            <p>Use the account provided by your organization.</p>
+            <label>Email<input name="email" type="email" autocomplete="email" required></label>
+            <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+            <button type="submit" class="landing-auth-submit">Sign in <span aria-hidden="true">→</span></button>
+          </form>
+          <form id="landing-two-factor-form" class="landing-auth-form" hidden>
+            <h2>Verify your identity</h2>
+            <p>Enter the six-digit code from your authenticator app.</p>
+            <label>Authenticator code<input name="code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required></label>
+            <button type="submit" class="landing-auth-submit">Verify and continue <span aria-hidden="true">→</span></button>
+          </form>
+          <p id="landing-auth-error" class="landing-auth-error" role="alert" hidden></p>
+        </section>
+        <p class="landing-access-note">Access is provisioned by your organization. Your available lake workspaces appear after sign-in.</p>
+      </div>
+
+      <div class="landing-visual" aria-hidden="true">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="visual-lake"><span></span><span></span><span></span></div>
+        <div class="visual-card visual-card-main"><small>INTELLIGENCE RELEASE</small><strong>Lake conditions, made actionable.</strong><p>Monitor · Detect · Plan response</p></div>
+        <div class="visual-card visual-card-signal"><i></i><span>Sentinel record</span><strong>Continuous observation</strong></div>
+      </div>
+    </section>
+
+    <section class="landing-proof" aria-label="Lake intelligence capabilities">
+      <article><span>01</span><strong>Monitor</strong><p>Track lake conditions through a consistent, shared view.</p></article>
+      <article><span>02</span><strong>Prioritize</strong><p>Focus field attention on the changes that matter most.</p></article>
+      <article><span>03</span><strong>Coordinate</strong><p>Move from evidence to response with the right people in the loop.</p></article>
+    </section>
+  </main>
+  <div class="app-shell" hidden>
+    <header class="app-header">
+      <div class="brand-mark" aria-hidden="true">C</div>
+      <div class="brand-copy">
+        <span class="eyebrow">Coactive Geospatial Intelligence</span>
+        <strong>Sargassum — US ACE</strong>
+      </div>
+      <label id="tenant-switcher-label" class="tenant-switcher-label" for="tenant-switcher" hidden>Lake tenant</label>
+      <select id="tenant-switcher" class="tenant-switcher" aria-label="Lake tenant" disabled hidden></select>
+      <div class="record-badge"><span></span> Release record</div>
+      <div id="user-identity" class="user-identity" aria-label="Signed-in user" hidden>
+        <strong id="user-name"></strong><span id="user-role"></span>
+      </div>
+      <button id="logout" class="logout-button" type="button">Logout</button>
+    </header>
+
+    <div class="app-layout">
+      <aside class="site-rail" aria-labelledby="site-list-title">
+        <h2 id="site-list-title">Your Sites</h2>
+        <p id="site-count">Authorized locations</p>
+        <div id="site-list" class="site-list"></div>
+      </aside>
+
+      <section class="application-main">
+        <div class="workspace-toolbar">
+          <div class="workspace-switch" aria-label="Workspace">
+            <button id="workspace-console" type="button">Map Console</button>
+            <button id="workspace-briefing" type="button">Operational Briefing</button>
+            <button id="workspace-intelligence" type="button">Intelligence</button>
+          </div>
+        </div>
+
+        <nav class="beat-nav" aria-label="Demonstration sections"></nav>
+
+        <main class="workspace">
+      <section id="intelligence-root" aria-label="Operations intelligence" hidden></section>
+      <section id="release-status" class="release-status-panel" aria-labelledby="release-status-title" role="status" hidden>
+        <div class="release-status-copy">
+          <p class="panel-kicker">Limited release</p>
+          <h1 id="release-status-title">The complete visual workspace has not been published.</h1>
+          <p>This release is available to your workspace, but it does not declare enough verified data to render the map or operational history.</p>
+          <dl class="release-status-facts">
+            <div><dt>Release version</dt><dd id="release-status-version"></dd></div>
+            <div><dt>Verified acquisitions</dt><dd id="release-status-acquisitions"></dd></div>
+            <div><dt>Missing capabilities</dt><dd id="release-status-capabilities"></dd></div>
+          </dl>
+          <p id="release-status-guidance" class="release-status-guidance"></p>
+        </div>
+      </section>
+      <section class="map-stage" aria-label="Lake map">
+        <div id="map"></div>
+        <div id="hyperspectral-stage" class="hyperspectral-stage"></div>
+        <fieldset id="console-layer-control" class="console-layer-control" hidden>
+          <legend class="sr-only">Map layers</legend>
+          <div class="console-mode-tabs">
+            <button type="button" data-console-mode="intensity">Intensity</button>
+            <button type="button" data-console-mode="zones">Zones</button>
+          </div>
+          <strong>Observation signals</strong>
+          <label><input type="checkbox" value="coverage"> Coverage</label>
+          <label><input type="checkbox" value="footprint"> Footprint</label>
+          <label><input type="checkbox" value="water"> Water</label>
+        </fieldset>
+        <div class="map-heading">
+          <span id="map-kicker"></span>
+          <strong id="map-title"></strong>
+        </div>
+        <div id="map-legend" class="map-legend"></div>
+        <div class="map-source">Approved release imagery</div>
+      </section>
+      <aside id="panel" class="story-panel" aria-live="polite"></aside>
+      <aside id="console-inspector" class="console-inspector" aria-label="Observation details" hidden>
+        <section id="console-samples"></section>
+        <section aria-labelledby="console-timeline-title">
+          <h2 id="console-timeline-title">Floating vegetation timeline</h2>
+          <div id="console-timeline"></div>
+        </section>
+        <section id="console-metrics"></section>
+        <section id="console-granules"></section>
+        <section id="console-observations"></section>
+        <section id="console-source"></section>
+      </aside>
+        </main>
+      </section>
+    </div>
+  </div>
+
+  <script src="runtime-config.js"></script>
+  <script src="vendor/leaflet.js"></script>
+  <script src="core.js"></script>
+  <script src="console.js"></script>
+  <script src="views.js"></script>
+  <script src="intelligence-data.js"></script>
+  <script src="intelligence.js"></script>
+  <script src="app.js"></script>
+  <script type="module" src="bootstrap.js"></script>
+</body>
+</html>

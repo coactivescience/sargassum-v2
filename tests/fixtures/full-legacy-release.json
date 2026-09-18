@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "schema": "giant-salvinia-legacy-v2",
+    "source_revision": "caddo-legacy-v2-test",
+    "published_at": "2026-08-26"
+  },
+  "sites": [
+    {
+      "key": "caddo",
+      "label": "Caddo Lake",
+      "status": "operational",
+      "detail": "Verified visual release"
+    }
+  ],
+  "caddo_geometry": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 1,
+          "name": "East Pocket"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [-94.05, 32.76],
+              [-94.03, 32.76],
+              [-94.04, 32.78],
+              [-94.05, 32.76]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "monitor": {
+    "bounds": [[32.69, -94.21], [32.9, -93.85]],
+    "minimum_patch_ha": 0.01,
+    "frames": [
+      {
+        "label": "2017 baseline acquisition",
+        "date": "2017-08-12",
+        "mat_ha": 8.6,
+        "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/monitor-2017.webp"
+      },
+      {
+        "label": "2021 response acquisition",
+        "date": "2021-08-15",
+        "mat_ha": 12.4,
+        "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/monitor-2021.webp"
+      },
+      {
+        "label": "2026 approved acquisition",
+        "date": "2026-07-15",
+        "mat_ha": 10.2,
+        "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/monitor-2026.webp"
+      }
+    ]
+  },
+  "detect": {
+    "date": "2026-07-15",
+    "frame": {
+      "date": "2026-07-15",
+      "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/detect-2026.webp"
+    },
+    "affected_count": 1,
+    "affected_cove_ids": [1],
+    "largest": [
+      {
+        "cove_id": 1,
+        "name": "Example Cove",
+        "detected_ha": 1.2,
+        "valid_fraction": 0.95,
+        "lonlat": [-94.04, 32.77]
+      }
+    ]
+  },
+  "response": {
+    "bounds": [[32.69, -94.21], [32.9, -93.85]],
+    "frames": [
+      {
+        "label": "Priority date",
+        "date": "2021-08-15",
+        "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/response-2021.webp"
+      },
+      {
+        "label": "Year 1 comparison",
+        "date": "2022-08-19",
+        "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/response-2022.webp"
+      },
+      {
+        "label": "Documented outcome",
+        "date": "2024-08-11",
+        "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/response-2024.webp"
+      }
+    ],
+    "treatments": [
+      {
+        "label": "Management-log comparison window",
+        "start_date": "2021-08-16",
+        "end_date": "2021-09-15",
+        "detail": "Context record; no treatment effect is inferred"
+      }
+    ],
+    "priorities": [
+      {
+        "cove_id": 1,
+        "name": "Example Cove",
+        "rank": 1,
+        "origin_ha": 1.2,
+        "growth_ha": 0.4,
+        "lonlat": [-94.04, 32.77]
+      }
+    ],
+    "hit_cove_ids": [1],
+    "missed_cove_ids": [],
+    "priority_only_cove_ids": []
+  },
+  "verification": {
+    "bounds": [[32.69, -94.21], [32.9, -93.85]],
+    "candidates": [
+      {
+        "number": 1,
+        "cove_id": 1,
+        "name": "Example Cove",
+        "area_before_ha": 1.2,
+        "area_after_ha": 0.5,
+        "elapsed_days": 30,
+        "nir_decline": 0.2,
+        "drift_status": "Candidate change",
+        "lonlat": [-94.04, 32.77],
+        "before": {
+          "date": "2021-08-15",
+          "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/verify-before.webp"
+        },
+        "after": {
+          "date": "2021-09-14",
+          "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/verify-after.webp"
+        }
+      }
+    ]
+  },
+  "hyperspectral": {
+    "context": {
+      "location_label": "Kolkata, India",
+      "sensor_label": "Pixxel FF01",
+      "capture_date": "2025-11-13",
+      "purpose_label": "Reference/evaluation material"
+    },
+    "evidence_gate": {
+      "passes": true,
+      "label": "Exploratory evidence gate passed"
+    },
+    "sites": [
+      {
+        "label": "Area A",
+        "vegetation_patches": 4,
+        "open_water_patches": 2,
+        "aquatic_cover": {
+          "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/hyperspectral-a.webp"
+        },
+        "spectrum": [
+          { "wavelength_nm": 560, "normalized_q25": 0.2, "normalized_median": 0.22, "normalized_q75": 0.24 },
+          { "wavelength_nm": 710, "normalized_q25": 0.25, "normalized_median": 0.27, "normalized_q75": 0.29 },
+          { "wavelength_nm": 870, "normalized_q25": 0.3, "normalized_median": 0.32, "normalized_q75": 0.34 }
+        ]
+      },
+      {
+        "label": "Area B",
+        "vegetation_patches": 4,
+        "open_water_patches": 2,
+        "aquatic_cover": {
+          "file": "https://api.test.invalid/api/tenants/test/salvinia/releases/test/assets/hyperspectral-b.webp"
+        },
+        "spectrum": [
+          { "wavelength_nm": 560, "normalized_q25": 0.24, "normalized_median": 0.26, "normalized_q75": 0.28 },
+          { "wavelength_nm": 710, "normalized_q25": 0.26, "normalized_median": 0.28, "normalized_q75": 0.3 },
+          { "wavelength_nm": 870, "normalized_q25": 0.28, "normalized_median": 0.3, "normalized_q75": 0.32 }
+        ]
+      }
+    ],
+    "vegetation_separation": {
+      "median_between_site_degrees": 12.4,
+      "balanced_within_site_degrees": 4.2,
+      "excess_separation_degrees": 8.2
+    },
+    "open_water_control": { "excess_separation_degrees": 1.1 },
+    "robustness": { "summary": ["Representative test comparison."] },
+    "limitations": [{ "text": "Reference evidence only." }]
+  },
+  "evidence": {
+    "monitor": { "title": "Monitor evidence", "lines": ["Verified frame."] },
+    "detect": { "title": "Detection evidence", "lines": ["Field confirmation required."] },
+    "response": { "title": "Response evidence", "lines": ["Historical decision point."] },
+    "verification": { "title": "Verification evidence", "lines": ["Change is not treatment proof."] },
+    "deploy": { "title": "Deployment evidence", "lines": ["Operational release."] }
+  }
+}

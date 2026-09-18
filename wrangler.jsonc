@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "sargassum-v2",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-23",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "observability": { "enabled": true },
+  "env": {
+    "staging": {
+      "name": "sargassum-v2-staging",
+      "vars": {
+        "API_BASE_URL": "https://api.coactivescience.dev"
+      },
+      "routes": [
+        {
+          "pattern": "sargassum.coactivescience.dev",
+          "custom_domain": true
+        }
+      ]
+    },
+    "production": {
+      "name": "sargassum-v2-production"
+    }
+  }
+}
