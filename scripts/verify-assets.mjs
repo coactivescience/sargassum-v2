@@ -13,6 +13,8 @@ const required = [
   "public/auth-client.js",
   "public/tenant-client.js",
   "public/release-client.js",
+  "public/sargassum-schema.js",
+  "public/sargassum-app.js",
   "public/landing-client.js",
   "public/bootstrap.js",
   "public/vendor/leaflet.js",

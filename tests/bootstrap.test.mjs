@@ -365,3 +365,41 @@ test("does not initialize a stale release after a newer selection starts loading
   resolveRelease(classifiedRelease());
   assert.deepEqual(await result, { status: "stale" });
 });
+
+test("classifies an invalid Sargassum release separately from an unavailable one", async () => {
+  const shown = [];
+  const result = await start(config, {
+    loadTenants: async () => [tenants[0]],
+    selectTenant: (available) => ({ tenant: available[0], source: "url" }),
+    loadRelease: async () => { throw { code: "invalid_release", status: undefined, requestId: "req-invalid" }; },
+    startApp: () => { throw new Error("an invalid release must not start the workspace"); },
+    showError: (state) => shown.push(state),
+  });
+  assert.deepEqual(result, { status: "error", code: "release_invalid" });
+  assert.deepEqual(shown, [{ code: "release_invalid", requestId: "req-invalid" }]);
+
+  const environment = browserStatusEnvironment();
+  bootstrap.showBrowserError({ code: "release_invalid", requestId: "req-invalid" }, environment.documentRef, environment.windowRef);
+  assert.match(environment.status.textContent, /Puerto Rico Sargassum release is invalid.*Reference: req-invalid\./);
+});
+
+test("loads the Puerto Rico site release route by default", async () => {
+  const priorFetch = globalThis.fetch;
+  const requested = [];
+  globalThis.fetch = async (url) => {
+    requested.push(String(url));
+    return Response.json({ error: "release_not_found" }, { status: 404 });
+  };
+  try {
+    const result = await start(config, {
+      loadTenants: async () => [tenants[0]],
+      selectTenant: (available) => ({ tenant: available[0], source: "url" }),
+      showEmptyRelease: () => {},
+      showError: () => { throw new Error("a missing release is an empty state"); },
+    });
+    assert.deepEqual(result, { status: "empty", tenantId: "tenant-a" });
+    assert.deepEqual(requested, ["https://api.example.test/api/tenants/tenant-a/salvinia/sites/puerto-rico/releases/current/manifest"]);
+  } finally {
+    globalThis.fetch = priorFetch;
+  }
+});

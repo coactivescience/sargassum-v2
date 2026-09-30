@@ -1,4 +1,5 @@
 import { validateFullLegacyRelease } from "./release-schema.js";
+import { SARGASSUM_SITE_KEY, validateSargassumDay, validateSargassumRelease } from "./sargassum-schema.js";
 
 export class ReleaseError extends Error {
   constructor(code, { status, requestId, message } = {}) {
@@ -84,4 +85,66 @@ export async function loadCurrentRelease(apiBaseUrl, tenantId, fetcher = fetch) 
   }
   const expectedPathPrefix = `/api/tenants/${encodeURIComponent(tenantId.trim())}/salvinia/releases/${encodeURIComponent(manifest.release.id.trim())}/assets/`;
   return { ...classifyRelease(resolveAssetReferences(manifest.payload, manifest.assets, apiBaseUrl, expectedPathPrefix)), releaseId: manifest.release.id.trim() };
+}
+
+function sargassumEndpointFor(apiBaseUrl, tenantId) {
+  if (typeof apiBaseUrl !== "string" || !apiBaseUrl.trim()
+    || typeof tenantId !== "string" || !tenantId.trim()) {
+    throw new ReleaseError("invalid_configuration");
+  }
+  try {
+    const api = new URL(apiBaseUrl.trim());
+    return new URL(`/api/tenants/${encodeURIComponent(tenantId.trim())}/salvinia/sites/${SARGASSUM_SITE_KEY}/releases/current/manifest`, api).toString();
+  } catch {
+    throw new ReleaseError("invalid_configuration");
+  }
+}
+
+/** Load the tenant's active Puerto Rico Sargassum release from the site-scoped route. */
+export async function loadSargassumRelease(apiBaseUrl, tenantId, fetcher = fetch) {
+  const response = await fetcher(sargassumEndpointFor(apiBaseUrl, tenantId), {
+    credentials: "include",
+    headers: { accept: "application/json" },
+  });
+  if (!response.ok) throw await responseError(response);
+
+  let manifest;
+  try { manifest = await response.json(); } catch {
+    throw new ReleaseError("invalid_release", { message: "Release manifest is not valid JSON" });
+  }
+  const releaseId = typeof manifest?.release?.id === "string" ? manifest.release.id.trim() : "";
+  if (!manifest?.payload || !manifest?.assets || typeof manifest.assets !== "object" || !releaseId) {
+    throw new ReleaseError("invalid_release", { message: "Release manifest is incomplete" });
+  }
+  if (manifest.release.site_key !== SARGASSUM_SITE_KEY) {
+    throw new ReleaseError("invalid_release", { message: "Release manifest belongs to another site" });
+  }
+  const expectedPathPrefix = `/api/tenants/${encodeURIComponent(tenantId.trim())}/salvinia/sites/${SARGASSUM_SITE_KEY}/releases/${encodeURIComponent(releaseId)}/assets/`;
+  const payload = resolveAssetReferences(manifest.payload, manifest.assets, apiBaseUrl, expectedPathPrefix);
+  const validation = validateSargassumRelease(payload);
+  if (!validation.ok) {
+    const error = new ReleaseError("invalid_release", { message: validation.errors[0] });
+    error.validation = validation;
+    throw error;
+  }
+  return {
+    kind: "sargassum",
+    release: payload,
+    releaseId,
+    sourceRevision: typeof manifest.release.source_revision === "string" ? manifest.release.source_revision : payload.meta.source_revision,
+    validation,
+  };
+}
+
+/** Fetch one day asset (already resolved and prefix-checked) and validate it against its timeline row. */
+export async function loadSargassumDay(row, fetcher = fetch) {
+  const response = await fetcher(row.file, { credentials: "include", headers: { accept: "application/json" } });
+  if (!response.ok) throw await responseError(response);
+  let record;
+  try { record = await response.json(); } catch {
+    throw new ReleaseError("invalid_release", { message: `Day ${row.date} is not valid JSON` });
+  }
+  const validation = validateSargassumDay(record, row);
+  if (!validation.ok) throw new ReleaseError("invalid_release", { message: validation.errors[0] });
+  return record;
 }

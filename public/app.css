@@ -769,3 +769,72 @@ details.evidence summary { padding: 14px 0; cursor: pointer; color: #c7d3cd; fon
 .intel-export-status { min-height:1.5em; font-size:13px; }
 @media(max-width:1050px) { .intel-map-layout {grid-template-columns:1fr;} .intel-weight-grid {grid-template-columns:repeat(3,minmax(0,1fr));} }
 @media(max-width:700px) { .intel-grid,.intel-metrics {grid-template-columns:repeat(2,minmax(0,1fr));} .intel-weight-grid {grid-template-columns:repeat(2,minmax(0,1fr));} .intel-ask-form {display:block;} .workspace-switch {flex-wrap:wrap;} #intelligence-root select {max-width:100%;} }
+
+/* Puerto Rico Sargassum workspace */
+.application-main.sargassum-main { grid-template-rows: auto auto minmax(0, 1fr) auto; }
+.sargassum-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px 10px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+.sargassum-header h1 { margin: 2px 0 0; font-size: 20px; }
+.sargassum-header .panel-kicker { margin: 0; }
+.sargassum-header-meta { text-align: right; }
+.sargassum-header-meta p { margin: 2px 0; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+.sargassum-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  padding: 10px 18px;
+  background: var(--panel);
+}
+.sargassum-tile { padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel-soft); }
+.sargassum-tile span, .sargassum-tile small { display: block; color: var(--muted); font-size: 11px; }
+.sargassum-tile strong { display: block; margin: 3px 0; color: var(--ink); font-size: 19px; }
+.sargassum-workspace { grid-template-columns: minmax(0, 1fr) 360px; min-height: 360px; }
+.sargassum-detail { min-width: 0; overflow-y: auto; padding: 16px; border-left: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+.sargassum-detail h2 { margin: 4px 0 12px; font-size: 17px; }
+.sargassum-detail h3 { margin: 16px 0 6px; color: var(--muted); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+.sargassum-facts { display: grid; gap: 4px; margin: 0; }
+.sargassum-facts div { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+.sargassum-facts dt { color: var(--muted); }
+.sargassum-facts dd { margin: 0; text-align: right; }
+.sargassum-alert { padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel-soft); font-size: 12px; }
+.sargassum-alert.active { border-color: var(--danger); background: rgba(232, 120, 104, .12); }
+.sargassum-alert p { margin: 6px 0 0; line-height: 1.45; color: var(--muted); }
+.sargassum-timeline-panel { padding: 10px 18px 14px; border-top: 1px solid var(--line); background: var(--panel); }
+.sargassum-timeline-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.sargassum-timeline-heading h2 { margin: 0 0 8px; font-size: 13px; }
+.sargassum-timeline-heading p { margin: 0; color: var(--muted); font-size: 11px; }
+.sargassum-timeline { display: flex; gap: 3px; overflow-x: auto; padding-bottom: 4px; }
+.sargassum-day {
+  position: relative;
+  display: grid;
+  grid-template-rows: 56px auto;
+  align-items: end;
+  min-width: 34px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 3px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 9px;
+}
+.sargassum-day-bar { display: block; align-self: end; width: 100%; border-radius: 3px 3px 0 0; background: var(--green); }
+.sargassum-day.severity-medium .sargassum-day-bar { background: var(--amber); }
+.sargassum-day.severity-high .sargassum-day-bar { background: var(--danger); }
+.sargassum-day.alert::after { content: ""; position: absolute; top: 2px; right: 2px; width: 7px; height: 7px; border-radius: 50%; background: var(--danger); }
+.sargassum-day.active { border-color: var(--lime-bright); color: var(--ink); background: var(--panel-soft); }
+.sargassum-day:focus-visible { outline: 2px solid #7dc6f4; outline-offset: 1px; }
+.sargassum-legend-item { display: inline-flex; align-items: center; gap: 5px; margin-right: 10px; font-size: 11px; }
+.sargassum-legend-item i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+@media (max-width: 900px) {
+  .sargassum-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sargassum-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(320px, 1fr) auto; }
+  .sargassum-detail { border-top: 1px solid var(--line); border-left: 0; }
+}

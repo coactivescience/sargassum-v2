@@ -11,7 +11,7 @@ test("keeps the MFA form out of the landing sign-in panel until it is needed", (
 });
 
 test("switches to a compact access layout instead of leaving sign-in below the marketing hero", () => {
-  assert.match(html, /<h1 id="landing-title">Lake Intelligence<\/h1>/);
+  assert.match(html, /<h1 id="landing-title">Sargassum Intelligence<\/h1>/);
   assert.match(bootstrap, /landing-auth-active/);
   assert.match(css, /\.public-landing\.landing-auth-active \.landing-hero/);
 });
@@ -19,25 +19,36 @@ test("switches to a compact access layout instead of leaving sign-in below the m
 test("keeps initial app-shell provenance neutral until the active release loads", () => {
   assert.doesNotMatch(html, /Sentinel-2|2017–2026/);
   assert.match(html, /<div class="record-badge"><span><\/span> Release record<\/div>/);
-  assert.match(html, /<div class="map-source">Approved release imagery<\/div>/);
+  assert.match(html, /<div class="map-source">Approved release detections<\/div>/);
 });
 
-test("declares the map-first operations console shell", () => {
+test("declares every element the Sargassum workspace renders into", () => {
   for (const marker of [
     "site-list",
-    "workspace-console",
-    "workspace-briefing",
-    "console-layer-control",
-    "console-inspector",
-    "console-timeline",
-    "console-metrics",
-    "console-granules",
-    "console-observations",
-    "console-source",
+    "sargassum-species",
+    "sargassum-title",
+    "sargassum-coverage",
+    "sargassum-revision",
+    "sargassum-summary",
+    "map",
+    "map-kicker",
+    "map-title",
+    "map-legend",
+    "sargassum-detail",
+    "sargassum-timeline",
+    "sargassum-day-status",
   ]) {
     assert.match(html, new RegExp(`id="${marker}"`));
   }
   assert.match(html, /<strong>Sargassum — US ACE<\/strong>/);
   assert.match(html, /Coactive Geospatial Intelligence/);
-  assert.match(html, /<script src="console\.js"><\/script>/);
+  assert.match(html, /<script type="module" src="bootstrap\.js"><\/script>/);
+});
+
+test("no longer loads the Caddo Salvinia workspace scripts or copy", () => {
+  for (const script of ["core.js", "console.js", "views.js", "intelligence-data.js", "intelligence.js", "app.js"]) {
+    assert.doesNotMatch(html, new RegExp(`<script src="${script.replace(".", "\.")}">`));
+  }
+  assert.doesNotMatch(html, /Caddo|[Gg]iant [Ss]alvinia|Lake Operations/);
+  assert.doesNotMatch(bootstrap, /startSalviniaApp|lake intelligence/);
 });

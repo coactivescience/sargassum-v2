@@ -1,4 +1,5 @@
-import { loadCurrentRelease } from "./release-client.js";
+import { loadSargassumRelease } from "./release-client.js";
+import { startSargassumWorkspace } from "./sargassum-app.js";
 import {
   loadAccessibleTenants,
   loadBrowserSession,
@@ -12,6 +13,7 @@ function stateFor(error) {
   if (error?.status === 401) return "authentication_required";
   if (error?.status === 403) return "authorization_denied";
   if (error?.status === 404) return "release_not_found";
+  if (error?.code === "invalid_release") return "release_invalid";
   return "release_unavailable";
 }
 
@@ -40,7 +42,7 @@ export async function start(config, dependencies = {}) {
   const {
     loadTenants = loadAccessibleTenants,
     loadSession = loadBrowserSession,
-    loadRelease = loadCurrentRelease,
+    loadRelease = loadSargassumRelease,
     selectTenant = selectAccessibleTenant,
     persistSelection = () => {},
     renderTenantOptions = () => {},
@@ -98,6 +100,7 @@ export async function start(config, dependencies = {}) {
       startApp(classification.release, tenant, {
         kind: classification.kind,
         ...(classification.releaseId ? { releaseId: classification.releaseId } : {}),
+        ...(classification.sourceRevision ? { sourceRevision: classification.sourceRevision } : {}),
         validation: classification.validation,
       });
       const userIdentity = await identity;
@@ -139,11 +142,12 @@ export async function start(config, dependencies = {}) {
 
 function messageFor(code) {
   return {
-    authentication_required: "Sign in to view this lake intelligence release.",
-    authorization_denied: "Your account does not have access to this lake intelligence release.",
-    no_tenant_access: "No Lake Operations workspace is available for this session.",
-    release_not_found: "There is no published lake intelligence release for this tenant yet.",
-    release_unavailable: "The lake intelligence release could not be loaded. Please try again.",
+    authentication_required: "Sign in to view the Puerto Rico Sargassum release.",
+    authorization_denied: "Your account does not have access to the Puerto Rico Sargassum release.",
+    no_tenant_access: "No Sargassum workspace is available for this session.",
+    release_not_found: "There is no published Puerto Rico Sargassum release for this tenant yet.",
+    release_invalid: "The published Puerto Rico Sargassum release is invalid and cannot be displayed. Please contact your administrator.",
+    release_unavailable: "The Puerto Rico Sargassum release could not be loaded. Please try again.",
   }[code];
 }
 
@@ -186,7 +190,7 @@ export function showBrowserEmptyRelease(_tenant, documentRef = document, windowR
   if (signIn) signIn.hidden = true;
   if (element) {
     element.hidden = false;
-    element.textContent = "Your workspace access is active. The first lake intelligence release is still being prepared.";
+    element.textContent = "Your workspace access is active. The first Puerto Rico Sargassum release is still being prepared.";
   }
 }
 
@@ -369,7 +373,7 @@ function startBrowserApp(config) {
       renderUserIdentity,
       showEmptyRelease: showBrowserEmptyRelease,
       startApp: (release, tenant, classification) => {
-        window.startSalviniaApp({ release, ...classification }, tenant, config);
+        startSargassumWorkspace({ release, ...classification }, tenant, config);
         persist(tenant.id, { replace: true });
       },
       showError: showBrowserError,
