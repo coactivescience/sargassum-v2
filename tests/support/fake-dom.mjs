@@ -92,6 +92,8 @@ export function fakeLeaflet() {
 }
 
 export const WORKSPACE_IDS = [
+  "sargassum-site-label",
+  "sargassum-site-switcher",
   "public-landing", "sargassum-species", "sargassum-title", "sargassum-coverage", "sargassum-revision",
   "sargassum-summary", "map", "map-kicker", "map-title", "map-legend", "sargassum-timeline",
   "sargassum-detail", "sargassum-day-status",

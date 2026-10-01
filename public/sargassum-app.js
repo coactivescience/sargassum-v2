@@ -1,4 +1,5 @@
-// Puerto Rico Sargassum workspace: summary, daily timeline, Leaflet map, and day detail.
+// Sargassum site workspace: summary, daily timeline, Leaflet map, and day detail.
+// Site identity and labels come from the release data; nothing names a place.
 // Every data value reaches the DOM through textContent or element attributes; the
 // module never assigns innerHTML, so upstream text (alert messages) cannot inject markup.
 import { loadSargassumDay } from "./release-client.js";
@@ -52,6 +53,32 @@ function boundsToLatLng(bounds) {
   return [[bounds.lat_min, bounds.lon_min], [bounds.lat_max, bounds.lon_max]];
 }
 
+/** A selector only when the tenant has several Sargassum sites; choosing one reloads with ?site=. */
+function renderSiteSwitcher(documentRef, windowRef, sites, selectedId, navigate) {
+  const label = documentRef.querySelector("#sargassum-site-label");
+  const control = documentRef.querySelector("#sargassum-site-switcher");
+  if (!control) return;
+  const several = Array.isArray(sites) && sites.length > 1;
+  control.hidden = !several;
+  if (label) label.hidden = !several;
+  if (!several) {
+    control.replaceChildren();
+    return;
+  }
+  control.replaceChildren(...sites.map((site) => {
+    const option = documentRef.createElement("option");
+    option.value = site.id;
+    option.textContent = site.current_release ? site.label : `${site.label} (no release yet)`;
+    option.selected = site.id === selectedId;
+    return option;
+  }));
+  control.onchange = () => {
+    const url = new URL(windowRef.location.href);
+    url.searchParams.set("site", control.value);
+    navigate(url.toString());
+  };
+}
+
 /**
  * Render the Sargassum workspace for an already-validated release classification.
  * Returns a controller with selectDate() and dispose(); the controller is also
@@ -63,6 +90,7 @@ export function startSargassumWorkspace(classification, tenant, _config, depende
     windowRef = window,
     loadDay = loadSargassumDay,
     leaflet = windowRef.L,
+    navigate = (url) => windowRef.location.assign(url),
   } = dependencies;
   windowRef.demoApp?.dispose?.();
 
@@ -76,7 +104,8 @@ export function startSargassumWorkspace(classification, tenant, _config, depende
 
   const summary = release.summary;
   const siteLabel = release.site.label;
-  query("#sargassum-species").textContent = `${release.site.species || "Sargassum"} · ${tenant?.display_name ?? "Workspace"}`;
+  query("#sargassum-species").textContent = `Sargassum · ${tenant?.display_name ?? "Workspace"}`;
+  renderSiteSwitcher(documentRef, windowRef, classification.sites, release.site.id, navigate);
   query("#sargassum-title").textContent = `${siteLabel} Sargassum detections`;
   query("#sargassum-coverage").textContent = `${summary.first_date} – ${summary.last_date} · ${summary.days} daily record${summary.days === 1 ? "" : "s"}`;
   query("#sargassum-revision").textContent = `Release ${classification.releaseId ?? "—"} · source ${classification.sourceRevision ?? release.meta.source_revision}`;
@@ -107,7 +136,7 @@ export function startSargassumWorkspace(classification, tenant, _config, depende
     }
     map.fitBounds(extent, { padding: [16, 16] });
     query("#map-kicker").textContent = "Approach zone";
-    query("#map-title").textContent = `${siteLabel} coast`;
+    query("#map-title").textContent = siteLabel;
   }
   const legend = query("#map-legend");
   legend?.replaceChildren(...[

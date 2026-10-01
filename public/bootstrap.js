@@ -95,12 +95,13 @@ export async function start(config, dependencies = {}) {
     if (source !== "url") persistSelection(tenant.id, { replace: true });
 
     try {
-      const classification = await loadRelease(apiBaseUrl, tenant.id);
+      const classification = await loadRelease(apiBaseUrl, tenant.id, { search: getSearch() });
       if (stale(isCurrent)) return { status: "stale" };
       startApp(classification.release, tenant, {
         kind: classification.kind,
         ...(classification.releaseId ? { releaseId: classification.releaseId } : {}),
         ...(classification.sourceRevision ? { sourceRevision: classification.sourceRevision } : {}),
+        ...(classification.site ? { site: classification.site, sites: classification.sites } : {}),
         validation: classification.validation,
       });
       const userIdentity = await identity;
@@ -110,7 +111,7 @@ export async function start(config, dependencies = {}) {
     } catch (error) {
       if (stale(isCurrent)) return { status: "stale" };
       if (error?.status === 404) {
-        showEmptyRelease(tenant);
+        showEmptyRelease(tenant, { code: error?.code === "no_sargassum_sites" ? "no_sargassum_sites" : "release_not_found", site: error?.site });
         const userIdentity = await identity;
         if (stale(isCurrent)) return { status: "stale" };
         if (userIdentity) renderUserIdentity(userIdentity);
@@ -142,12 +143,12 @@ export async function start(config, dependencies = {}) {
 
 function messageFor(code) {
   return {
-    authentication_required: "Sign in to view the Puerto Rico Sargassum release.",
-    authorization_denied: "Your account does not have access to the Puerto Rico Sargassum release.",
+    authentication_required: "Sign in to view the Sargassum release.",
+    authorization_denied: "Your account does not have access to the Sargassum release.",
     no_tenant_access: "No Sargassum workspace is available for this session.",
-    release_not_found: "There is no published Puerto Rico Sargassum release for this tenant yet.",
-    release_invalid: "The published Puerto Rico Sargassum release is invalid and cannot be displayed. Please contact your administrator.",
-    release_unavailable: "The Puerto Rico Sargassum release could not be loaded. Please try again.",
+    release_not_found: "There is no published Sargassum release for this tenant yet.",
+    release_invalid: "The published Sargassum release is invalid and cannot be displayed. Please contact your administrator.",
+    release_unavailable: "The Sargassum release could not be loaded. Please try again.",
   }[code];
 }
 
@@ -176,7 +177,7 @@ export function showBrowserError({ code, requestId }, documentRef = document, wi
   element.textContent = `${messageFor(code)}${requestId ? ` Reference: ${requestId}.` : ""}`;
 }
 
-export function showBrowserEmptyRelease(_tenant, documentRef = document, windowRef = window) {
+export function showBrowserEmptyRelease(_tenant, documentRef = document, windowRef = window, reason = {}) {
   windowRef.demoApp?.dispose?.();
   const landing = documentRef.querySelector("#public-landing");
   const element = documentRef.querySelector("#landing-release-status");
@@ -190,7 +191,9 @@ export function showBrowserEmptyRelease(_tenant, documentRef = document, windowR
   if (signIn) signIn.hidden = true;
   if (element) {
     element.hidden = false;
-    element.textContent = "Your workspace access is active. The first Puerto Rico Sargassum release is still being prepared.";
+    element.textContent = reason.code === "no_sargassum_sites"
+      ? "No Sargassum sites are enabled for this workspace yet. Ask your administrator to enable a site."
+      : `Your workspace access is active. The first Sargassum release${reason.site?.label ? ` for ${reason.site.label}` : ""} is still being prepared.`;
   }
 }
 
@@ -371,7 +374,7 @@ function startBrowserApp(config) {
       persistSelection: persist,
       renderTenantOptions: (tenants, selectedId) => render(tenants, selectedId, selectTenantId),
       renderUserIdentity,
-      showEmptyRelease: showBrowserEmptyRelease,
+      showEmptyRelease: (tenant, reason) => showBrowserEmptyRelease(tenant, document, window, reason),
       startApp: (release, tenant, classification) => {
         startSargassumWorkspace({ release, ...classification }, tenant, config);
         persist(tenant.id, { replace: true });

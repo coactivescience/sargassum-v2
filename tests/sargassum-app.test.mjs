@@ -8,10 +8,14 @@ import { fakeDocument, fakeLeaflet, WORKSPACE_CLASSES, WORKSPACE_IDS } from "./s
 
 const fixture = JSON.parse(readFileSync(new URL("fixtures/sargassum-manifest.json", import.meta.url)));
 const days = JSON.parse(readFileSync(new URL("fixtures/sargassum-days.json", import.meta.url)));
-const tenant = { id: fixture.release.tenant_id, display_name: "Puerto Rico DNER" };
+const tenant = { id: fixture.fixture.tenant_id, display_name: "Coastal Agency" };
+const site = fixture.fixture.site;
 
-async function classification() {
-  return loadSargassumRelease("https://api.example.test", tenant.id, async () => Response.json(structuredClone(fixture)));
+async function classification(sites = [site]) {
+  const { fixture: _fixture, ...manifest } = structuredClone(fixture);
+  return loadSargassumRelease("https://api.example.test", tenant.id, async (url) => (
+    String(url).endsWith("/sargassum/sites") ? Response.json({ sites }) : Response.json(manifest)
+  ));
 }
 
 function environment({ loadDay } = {}) {
@@ -105,4 +109,34 @@ test("renders without a map when Leaflet is unavailable", async () => {
   await controller.ready;
   assert.equal(controller.map, null);
   assert.match(env.byId("sargassum-detail").textContent, /Low severity/);
+});
+
+test("shows no site selector for a single site and labels the workspace from data", async () => {
+  const env = environment();
+  const controller = startSargassumWorkspace(await classification(), tenant, {}, env.dependencies);
+  await controller.ready;
+  assert.equal(env.byId("sargassum-site-switcher").hidden, true);
+  assert.equal(env.byId("sargassum-site-label").hidden, true);
+  assert.equal(env.byId("sargassum-species").textContent, "Sargassum · Coastal Agency");
+  assert.equal(env.byId("map-title").textContent, site.label);
+});
+
+test("offers every listed site and navigates to ?site= when another is chosen", async () => {
+  const other = { id: "00000000-0000-4000-8000-000000000303", label: "Another coast", current_release: null };
+  const env = environment();
+  const visited = [];
+  env.windowRef.location = { href: `https://app.example.test/?tenant=${tenant.id}` };
+  const controller = startSargassumWorkspace(await classification([site, other]), tenant, {}, { ...env.dependencies, navigate: (url) => visited.push(url) });
+  await controller.ready;
+  const control = env.byId("sargassum-site-switcher");
+  assert.equal(control.hidden, false);
+  assert.deepEqual(control.children.map((option) => [option.value, option.textContent, option.selected]), [
+    [site.id, site.label, true],
+    [other.id, "Another coast (no release yet)", false],
+  ]);
+  control.value = other.id;
+  control.onchange();
+  const target = new URL(visited[0]);
+  assert.equal(target.searchParams.get("site"), other.id);
+  assert.equal(target.searchParams.get("tenant"), tenant.id);
 });

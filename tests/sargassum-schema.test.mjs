@@ -8,13 +8,29 @@ const manifest = JSON.parse(readFileSync(new URL("fixtures/sargassum-manifest.js
 const days = JSON.parse(readFileSync(new URL("fixtures/sargassum-days.json", import.meta.url)));
 const payload = () => structuredClone(manifest.payload);
 
-test("accepts the payload the Puerto Rico release publisher produces", () => {
+test("accepts the payload the Sargassum release publisher produces", () => {
   assert.deepEqual(validateSargassumRelease(payload()), { ok: true, errors: [] });
+  assert.deepEqual(validateSargassumRelease(payload(), { siteId: manifest.payload.site.id }), { ok: true, errors: [] });
+});
+
+test("treats the site as data: any UUID-identified site with a label is valid", () => {
+  const value = payload();
+  value.site = { id: "00000000-0000-4000-8000-000000000999", label: "Any coastline" };
+  value.meta.site_id = value.site.id;
+  assert.deepEqual(validateSargassumRelease(value), { ok: true, errors: [] });
+});
+
+test("rejects a payload for a site other than the one requested", () => {
+  const result = validateSargassumRelease(payload(), { siteId: "00000000-0000-4000-8000-000000000303" });
+  assert.ok(result.errors.some((error) => /belongs to another site/.test(error)), result.errors.join("; "));
 });
 
 for (const [label, mutate, message] of [
   ["a Caddo legacy schema", (value) => { value.schema = "giant-salvinia-legacy-v2"; }, /schema must be sargassum-vertical-v1/],
-  ["another site", (value) => { value.meta.site_key = "caddo"; }, /meta.site_key must be puerto-rico/],
+  ["another application", (value) => { value.meta.application_key = "salvinia"; }, /meta.application_key must be sargassum/],
+  ["a site key instead of a site UUID", (value) => { value.meta.site_id = "puerto-rico"; }, /meta.site_id must be a site UUID/],
+  ["a site that disagrees with meta", (value) => { value.site.id = "00000000-0000-4000-8000-000000000303"; }, /site must match meta.site_id/],
+  ["a site without a label", (value) => { value.site.label = " "; }, /site must match meta.site_id and carry a label/],
   ["an unsupported severity", (value) => { value.timeline[0].severity = "extreme"; }, /severity must be low, medium, or high/],
   ["a coverage outside 0–100", (value) => { value.timeline[1].coverage_pct = 140; }, /coverage_pct must be a percentage/],
   ["a non-boolean alert flag", (value) => { value.timeline[0].alert_active = "yes"; }, /alert_active must be a boolean/],

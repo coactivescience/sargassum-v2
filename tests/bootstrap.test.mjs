@@ -380,26 +380,66 @@ test("classifies an invalid Sargassum release separately from an unavailable one
 
   const environment = browserStatusEnvironment();
   bootstrap.showBrowserError({ code: "release_invalid", requestId: "req-invalid" }, environment.documentRef, environment.windowRef);
-  assert.match(environment.status.textContent, /Puerto Rico Sargassum release is invalid.*Reference: req-invalid\./);
+  assert.match(environment.status.textContent, /Sargassum release is invalid.*Reference: req-invalid\./);
 });
 
-test("loads the Puerto Rico site release route by default", async () => {
+test("loads the tenant's Sargassum sites, then the selected site's release route, by default", async () => {
   const priorFetch = globalThis.fetch;
   const requested = [];
+  const siteId = "00000000-0000-4000-8000-000000000302";
   globalThis.fetch = async (url) => {
     requested.push(String(url));
-    return Response.json({ error: "release_not_found" }, { status: 404 });
+    if (String(url).endsWith("/sargassum/sites")) return Response.json({ sites: [{ id: siteId, label: "Test coast", current_release: null }] });
+    return Response.json({ error: { code: "release_not_found", request_id: "req-1" } }, { status: 404 });
   };
   try {
+    const empty = [];
     const result = await start(config, {
       loadTenants: async () => [tenants[0]],
       selectTenant: (available) => ({ tenant: available[0], source: "url" }),
-      showEmptyRelease: () => {},
+      showEmptyRelease: (tenant, reason) => empty.push(reason),
       showError: () => { throw new Error("a missing release is an empty state"); },
     });
     assert.deepEqual(result, { status: "empty", tenantId: "tenant-a" });
-    assert.deepEqual(requested, ["https://api.example.test/api/tenants/tenant-a/salvinia/sites/puerto-rico/releases/current/manifest"]);
+    assert.deepEqual(requested, [
+      "https://api.example.test/api/tenants/tenant-a/sargassum/sites",
+      `https://api.example.test/api/tenants/tenant-a/sargassum/sites/${siteId}/releases/current/manifest`,
+    ]);
+    assert.equal(empty[0].code, "release_not_found");
+    assert.equal(empty[0].site.label, "Test coast");
   } finally {
     globalThis.fetch = priorFetch;
   }
 });
+
+test("shows a distinct empty state when no Sargassum sites are enabled", async () => {
+  const empty = [];
+  const result = await start(config, {
+    loadTenants: async () => [tenants[0]],
+    selectTenant: (available) => ({ tenant: available[0], source: "url" }),
+    loadRelease: async () => { const error = new Error("none"); error.status = 404; error.code = "no_sargassum_sites"; throw error; },
+    showEmptyRelease: (tenant, reason) => empty.push(reason),
+    showError: () => { throw new Error("no sites is an empty state"); },
+  });
+  assert.deepEqual(result, { status: "empty", tenantId: "tenant-a" });
+  assert.equal(empty[0].code, "no_sargassum_sites");
+
+  const environment = browserStatusEnvironment();
+  bootstrap.showBrowserEmptyRelease(undefined, environment.documentRef, environment.windowRef, { code: "no_sargassum_sites" });
+  assert.match(environment.status.textContent, /No Sargassum sites are enabled for this workspace/);
+  bootstrap.showBrowserEmptyRelease(undefined, environment.documentRef, environment.windowRef, { code: "release_not_found", site: { label: "Test coast" } });
+  assert.match(environment.status.textContent, /first Sargassum release for Test coast is still being prepared/);
+});
+
+test("passes the page search to the release loader so ?site= selects the site", async () => {
+  const calls = [];
+  await start(config, {
+    loadTenants: async () => [tenants[0]],
+    selectTenant: (available) => ({ tenant: available[0], source: "url" }),
+    getSearch: () => "?tenant=tenant-a&site=00000000-0000-4000-8000-000000000303",
+    loadRelease: async (...args) => { calls.push(args); const error = new Error("none"); error.status = 404; throw error; },
+    showEmptyRelease: () => {},
+  });
+  assert.deepEqual(calls[0][2], { search: "?tenant=tenant-a&site=00000000-0000-4000-8000-000000000303" });
+});
+

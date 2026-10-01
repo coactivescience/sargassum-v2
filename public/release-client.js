@@ -1,5 +1,5 @@
 import { validateFullLegacyRelease } from "./release-schema.js";
-import { SARGASSUM_SITE_KEY, validateSargassumDay, validateSargassumRelease } from "./sargassum-schema.js";
+import { isSiteId, SARGASSUM_APPLICATION_KEY, validateSargassumDay, validateSargassumRelease } from "./sargassum-schema.js";
 
 export class ReleaseError extends Error {
   constructor(code, { status, requestId, message } = {}) {
@@ -62,9 +62,11 @@ export function classifyRelease(release) {
 async function responseError(response) {
   let body;
   try { body = await response.json(); } catch { /* API response had no JSON body. */ }
-  return new ReleaseError(body?.error || "release_request_failed", {
+  // The data service answers { error: { code, request_id } }; older routes used a bare string.
+  const code = typeof body?.error === "string" ? body.error : body?.error?.code;
+  return new ReleaseError(typeof code === "string" && code ? code : "release_request_failed", {
     status: response.status,
-    requestId: response.headers.get("x-request-id") || body?.request_id || undefined,
+    requestId: response.headers.get("x-request-id") || body?.error?.request_id || body?.request_id || undefined,
   });
 }
 
@@ -87,41 +89,76 @@ export async function loadCurrentRelease(apiBaseUrl, tenantId, fetcher = fetch) 
   return { ...classifyRelease(resolveAssetReferences(manifest.payload, manifest.assets, apiBaseUrl, expectedPathPrefix)), releaseId: manifest.release.id.trim() };
 }
 
-function sargassumEndpointFor(apiBaseUrl, tenantId) {
+function sargassumUrl(apiBaseUrl, tenantId, path) {
   if (typeof apiBaseUrl !== "string" || !apiBaseUrl.trim()
     || typeof tenantId !== "string" || !tenantId.trim()) {
     throw new ReleaseError("invalid_configuration");
   }
   try {
-    const api = new URL(apiBaseUrl.trim());
-    return new URL(`/api/tenants/${encodeURIComponent(tenantId.trim())}/salvinia/sites/${SARGASSUM_SITE_KEY}/releases/current/manifest`, api).toString();
+    return new URL(`/api/tenants/${encodeURIComponent(tenantId.trim())}/sargassum${path}`, new URL(apiBaseUrl.trim())).toString();
   } catch {
     throw new ReleaseError("invalid_configuration");
   }
 }
 
-/** Load the tenant's active Puerto Rico Sargassum release from the site-scoped route. */
-export async function loadSargassumRelease(apiBaseUrl, tenantId, fetcher = fetch) {
-  const response = await fetcher(sargassumEndpointFor(apiBaseUrl, tenantId), {
-    credentials: "include",
-    headers: { accept: "application/json" },
-  });
+async function getJson(url, fetcher) {
+  const response = await fetcher(url, { credentials: "include", headers: { accept: "application/json" } });
   if (!response.ok) throw await responseError(response);
+  try { return await response.json(); } catch {
+    throw new ReleaseError("invalid_release", { message: "Sargassum response is not valid JSON" });
+  }
+}
+
+/** List the tenant's sites that are enabled for Sargassum (labels and IDs come from the data service). */
+export async function loadSargassumSites(apiBaseUrl, tenantId, fetcher = fetch) {
+  const body = await getJson(sargassumUrl(apiBaseUrl, tenantId, "/sites"), fetcher);
+  if (!Array.isArray(body?.sites) || body.sites.some((site) => !isSiteId(site?.id) || typeof site?.label !== "string" || !site.label.trim())) {
+    throw new ReleaseError("invalid_release", { message: "Sargassum site list is invalid" });
+  }
+  return body.sites;
+}
+
+/**
+ * Choose the site to show: `?site=<uuid>` when it is listed, otherwise the
+ * first site with a current release, otherwise the first site.
+ */
+export function selectSargassumSite(sites, search = "") {
+  if (!Array.isArray(sites) || sites.length === 0) return null;
+  const requested = new URLSearchParams(search).get("site");
+  const fromUrl = sites.find((site) => site.id === requested);
+  if (fromUrl) return { site: fromUrl, source: "url" };
+  const withRelease = sites.find((site) => site.current_release);
+  return { site: withRelease ?? sites[0], source: "default" };
+}
+
+/**
+ * Load the active release of the selected Sargassum site. The third argument is
+ * a fetcher or { fetcher, search }.
+ */
+export async function loadSargassumRelease(apiBaseUrl, tenantId, options = {}) {
+  const { fetcher = fetch, search = "" } = typeof options === "function" ? { fetcher: options } : options;
+  const sites = await loadSargassumSites(apiBaseUrl, tenantId, fetcher);
+  const selected = selectSargassumSite(sites, search);
+  if (!selected) throw new ReleaseError("no_sargassum_sites", { status: 404, message: "No Sargassum sites are enabled for this workspace" });
+  const site = selected.site;
 
   let manifest;
-  try { manifest = await response.json(); } catch {
-    throw new ReleaseError("invalid_release", { message: "Release manifest is not valid JSON" });
+  try {
+    manifest = await getJson(sargassumUrl(apiBaseUrl, tenantId, `/sites/${encodeURIComponent(site.id)}/releases/current/manifest`), fetcher);
+  } catch (error) {
+    if (error instanceof ReleaseError) Object.assign(error, { site, sites });
+    throw error;
   }
   const releaseId = typeof manifest?.release?.id === "string" ? manifest.release.id.trim() : "";
   if (!manifest?.payload || !manifest?.assets || typeof manifest.assets !== "object" || !releaseId) {
     throw new ReleaseError("invalid_release", { message: "Release manifest is incomplete" });
   }
-  if (manifest.release.site_key !== SARGASSUM_SITE_KEY) {
-    throw new ReleaseError("invalid_release", { message: "Release manifest belongs to another site" });
+  if (manifest.release.site_id !== site.id || manifest.release.application_key !== SARGASSUM_APPLICATION_KEY) {
+    throw new ReleaseError("invalid_release", { message: "Release manifest belongs to another site or application" });
   }
-  const expectedPathPrefix = `/api/tenants/${encodeURIComponent(tenantId.trim())}/salvinia/sites/${SARGASSUM_SITE_KEY}/releases/${encodeURIComponent(releaseId)}/assets/`;
+  const expectedPathPrefix = `/api/tenants/${encodeURIComponent(tenantId.trim())}/sargassum/sites/${encodeURIComponent(site.id)}/releases/${encodeURIComponent(releaseId)}/assets/`;
   const payload = resolveAssetReferences(manifest.payload, manifest.assets, apiBaseUrl, expectedPathPrefix);
-  const validation = validateSargassumRelease(payload);
+  const validation = validateSargassumRelease(payload, { siteId: site.id });
   if (!validation.ok) {
     const error = new ReleaseError("invalid_release", { message: validation.errors[0] });
     error.validation = validation;
@@ -133,6 +170,8 @@ export async function loadSargassumRelease(apiBaseUrl, tenantId, fetcher = fetch
     releaseId,
     sourceRevision: typeof manifest.release.source_revision === "string" ? manifest.release.source_revision : payload.meta.source_revision,
     validation,
+    site,
+    sites,
   };
 }
 

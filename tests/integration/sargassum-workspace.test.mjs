@@ -11,8 +11,11 @@ import { fakeDocument, fakeLeaflet, WORKSPACE_CLASSES, WORKSPACE_IDS } from "../
 const API_ORIGIN = "https://api.example.test";
 const fixture = JSON.parse(readFileSync(new URL("../fixtures/sargassum-manifest.json", import.meta.url)));
 const days = JSON.parse(readFileSync(new URL("../fixtures/sargassum-days.json", import.meta.url)));
-const TENANT = { id: fixture.release.tenant_id, slug: "puerto-rico-dner", display_name: "Puerto Rico DNER" };
-const SITE_ROOT = `/api/tenants/${TENANT.id}/salvinia/sites/puerto-rico/releases`;
+const TENANT = { id: fixture.fixture.tenant_id, slug: "coastal-agency", display_name: "Coastal Agency" };
+const SITE = fixture.fixture.site;
+const SITES_PATH = `/api/tenants/${TENANT.id}/sargassum/sites`;
+const SITE_ROOT = `${SITES_PATH}/${SITE.id}/releases`;
+const { fixture: _context, ...MANIFEST } = fixture;
 
 function server() {
   const requests = [];
@@ -22,15 +25,16 @@ function server() {
     requests.push({ path: url.pathname, credentials: init.credentials });
     assert.equal(url.origin, API_ORIGIN);
     if (url.pathname === "/api/tenants/accessible") return Response.json({ data: { tenants: [TENANT] } });
-    if (url.pathname === `${SITE_ROOT}/current/manifest`) return Response.json(structuredClone(fixture));
+    if (url.pathname === SITES_PATH) return Response.json({ sites: [SITE] });
+    if (url.pathname === `${SITE_ROOT}/current/manifest`) return Response.json(structuredClone(MANIFEST));
     const asset = url.pathname.match(new RegExp(`^${SITE_ROOT}/${fixture.release.id}/assets/([0-9a-f]{64})$`));
     if (asset && dayByToken.has(asset[1])) return Response.json(dayByToken.get(asset[1]));
-    return Response.json({ error: "not_found" }, { status: 404 });
+    return Response.json({ error: { code: "not_found" } }, { status: 404 });
   };
   return { fetcher, requests };
 }
 
-test("an authenticated tenant loads the Puerto Rico release and renders its latest verified day", async () => {
+test("an authenticated tenant lists its Sargassum sites, loads the site release, and renders its latest verified day", async () => {
   const api = server();
   const documentRef = fakeDocument(WORKSPACE_IDS, WORKSPACE_CLASSES);
   const windowRef = {};
@@ -38,7 +42,7 @@ test("an authenticated tenant loads the Puerto Rico release and renders its late
   let controller;
   const result = await start({ apiBaseUrl: API_ORIGIN }, {
     loadTenants: (base) => loadAccessibleTenants(base, api.fetcher),
-    loadRelease: (base, tenantId) => loadSargassumRelease(base, tenantId, api.fetcher),
+    loadRelease: (base, tenantId, options) => loadSargassumRelease(base, tenantId, { ...options, fetcher: api.fetcher }),
     selectTenant: (available) => ({ tenant: available[0], source: "url" }),
     startApp: (release, tenant, classification) => {
       controller = startSargassumWorkspace({ release, ...classification }, tenant, {}, {
@@ -57,6 +61,7 @@ test("an authenticated tenant loads the Puerto Rico release and renders its late
   const latestToken = fixture.payload.timeline.at(-1).file;
   assert.deepEqual(api.requests.map((request) => request.path), [
     "/api/tenants/accessible",
+    SITES_PATH,
     `${SITE_ROOT}/current/manifest`,
     `${SITE_ROOT}/${fixture.release.id}/assets/${latestToken}`,
   ]);
@@ -67,22 +72,24 @@ test("an authenticated tenant loads the Puerto Rico release and renders its late
   assert.match(documentRef.querySelector("#sargassum-detail").textContent, /2025-05-16/);
 });
 
-test("a tenant without a Puerto Rico release sees the empty state instead of the Caddo workspace", async () => {
+test("a tenant whose site has no release yet sees the empty state, and no Salvinia route is requested", async () => {
   const requests = [];
   const fetcher = async (input) => {
     requests.push(new URL(String(input)).pathname);
     if (new URL(String(input)).pathname === "/api/tenants/accessible") return Response.json({ data: { tenants: [TENANT] } });
-    return Response.json({ error: "release_not_found" }, { status: 404 });
+    if (new URL(String(input)).pathname === SITES_PATH) return Response.json({ sites: [{ ...SITE, current_release: null }] });
+    return Response.json({ error: { code: "release_not_found" } }, { status: 404 });
   };
   let empty = false;
   const result = await start({ apiBaseUrl: API_ORIGIN }, {
     loadTenants: (base) => loadAccessibleTenants(base, fetcher),
-    loadRelease: (base, tenantId) => loadSargassumRelease(base, tenantId, fetcher),
+    loadRelease: (base, tenantId, options) => loadSargassumRelease(base, tenantId, { ...options, fetcher }),
     selectTenant: (available) => ({ tenant: available[0], source: "url" }),
     showEmptyRelease: () => { empty = true; },
     startApp: () => { throw new Error("no workspace without a release"); },
   });
   assert.deepEqual(result, { status: "empty", tenantId: TENANT.id });
   assert.equal(empty, true);
-  assert.ok(!requests.some((path) => path.includes("/salvinia/releases/current/manifest")), "the Caddo route is never requested");
+  assert.ok(!requests.some((path) => path.includes("/salvinia/")), "no Salvinia route is requested");
+  assert.deepEqual(requests.slice(1), [SITES_PATH, `${SITE_ROOT}/current/manifest`]);
 });

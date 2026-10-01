@@ -1,10 +1,11 @@
-// Strict validation for Puerto Rico Sargassum releases (schema "sargassum-vertical-v1").
-// The payload is produced by coactive_data_service's salvinia-heavy container
-// (app/salvinia/puerto_rico.py) and each timeline row's `file` has already been
-// resolved to an authorized release-asset URL by release-client.js.
+// Strict validation for Sargassum site releases (schema "sargassum-vertical-v1").
+// The payload is produced by coactive_data_service's Sargassum container
+// (containers/sargassum/app/runner.py) for one platform.sites row, and each
+// timeline row's `file` has already been resolved to an authorized
+// release-asset URL by release-client.js. Sites are data: nothing here names a place.
 
 export const SARGASSUM_SCHEMA = "sargassum-vertical-v1";
-export const SARGASSUM_SITE_KEY = "puerto-rico";
+export const SARGASSUM_APPLICATION_KEY = "sargassum";
 
 const SEVERITIES = new Set(["low", "medium", "high"]);
 const TRENDS = new Set(["baseline", "stable", "increasing", "decreasing"]);
@@ -12,6 +13,7 @@ const DATA_QUALITIES = new Set(["poor", "fair", "good"]);
 const CONFIDENCES = new Set(["high", "medium", "low"]);
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const REVISION = /^[a-z0-9][a-z0-9-]{0,127}$/;
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 
 const isObject = (value) => Boolean(value) && typeof value === "object" && !Array.isArray(value);
 const isNumber = (value) => typeof value === "number" && Number.isFinite(value);
@@ -89,14 +91,23 @@ function validateRow(row, index, check) {
   check.require(isText(row.file), `${label}.file must reference a release asset`);
 }
 
-/** Validate a resolved release payload; returns { ok, errors }. */
-export function validateSargassumRelease(payload) {
+export const isSiteId = (value) => typeof value === "string" && UUID.test(value);
+
+/**
+ * Validate a resolved release payload; returns { ok, errors }.
+ * When `siteId` is given, the payload must describe exactly that site.
+ */
+export function validateSargassumRelease(payload, { siteId } = {}) {
   const check = checker();
   if (!check.require(isObject(payload), "release payload must be an object")) return { ok: false, errors: check.errors };
   check.require(payload.schema === SARGASSUM_SCHEMA, `release schema must be ${SARGASSUM_SCHEMA}`);
-  check.require(isObject(payload.meta) && payload.meta.site_key === SARGASSUM_SITE_KEY, "release meta.site_key must be puerto-rico");
-  check.require(isObject(payload.meta) && REVISION.test(payload.meta.source_revision ?? ""), "release meta.source_revision is invalid");
-  check.require(isObject(payload.site) && payload.site.key === SARGASSUM_SITE_KEY && isText(payload.site.label), "release site must be puerto-rico with a label");
+  const meta = isObject(payload.meta) ? payload.meta : {};
+  check.require(meta.application_key === SARGASSUM_APPLICATION_KEY, `release meta.application_key must be ${SARGASSUM_APPLICATION_KEY}`);
+  check.require(isSiteId(meta.site_id), "release meta.site_id must be a site UUID");
+  check.require(REVISION.test(meta.source_revision ?? ""), "release meta.source_revision is invalid");
+  check.require(isObject(payload.site) && payload.site.id === meta.site_id && isText(payload.site.label), "release site must match meta.site_id and carry a label");
+  if (siteId !== undefined) check.require(meta.site_id === siteId, "release belongs to another site");
+  check.require(payload.detection_method === null || payload.detection_method === undefined || isText(payload.detection_method), "release detection_method must be text or null");
 
   const aoi = payload.aoi;
   check.require(

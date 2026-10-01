@@ -10,9 +10,12 @@ import { chromium } from "playwright-core";
 const PUBLIC_ROOT = resolve(fileURLToPath(new URL("../../public", import.meta.url)));
 const fixture = JSON.parse(await readFile(new URL("../fixtures/sargassum-manifest.json", import.meta.url), "utf8"));
 const days = JSON.parse(await readFile(new URL("../fixtures/sargassum-days.json", import.meta.url), "utf8"));
-const TENANT_ID = fixture.release.tenant_id;
+const TENANT_ID = fixture.fixture.tenant_id;
 const RELEASE_ID = fixture.release.id;
-const SITE_ROOT = `/api/tenants/${TENANT_ID}/salvinia/sites/puerto-rico/releases`;
+const SITE = fixture.fixture.site;
+const SITES_PATH = `/api/tenants/${TENANT_ID}/sargassum/sites`;
+const SITE_ROOT = `${SITES_PATH}/${SITE.id}/releases`;
+const { fixture: _context, ...MANIFEST } = fixture;
 const HOSTILE = "<img src=x onerror=window.__injected=1> Sargassum approaching the south coast";
 
 function json(response, body, status = 200) {
@@ -30,11 +33,12 @@ async function serveWorkspace() {
     const authenticated = request.headers.cookie?.includes("browser-acceptance=authorized");
     if (url.pathname.startsWith("/api/") && !authenticated) return json(response, { error: "authentication_required" }, 401);
     if (url.pathname === "/api/tenants/accessible") {
-      return json(response, { data: { tenants: [{ id: TENANT_ID, slug: "puerto-rico-dner", display_name: "Puerto Rico DNER" }] } });
+      return json(response, { data: { tenants: [{ id: TENANT_ID, slug: "coastal-agency", display_name: "Coastal Agency" }] } });
     }
     if (url.pathname === "/api/auth/get-session") return json(response, { user: { name: "Browser Operator", role: "operator" } });
+    if (url.pathname === SITES_PATH) return json(response, { sites: [SITE] });
     if (url.pathname === `${SITE_ROOT}/current/manifest`) {
-      const manifest = structuredClone(fixture);
+      const manifest = structuredClone(MANIFEST);
       for (const token of Object.keys(manifest.assets)) manifest.assets[token] = `${origin}${manifest.assets[token]}`;
       return json(response, manifest);
     }
@@ -64,7 +68,7 @@ async function serveWorkspace() {
   return { origin, requests, close: () => new Promise((done, fail) => server.close((error) => error ? fail(error) : done())) };
 }
 
-test("an authenticated operator browses the Puerto Rico Sargassum release day by day", async (context) => {
+test("an authenticated operator browses a Sargassum site release day by day", async (context) => {
   const workspace = await serveWorkspace();
   let browser;
   context.after(async () => {
@@ -94,7 +98,8 @@ test("an authenticated operator browses the Puerto Rico Sargassum release day by
   assert.equal(await page.evaluate(() => window.__injected), undefined);
   assert.equal(await page.locator('#sargassum-timeline button[data-date="2025-05-09"]').getAttribute("aria-pressed"), "true");
 
+  assert.ok(workspace.requests.includes(SITES_PATH));
   assert.ok(workspace.requests.includes(`${SITE_ROOT}/current/manifest`));
-  assert.ok(!workspace.requests.some((path) => path.includes("/salvinia/releases/current/manifest")), "the Caddo route is never requested");
+  assert.ok(!workspace.requests.some((path) => path.includes("/salvinia/")), "no Salvinia route is requested");
   assert.deepEqual(pageErrors, []);
 });

@@ -1,288 +1,270 @@
 {
   "release": {
     "id": "00000000-0000-4000-8000-000000000002",
-    "tenant_id": "00000000-0000-4000-8000-000000000001",
-    "site_key": "puerto-rico",
+    "site_id": "00000000-0000-4000-8000-000000000302",
+    "application_key": "sargassum",
     "status": "active",
-    "source_revision": "fixture-v1"
+    "source_revision": "fixture-v1",
+    "activated_at": "2026-10-01T00:00:00.000Z"
   },
   "payload": {
-    "schema": "sargassum-vertical-v1",
-    "site": {
-      "key": "puerto-rico",
-      "label": "Puerto Rico",
-      "species": "Sargassum"
-    },
-    "detection_method": "dual_index_NFAI_MCI",
     "aoi": {
-      "type": "FeatureCollection",
-      "name": "peurto_rico_coast_1",
       "features": [
         {
-          "type": "Feature",
-          "properties": {
-            "id": "03221ED6803E5F1767C6",
-            "Name": "pr_coast",
-            "description": null,
-            "timestamp": null,
-            "begin": null,
-            "end": null,
-            "altitudeMode": null,
-            "tessellate": -1,
-            "extrude": 0,
-            "visibility": -1,
-            "drawOrder": null,
-            "icon": null
-          },
           "geometry": {
-            "type": "Polygon",
             "coordinates": [
               [
                 [
                   -66.15408325805492,
-                  17.92049366245641,
-                  0.0
+                  17.92049366245641
                 ],
                 [
                   -66.1410840651383,
-                  17.92771242718399,
-                  0.0
+                  17.92771242718399
                 ],
                 [
                   -66.13556739000332,
-                  17.93400168940198,
-                  0.0
+                  17.93400168940198
                 ],
                 [
                   -66.12460351076956,
-                  17.93263342936418,
-                  0.0
+                  17.93263342936418
                 ],
                 [
                   -66.12062666847957,
-                  17.93893621075592,
-                  0.0
+                  17.93893621075592
                 ],
                 [
                   -66.10125144882734,
-                  17.93996739105507,
-                  0.0
+                  17.93996739105507
                 ],
                 [
                   -66.07801601757733,
-                  17.95382014503402,
-                  0.0
+                  17.95382014503402
                 ],
                 [
                   -66.08608811877207,
-                  17.96423670265979,
-                  0.0
+                  17.96423670265979
                 ],
                 [
                   -66.09366864437473,
-                  17.96000294516774,
-                  0.0
+                  17.96000294516774
                 ],
                 [
                   -66.1038988777959,
-                  17.95462227065172,
-                  0.0
+                  17.95462227065172
                 ],
                 [
                   -66.1061855507552,
-                  17.95210346326211,
-                  0.0
+                  17.95210346326211
                 ],
                 [
                   -66.10799080014445,
-                  17.95038607348365,
-                  0.0
+                  17.95038607348365
                 ],
                 [
                   -66.11773902269799,
-                  17.94729439782618,
-                  0.0
+                  17.94729439782618
                 ],
                 [
                   -66.12110885135739,
-                  17.94763762421351,
-                  0.0
+                  17.94763762421351
                 ],
                 [
                   -66.12628376623654,
-                  17.94591971873649,
-                  0.0
+                  17.94591971873649
                 ],
                 [
                   -66.12784846992588,
-                  17.94683548019884,
-                  0.0
+                  17.94683548019884
                 ],
                 [
                   -66.13459343365135,
-                  17.9413371639122,
-                  0.0
+                  17.9413371639122
                 ],
                 [
                   -66.137355058488,
-                  17.93996445175113,
-                  0.0
+                  17.93996445175113
                 ],
                 [
                   -66.14048469245006,
-                  17.94076527061718,
-                  0.0
+                  17.94076527061718
                 ],
                 [
                   -66.14686259892555,
-                  17.93343578119162,
-                  0.0
+                  17.93343578119162
                 ],
                 [
                   -66.14914966484919,
-                  17.93343511990753,
-                  0.0
+                  17.93343511990753
                 ],
                 [
                   -66.1549374871457,
-                  17.92861950968738,
-                  0.0
+                  17.92861950968738
                 ],
                 [
                   -66.15818483070716,
-                  17.92896334958942,
-                  0.0
+                  17.92896334958942
                 ],
                 [
                   -66.16010273190209,
-                  17.92713344107869,
-                  0.0
+                  17.92713344107869
                 ],
                 [
                   -66.15408325805492,
-                  17.92049366245641,
-                  0.0
+                  17.92049366245641
                 ]
               ]
-            ]
-          }
+            ],
+            "type": "Polygon"
+          },
+          "properties": {},
+          "type": "Feature"
         }
-      ]
+      ],
+      "type": "FeatureCollection"
     },
     "approach_zone": {
-      "lon_min": -69.0,
+      "lat_max": 19.5,
       "lat_min": 16.5,
       "lon_max": -63.0,
-      "lat_max": 19.5
+      "lon_min": -69.0
     },
-    "summary": {
-      "first_date": "2025-05-09",
-      "last_date": "2025-05-17",
-      "days": 3,
-      "alert_days": 1,
-      "severity_days": {
-        "low": 2,
-        "medium": 1,
-        "high": 0
-      },
-      "peak": {
-        "date": "2025-05-09",
-        "coverage_pct": 0.6452,
-        "coverage_km2": 357
-      }
-    },
+    "detection_method": "dual_index_NFAI_MCI",
     "latest": {
-      "date": "2025-05-17",
-      "severity": "low",
-      "coverage_pct": 0.0,
-      "coverage_km2": 0,
-      "trend": "stable",
-      "data_quality": "poor",
-      "valid_pct": 1.0,
-      "cloud_cover_pct": 99.0,
-      "nfai_mean": 0.0,
-      "mci_mean": 0.0,
-      "hotspot_count": 0,
       "alert_active": false,
       "alert_confidence": null,
       "arrival_probability_pct": 55.3,
+      "cloud_cover_pct": 99.0,
       "coastal_impact_pct": 0.0,
+      "coverage_km2": 0,
+      "coverage_pct": 0.0,
+      "data_quality": "poor",
+      "date": "2025-05-17",
       "days_until_peak_impact": null,
+      "file": "1b33b4d9b7a491c3ab8bffff2a79739c6e17464eca6ff9fc59e5aa923dba752b",
+      "hotspot_count": 0,
+      "mci_mean": 0.0,
+      "nfai_mean": 0.0,
       "origin_region": null,
-      "file": "1b33b4d9b7a491c3ab8bffff2a79739c6e17464eca6ff9fc59e5aa923dba752b"
+      "severity": "low",
+      "trend": "stable",
+      "valid_pct": 1.0
+    },
+    "meta": {
+      "application_key": "sargassum",
+      "operation": "sargassum-detect",
+      "site_id": "00000000-0000-4000-8000-000000000302",
+      "source_revision": "fixture-v1"
+    },
+    "schema": "sargassum-vertical-v1",
+    "site": {
+      "id": "00000000-0000-4000-8000-000000000302",
+      "label": "Puerto Rico"
+    },
+    "summary": {
+      "alert_days": 1,
+      "days": 3,
+      "first_date": "2025-05-09",
+      "last_date": "2025-05-17",
+      "peak": {
+        "coverage_km2": 357,
+        "coverage_pct": 0.6452,
+        "date": "2025-05-09"
+      },
+      "severity_days": {
+        "high": 0,
+        "low": 2,
+        "medium": 1
+      }
     },
     "timeline": [
       {
-        "date": "2025-05-09",
-        "severity": "medium",
-        "coverage_pct": 0.6452,
-        "coverage_km2": 357,
-        "trend": "decreasing",
-        "data_quality": "fair",
-        "valid_pct": 26.31,
-        "cloud_cover_pct": 73.69,
-        "nfai_mean": 0.07499,
-        "mci_mean": 0.10525,
-        "hotspot_count": 163,
         "alert_active": true,
         "alert_confidence": "medium",
         "arrival_probability_pct": 65.2,
+        "cloud_cover_pct": 73.69,
         "coastal_impact_pct": 18.12,
+        "coverage_km2": 357,
+        "coverage_pct": 0.6452,
+        "data_quality": "fair",
+        "date": "2025-05-09",
         "days_until_peak_impact": 14,
+        "file": "cc94cda8731979b65cc9c4d00fe4333741841b9ecbb73a21129c8a0cda4eb41d",
+        "hotspot_count": 163,
+        "mci_mean": 0.10525,
+        "nfai_mean": 0.07499,
         "origin_region": "ACR",
-        "file": "cc94cda8731979b65cc9c4d00fe4333741841b9ecbb73a21129c8a0cda4eb41d"
+        "severity": "medium",
+        "trend": "decreasing",
+        "valid_pct": 26.31
       },
       {
-        "date": "2025-05-16",
-        "severity": "low",
-        "coverage_pct": 0.024,
-        "coverage_km2": 4,
-        "trend": "stable",
-        "data_quality": "poor",
-        "valid_pct": 7.81,
-        "cloud_cover_pct": 92.19,
-        "nfai_mean": 0.02094,
-        "mci_mean": 0.12167,
-        "hotspot_count": 4,
         "alert_active": false,
         "alert_confidence": null,
         "arrival_probability_pct": 54.2,
+        "cloud_cover_pct": 92.19,
         "coastal_impact_pct": 0.0,
+        "coverage_km2": 4,
+        "coverage_pct": 0.024,
+        "data_quality": "poor",
+        "date": "2025-05-16",
         "days_until_peak_impact": null,
+        "file": "d4349672b5ba89ce68e1b355008211687483e46e6b20784e553b34d56446a9b4",
+        "hotspot_count": 4,
+        "mci_mean": 0.12167,
+        "nfai_mean": 0.02094,
         "origin_region": "ACR",
-        "file": "d4349672b5ba89ce68e1b355008211687483e46e6b20784e553b34d56446a9b4"
+        "severity": "low",
+        "trend": "stable",
+        "valid_pct": 7.81
       },
       {
-        "date": "2025-05-17",
-        "severity": "low",
-        "coverage_pct": 0.0,
-        "coverage_km2": 0,
-        "trend": "stable",
-        "data_quality": "poor",
-        "valid_pct": 1.0,
-        "cloud_cover_pct": 99.0,
-        "nfai_mean": 0.0,
-        "mci_mean": 0.0,
-        "hotspot_count": 0,
         "alert_active": false,
         "alert_confidence": null,
         "arrival_probability_pct": 55.3,
+        "cloud_cover_pct": 99.0,
         "coastal_impact_pct": 0.0,
+        "coverage_km2": 0,
+        "coverage_pct": 0.0,
+        "data_quality": "poor",
+        "date": "2025-05-17",
         "days_until_peak_impact": null,
+        "file": "1b33b4d9b7a491c3ab8bffff2a79739c6e17464eca6ff9fc59e5aa923dba752b",
+        "hotspot_count": 0,
+        "mci_mean": 0.0,
+        "nfai_mean": 0.0,
         "origin_region": null,
-        "file": "1b33b4d9b7a491c3ab8bffff2a79739c6e17464eca6ff9fc59e5aa923dba752b"
+        "severity": "low",
+        "trend": "stable",
+        "valid_pct": 1.0
       }
-    ],
-    "meta": {
-      "site_key": "puerto-rico",
-      "source_revision": "fixture-v1",
-      "operation": "sargassum-detect"
-    }
+    ]
   },
   "assets": {
-    "cc94cda8731979b65cc9c4d00fe4333741841b9ecbb73a21129c8a0cda4eb41d": "/api/tenants/00000000-0000-4000-8000-000000000001/salvinia/sites/puerto-rico/releases/00000000-0000-4000-8000-000000000002/assets/cc94cda8731979b65cc9c4d00fe4333741841b9ecbb73a21129c8a0cda4eb41d",
-    "d4349672b5ba89ce68e1b355008211687483e46e6b20784e553b34d56446a9b4": "/api/tenants/00000000-0000-4000-8000-000000000001/salvinia/sites/puerto-rico/releases/00000000-0000-4000-8000-000000000002/assets/d4349672b5ba89ce68e1b355008211687483e46e6b20784e553b34d56446a9b4",
-    "1b33b4d9b7a491c3ab8bffff2a79739c6e17464eca6ff9fc59e5aa923dba752b": "/api/tenants/00000000-0000-4000-8000-000000000001/salvinia/sites/puerto-rico/releases/00000000-0000-4000-8000-000000000002/assets/1b33b4d9b7a491c3ab8bffff2a79739c6e17464eca6ff9fc59e5aa923dba752b"
+    "1b33b4d9b7a491c3ab8bffff2a79739c6e17464eca6ff9fc59e5aa923dba752b": "/api/tenants/00000000-0000-4000-8000-000000000001/sargassum/sites/00000000-0000-4000-8000-000000000302/releases/00000000-0000-4000-8000-000000000002/assets/1b33b4d9b7a491c3ab8bffff2a79739c6e17464eca6ff9fc59e5aa923dba752b",
+    "68208a15c538089d7ffb8541b2a48102177e67519b646711f01a298dc1044cb0": "/api/tenants/00000000-0000-4000-8000-000000000001/sargassum/sites/00000000-0000-4000-8000-000000000302/releases/00000000-0000-4000-8000-000000000002/assets/68208a15c538089d7ffb8541b2a48102177e67519b646711f01a298dc1044cb0",
+    "cc94cda8731979b65cc9c4d00fe4333741841b9ecbb73a21129c8a0cda4eb41d": "/api/tenants/00000000-0000-4000-8000-000000000001/sargassum/sites/00000000-0000-4000-8000-000000000302/releases/00000000-0000-4000-8000-000000000002/assets/cc94cda8731979b65cc9c4d00fe4333741841b9ecbb73a21129c8a0cda4eb41d",
+    "d4349672b5ba89ce68e1b355008211687483e46e6b20784e553b34d56446a9b4": "/api/tenants/00000000-0000-4000-8000-000000000001/sargassum/sites/00000000-0000-4000-8000-000000000302/releases/00000000-0000-4000-8000-000000000002/assets/d4349672b5ba89ce68e1b355008211687483e46e6b20784e553b34d56446a9b4"
   },
-  "request_id": "fixture-request"
+  "request_id": "fixture-request",
+  "fixture": {
+    "tenant_id": "00000000-0000-4000-8000-000000000001",
+    "site": {
+      "id": "00000000-0000-4000-8000-000000000302",
+      "label": "Puerto Rico",
+      "bbox": [
+        -66.16010273190209,
+        17.92049366245641,
+        -66.07801601757733,
+        17.96423670265979
+      ],
+      "can_initiate_processing": true,
+      "current_release": {
+        "id": "00000000-0000-4000-8000-000000000002",
+        "source_revision": "fixture-v1",
+        "activated_at": "2026-10-01T00:00:00.000Z"
+      }
+    }
+  }
 }

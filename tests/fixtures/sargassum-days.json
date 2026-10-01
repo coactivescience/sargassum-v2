@@ -1,1 +1,3435 @@
-{"2025-05-09": {"FAI_mean": 0.07499, "MCI_mean": 0.10525, "MNDWI_mean": null, "NDVI_mean": null, "NDWI_mean": null, "NFAI_mean": 0.07499, "alert": {"active": true, "conditions": {"bloom_present": true, "coastal_pathway": true, "origin_confirmed": true}, "confidence": "medium", "evidence": {"acr_origin_fraction": 1.0, "arrival_probability_pct": 65.2, "coastal_impact_pct": 18.12, "coverage_km2": 357, "coverage_pct": 0.6452, "days_until_peak_impact": 14, "pathway_source": "lagrangian", "s2_confirmed": null}, "message": "Confirmed Sargassum bloom (~357 km\u00b2) on a trajectory to reach Puerto Rico's south coast in approximately ~14 days. Origin traced to Antilles Current Region."}, "aoi": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -63.0, "lon_min": -69.0, "name": "PR_approach_zone"}, "cloud_cover_pct": 73.69, "corridor": {"acr_upstream": {"active": true, "bounds": {"lat_max": 22, "lat_min": 10, "lon_max": -55, "lon_min": -70}, "coverage_pct": 0.925, "km_to_coast": 600, "label": "ACR Source (upstream)"}, "approach": {"active": false, "bounds": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -67, "lon_min": -69}, "hotspot_count": 0, "km_to_coast": 15, "label": "Near Approach / Mona Passage", "total_weight": 0}, "entry": {"active": true, "bounds": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -63, "lon_min": -65}, "hotspot_count": 150, "km_to_coast": 150, "label": "Eastern Entry (ACR inflow)", "total_weight": 11.714}, "transit": {"active": true, "bounds": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -65, "lon_min": -67}, "hotspot_count": 13, "km_to_coast": 50, "label": "Mid Corridor (approaching)", "total_weight": 0.611}}, "coverage_km2": 357, "coverage_pct": 0.6452, "data_quality": "fair", "date": "2025-05-09", "detection_method": "dual_index_NFAI_MCI", "forecast": {"arrival_probability_pct": 65.2, "coastal_impact_7d": 14.77, "coastal_impact_pct": 18.12, "days_until_impact": 5, "days_until_peak_impact": 14, "drift_centroids": [{"day": 0, "lat": 17.0659, "lon": -64.17}, {"day": 1, "lat": 17.2266, "lon": -64.2836}, {"day": 2, "lat": 17.4038, "lon": -64.3952}, {"day": 3, "lat": 17.5686, "lon": -64.4666}, {"day": 4, "lat": 17.7268, "lon": -64.5622}, {"day": 5, "lat": 17.8691, "lon": -64.6433}, {"day": 6, "lat": 17.9908, "lon": -64.6738}, {"day": 7, "lat": 18.0682, "lon": -64.7192}], "impact_by_day": [{"day": 1, "impact_pct": 0.0}, {"day": 2, "impact_pct": 0.0}, {"day": 3, "impact_pct": 0.67}, {"day": 4, "impact_pct": 0.0}, {"day": 5, "impact_pct": 7.38}, {"day": 6, "impact_pct": 11.41}, {"day": 7, "impact_pct": 14.77}, {"day": 8, "impact_pct": 15.44}, {"day": 9, "impact_pct": 15.44}, {"day": 10, "impact_pct": 16.78}, {"day": 11, "impact_pct": 14.77}, {"day": 12, "impact_pct": 15.44}, {"day": 13, "impact_pct": 16.11}, {"day": 14, "impact_pct": 18.12}, {"day": 15, "impact_pct": 16.78}, {"day": 16, "impact_pct": 16.11}, {"day": 17, "impact_pct": 15.44}, {"day": 18, "impact_pct": 14.77}, {"day": 19, "impact_pct": 14.77}, {"day": 20, "impact_pct": 14.77}, {"day": 21, "impact_pct": 14.77}], "lead_time_days": 14, "model": "lagrangian_forward_euler", "p_acr_lagged": 52.4, "p_presence": 65.2, "sample_trajectories": [{"coastal_arrival_prob": 100.0, "hotspot_id": "H0142", "path": [{"day": 0, "lat": 17.575, "lon": -65.075}, {"day": 1, "lat": 17.7187, "lon": -65.2679}, {"day": 2, "lat": 17.9071, "lon": -65.4565}, {"day": 3, "lat": 18.013, "lon": -65.5322}, {"day": 4, "lat": 18.1195, "lon": -65.5608}, {"day": 5, "lat": 18.2002, "lon": -65.5771}, {"day": 6, "lat": 18.3014, "lon": -65.4936}, {"day": 7, "lat": 18.3605, "lon": -65.5617}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0051", "path": [{"day": 0, "lat": 16.725, "lon": -65.275}, {"day": 1, "lat": 16.7841, "lon": -65.3151}, {"day": 2, "lat": 16.86, "lon": -65.4582}, {"day": 3, "lat": 16.9307, "lon": -65.54}, {"day": 4, "lat": 17.0432, "lon": -65.6822}, {"day": 5, "lat": 17.1346, "lon": -65.837}, {"day": 6, "lat": 17.2475, "lon": -65.9268}, {"day": 7, "lat": 17.3367, "lon": -66.0699}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0006", "path": [{"day": 0, "lat": 16.525, "lon": -64.775}, {"day": 1, "lat": 16.7284, "lon": -64.9436}, {"day": 2, "lat": 17.0231, "lon": -65.1614}, {"day": 3, "lat": 17.2427, "lon": -65.2953}, {"day": 4, "lat": 17.4703, "lon": -65.4354}, {"day": 5, "lat": 17.6986, "lon": -65.6298}, {"day": 6, "lat": 17.8285, "lon": -65.8094}, {"day": 7, "lat": 17.869, "lon": -65.9884}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0007", "path": [{"day": 0, "lat": 16.525, "lon": -64.725}, {"day": 1, "lat": 16.7284, "lon": -64.8936}, {"day": 2, "lat": 17.0231, "lon": -65.1114}, {"day": 3, "lat": 17.2965, "lon": -65.2588}, {"day": 4, "lat": 17.5735, "lon": -65.4056}, {"day": 5, "lat": 17.7854, "lon": -65.6104}, {"day": 6, "lat": 17.9341, "lon": -65.7551}, {"day": 7, "lat": 17.9667, "lon": -65.8951}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0004", "path": [{"day": 0, "lat": 16.525, "lon": -64.875}, {"day": 1, "lat": 16.643, "lon": -64.9874}, {"day": 2, "lat": 16.8815, "lon": -65.1836}, {"day": 3, "lat": 17.0915, "lon": -65.3241}, {"day": 4, "lat": 17.3057, "lon": -65.4706}, {"day": 5, "lat": 17.5026, "lon": -65.6472}, {"day": 6, "lat": 17.659, "lon": -65.796}, {"day": 7, "lat": 17.739, "lon": -65.9846}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0017", "path": [{"day": 0, "lat": 16.575, "lon": -64.825}, {"day": 1, "lat": 16.7683, "lon": -64.9694}, {"day": 2, "lat": 17.0351, "lon": -65.1638}, {"day": 3, "lat": 17.2547, "lon": -65.2977}, {"day": 4, "lat": 17.4823, "lon": -65.4378}, {"day": 5, "lat": 17.7107, "lon": -65.6322}, {"day": 6, "lat": 17.8262, "lon": -65.8033}, {"day": 7, "lat": 17.8667, "lon": -65.9822}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0016", "path": [{"day": 0, "lat": 16.575, "lon": -64.925}, {"day": 1, "lat": 16.7244, "lon": -65.0385}, {"day": 2, "lat": 16.9911, "lon": -65.2329}, {"day": 3, "lat": 17.1522, "lon": -65.3496}, {"day": 4, "lat": 17.3756, "lon": -65.4905}, {"day": 5, "lat": 17.5701, "lon": -65.6786}, {"day": 6, "lat": 17.7156, "lon": -65.849}, {"day": 7, "lat": 17.783, "lon": -66.0316}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0014", "path": [{"day": 0, "lat": 16.525, "lon": -64.175}, {"day": 1, "lat": 16.5398, "lon": -64.3382}, {"day": 2, "lat": 16.6155, "lon": -64.4579}, {"day": 3, "lat": 16.6899, "lon": -64.5706}, {"day": 4, "lat": 16.7958, "lon": -64.7146}, {"day": 5, "lat": 16.918, "lon": -64.9128}, {"day": 6, "lat": 17.0666, "lon": -65.0785}, {"day": 7, "lat": 17.1749, "lon": -65.2905}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0018", "path": [{"day": 0, "lat": 16.575, "lon": -64.775}, {"day": 1, "lat": 16.8071, "lon": -64.946}, {"day": 2, "lat": 17.1177, "lon": -65.1519}, {"day": 3, "lat": 17.3429, "lon": -65.2827}, {"day": 4, "lat": 17.62, "lon": -65.4295}, {"day": 5, "lat": 17.8318, "lon": -65.6344}, {"day": 6, "lat": 17.9304, "lon": -65.7952}, {"day": 7, "lat": 17.9331, "lon": -65.932}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0022", "path": [{"day": 0, "lat": 16.575, "lon": -64.575}, {"day": 1, "lat": 16.7451, "lon": -64.7658}, {"day": 2, "lat": 16.9819, "lon": -64.9894}, {"day": 3, "lat": 17.281, "lon": -65.146}, {"day": 4, "lat": 17.5934, "lon": -65.2971}, {"day": 5, "lat": 17.8328, "lon": -65.4782}, {"day": 6, "lat": 17.9911, "lon": -65.5818}, {"day": 7, "lat": 18.0588, "lon": -65.6069}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0019", "path": [{"day": 0, "lat": 16.575, "lon": -64.725}, {"day": 1, "lat": 16.8071, "lon": -64.896}, {"day": 2, "lat": 17.1177, "lon": -65.1019}, {"day": 3, "lat": 17.398, "lon": -65.2385}, {"day": 4, "lat": 17.6638, "lon": -65.3909}, {"day": 5, "lat": 17.8561, "lon": -65.5952}, {"day": 6, "lat": 17.9848, "lon": -65.7316}, {"day": 7, "lat": 18.0108, "lon": -65.7816}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0020", "path": [{"day": 0, "lat": 16.575, "lon": -64.675}, {"day": 1, "lat": 16.8, "lon": -64.8618}, {"day": 2, "lat": 17.0902, "lon": -65.0764}, {"day": 3, "lat": 17.3705, "lon": -65.213}, {"day": 4, "lat": 17.6476, "lon": -65.3598}, {"day": 5, "lat": 17.8609, "lon": -65.5356}, {"day": 6, "lat": 18.0192, "lon": -65.6393}, {"day": 7, "lat": 18.0713, "lon": -65.6842}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0021", "path": [{"day": 0, "lat": 16.575, "lon": -64.625}, {"day": 1, "lat": 16.8, "lon": -64.8118}, {"day": 2, "lat": 17.0902, "lon": -65.0264}, {"day": 3, "lat": 17.3963, "lon": -65.1641}, {"day": 4, "lat": 17.6921, "lon": -65.3104}, {"day": 5, "lat": 17.9054, "lon": -65.4862}, {"day": 6, "lat": 18.0162, "lon": -65.5922}, {"day": 7, "lat": 18.0839, "lon": -65.6173}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0025", "path": [{"day": 0, "lat": 16.575, "lon": -64.375}, {"day": 1, "lat": 16.6419, "lon": -64.5634}, {"day": 2, "lat": 16.7798, "lon": -64.7622}, {"day": 3, "lat": 16.9706, "lon": -64.9616}, {"day": 4, "lat": 17.2279, "lon": -65.1781}, {"day": 5, "lat": 17.503, "lon": -65.3887}, {"day": 6, "lat": 17.7744, "lon": -65.5014}, {"day": 7, "lat": 17.9548, "lon": -65.5905}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0024", "path": [{"day": 0, "lat": 16.575, "lon": -64.425}, {"day": 1, "lat": 16.6419, "lon": -64.6134}, {"day": 2, "lat": 16.7798, "lon": -64.8122}, {"day": 3, "lat": 17.0128, "lon": -65.0205}, {"day": 4, "lat": 17.2701, "lon": -65.2371}, {"day": 5, "lat": 17.5627, "lon": -65.4445}, {"day": 6, "lat": 17.8206, "lon": -65.5499}, {"day": 7, "lat": 17.9518, "lon": -65.6531}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0075", "path": [{"day": 0, "lat": 16.825, "lon": -64.875}, {"day": 1, "lat": 17.0532, "lon": -64.9715}, {"day": 2, "lat": 17.3684, "lon": -65.1402}, {"day": 3, "lat": 17.5858, "lon": -65.297}, {"day": 4, "lat": 17.7815, "lon": -65.4828}, {"day": 5, "lat": 17.94, "lon": -65.6977}, {"day": 6, "lat": 18.0093, "lon": -65.8479}, {"day": 7, "lat": 18.0226, "lon": -65.9127}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0079", "path": [{"day": 0, "lat": 16.875, "lon": -64.825}, {"day": 1, "lat": 17.1592, "lon": -64.9436}, {"day": 2, "lat": 17.4786, "lon": -65.1162}, {"day": 3, "lat": 17.6948, "lon": -65.2774}, {"day": 4, "lat": 17.9077, "lon": -65.4411}, {"day": 5, "lat": 18.0293, "lon": -65.5715}, {"day": 6, "lat": 18.1013, "lon": -65.6314}, {"day": 7, "lat": 18.1437, "lon": -65.6411}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0083", "path": [{"day": 0, "lat": 16.925, "lon": -64.825}, {"day": 1, "lat": 17.222, "lon": -64.9301}, {"day": 2, "lat": 17.5266, "lon": -65.1105}, {"day": 3, "lat": 17.7428, "lon": -65.2717}, {"day": 4, "lat": 17.9374, "lon": -65.4126}, {"day": 5, "lat": 18.059, "lon": -65.543}, {"day": 6, "lat": 18.1566, "lon": -65.5325}, {"day": 7, "lat": 18.2023, "lon": -65.5109}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0082", "path": [{"day": 0, "lat": 16.925, "lon": -64.925}, {"day": 1, "lat": 17.1636, "lon": -65.0145}, {"day": 2, "lat": 17.4771, "lon": -65.1852}, {"day": 3, "lat": 17.6783, "lon": -65.3804}, {"day": 4, "lat": 17.8306, "lon": -65.5821}, {"day": 5, "lat": 17.9559, "lon": -65.7879}, {"day": 6, "lat": 17.9897, "lon": -65.9448}, {"day": 7, "lat": 17.9897, "lon": -65.9448}]}, {"coastal_arrival_prob": 100.0, "hotspot_id": "H0073", "path": [{"day": 0, "lat": 16.825, "lon": -65.075}, {"day": 1, "lat": 16.9298, "lon": -65.1411}, {"day": 2, "lat": 17.1082, "lon": -65.278}, {"day": 3, "lat": 17.2775, "lon": -65.3957}, {"day": 4, "lat": 17.4573, "lon": -65.5281}, {"day": 5, "lat": 17.6518, "lon": -65.7162}, {"day": 6, "lat": 17.7501, "lon": -65.9157}, {"day": 7, "lat": 17.7937, "lon": -66.1172}]}]}, "hotspots": [{"coastal_arrival_prob": 85.2, "id": "H0001", "lat": 16.525, "lon": -65.175, "mci": 0.044, "nfai": 0.03827, "weight": 0.0375, "zone": "transit"}, {"coastal_arrival_prob": 87.1, "id": "H0002", "lat": 16.525, "lon": -65.125, "mci": 0.07514, "nfai": 0.06852, "weight": 0.0925, "zone": "transit"}, {"coastal_arrival_prob": 87.9, "id": "H0003", "lat": 16.525, "lon": -65.075, "mci": 0.0625, "nfai": 0.0581, "weight": 0.04336, "zone": "transit"}, {"coastal_arrival_prob": 100.0, "id": "H0004", "lat": 16.525, "lon": -64.875, "mci": 0.09662, "nfai": 0.09196, "weight": 0.1625, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0005", "lat": 16.525, "lon": -64.825, "mci": 0.07071, "nfai": 0.06642, "weight": 0.3175, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0006", "lat": 16.525, "lon": -64.775, "mci": 0.11759, "nfai": 0.09384, "weight": 0.27, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0007", "lat": 16.525, "lon": -64.725, "mci": 0.14086, "nfai": 0.11732, "weight": 0.0875, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0008", "lat": 16.525, "lon": -64.675, "mci": 0.04333, "nfai": 0.01533, "weight": 0.015, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0009", "lat": 16.525, "lon": -64.625, "mci": 0.04223, "nfai": 0.03508, "weight": 0.28, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0010", "lat": 16.525, "lon": -64.525, "mci": 0.04, "nfai": 0.02786, "weight": 0.02828, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0011", "lat": 16.525, "lon": -64.475, "mci": 0.01, "nfai": 0.0052, "weight": 0.00262, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0012", "lat": 16.525, "lon": -64.325, "mci": 0.07714, "nfai": 0.06858, "weight": 0.2275, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0013", "lat": 16.525, "lon": -64.225, "mci": 0.06667, "nfai": 0.03857, "weight": 0.03, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0014", "lat": 16.525, "lon": -64.175, "mci": 0.31443, "nfai": 0.1805, "weight": 0.17588, "zone": "entry"}, {"coastal_arrival_prob": 15.3, "id": "H0015", "lat": 16.525, "lon": -63.375, "mci": 0.10837, "nfai": 0.07962, "weight": 0.1075, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0016", "lat": 16.575, "lon": -64.925, "mci": 0.07632, "nfai": 0.0942, "weight": 0.0475, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0017", "lat": 16.575, "lon": -64.825, "mci": 0.03118, "nfai": 0.02438, "weight": 0.0425, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0018", "lat": 16.575, "lon": -64.775, "mci": 0.0625, "nfai": 0.0616, "weight": 0.18, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0019", "lat": 16.575, "lon": -64.725, "mci": 0.06746, "nfai": 0.06904, "weight": 0.1475, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0020", "lat": 16.575, "lon": -64.675, "mci": 0.07549, "nfai": 0.05221, "weight": 0.305, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0021", "lat": 16.575, "lon": -64.625, "mci": 0.0488, "nfai": 0.0335, "weight": 0.0625, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0022", "lat": 16.575, "lon": -64.575, "mci": 0.04167, "nfai": 0.05217, "weight": 0.015, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0023", "lat": 16.575, "lon": -64.525, "mci": 0.05607, "nfai": 0.04258, "weight": 0.14, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0024", "lat": 16.575, "lon": -64.425, "mci": 0.22171, "nfai": 0.16618, "weight": 0.1847, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0025", "lat": 16.575, "lon": -64.375, "mci": 0.10035, "nfai": 0.09195, "weight": 0.1425, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0026", "lat": 16.575, "lon": -64.325, "mci": 0.08941, "nfai": 0.07895, "weight": 0.2525, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0027", "lat": 16.575, "lon": -64.275, "mci": 0.05875, "nfai": 0.06275, "weight": 0.02, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0028", "lat": 16.575, "lon": -64.225, "mci": 0.10333, "nfai": 0.08872, "weight": 0.045, "zone": "entry"}, {"coastal_arrival_prob": 21.8, "id": "H0029", "lat": 16.575, "lon": -63.425, "mci": 0.08184, "nfai": 0.07656, "weight": 0.095, "zone": "entry"}, {"coastal_arrival_prob": 18.1, "id": "H0030", "lat": 16.575, "lon": -63.375, "mci": 0.056, "nfai": 0.02403, "weight": 0.025, "zone": "entry"}, {"coastal_arrival_prob": 8.4, "id": "H0031", "lat": 16.575, "lon": -63.225, "mci": 0.068, "nfai": 0.03068, "weight": 0.05, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0032", "lat": 16.625, "lon": -65.075, "mci": 0.028, "nfai": 0.04918, "weight": 0.01587, "zone": "transit"}, {"coastal_arrival_prob": 100.0, "id": "H0033", "lat": 16.625, "lon": -65.025, "mci": 0.30958, "nfai": 0.16741, "weight": 0.12121, "zone": "transit"}, {"coastal_arrival_prob": 0.0, "id": "H0034", "lat": 16.625, "lon": -64.975, "mci": 0.025, "nfai": 0.0606, "weight": 0.005, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0035", "lat": 16.625, "lon": -64.925, "mci": 0.09385, "nfai": 0.07892, "weight": 0.03283, "zone": "entry"}, {"coastal_arrival_prob": 66.0, "id": "H0036", "lat": 16.625, "lon": -64.575, "mci": 0.0605, "nfai": 0.05584, "weight": 0.05, "zone": "entry"}, {"coastal_arrival_prob": 65.9, "id": "H0037", "lat": 16.625, "lon": -64.475, "mci": 0.036, "nfai": 0.04924, "weight": 0.0625, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0038", "lat": 16.625, "lon": -64.375, "mci": 0.13865, "nfai": 0.09927, "weight": 0.24, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0039", "lat": 16.625, "lon": -64.225, "mci": 0.06692, "nfai": 0.03001, "weight": 0.0325, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0040", "lat": 16.625, "lon": -63.175, "mci": 0.04, "nfai": 0.027, "weight": 0.0025, "zone": "entry"}, {"coastal_arrival_prob": 14.8, "id": "H0041", "lat": 16.625, "lon": -63.125, "mci": 0.0913, "nfai": 0.04206, "weight": 0.0575, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0042", "lat": 16.675, "lon": -65.025, "mci": 0.082, "nfai": 0.09506, "weight": 0.01479, "zone": "transit"}, {"coastal_arrival_prob": 0.0, "id": "H0043", "lat": 16.675, "lon": -64.975, "mci": 0.085, "nfai": 0.09565, "weight": 0.00512, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0044", "lat": 16.675, "lon": -64.825, "mci": 0.28623, "nfai": 0.20576, "weight": 0.15404, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0045", "lat": 16.675, "lon": -64.775, "mci": 0.11818, "nfai": 0.11235, "weight": 0.11733, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0046", "lat": 16.675, "lon": -64.725, "mci": 0.02333, "nfai": 0.04802, "weight": 0.01515, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0047", "lat": 16.675, "lon": -64.325, "mci": 0.10125, "nfai": 0.14144, "weight": 0.02, "zone": "entry"}, {"coastal_arrival_prob": 7.6, "id": "H0048", "lat": 16.675, "lon": -63.225, "mci": 0.052, "nfai": 0.02782, "weight": 0.0125, "zone": "entry"}, {"coastal_arrival_prob": 11.5, "id": "H0049", "lat": 16.675, "lon": -63.175, "mci": 0.10761, "nfai": 0.07037, "weight": 0.4075, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0050", "lat": 16.675, "lon": -63.125, "mci": 0.07227, "nfai": 0.03199, "weight": 0.11, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0051", "lat": 16.725, "lon": -65.275, "mci": 0.04778, "nfai": 0.0244, "weight": 0.03125, "zone": "transit"}, {"coastal_arrival_prob": 87.3, "id": "H0052", "lat": 16.725, "lon": -65.225, "mci": 0.14778, "nfai": 0.07876, "weight": 0.0675, "zone": "transit"}, {"coastal_arrival_prob": 100.0, "id": "H0053", "lat": 16.725, "lon": -65.175, "mci": 0.13636, "nfai": 0.09722, "weight": 0.03064, "zone": "transit"}, {"coastal_arrival_prob": 66.9, "id": "H0054", "lat": 16.725, "lon": -64.725, "mci": 0.103, "nfai": 0.0963, "weight": 0.025, "zone": "entry"}, {"coastal_arrival_prob": 64.8, "id": "H0055", "lat": 16.725, "lon": -64.675, "mci": 0.0836, "nfai": 0.09054, "weight": 0.0625, "zone": "entry"}, {"coastal_arrival_prob": 61.5, "id": "H0056", "lat": 16.725, "lon": -64.625, "mci": 0.09759, "nfai": 0.0984, "weight": 0.0725, "zone": "entry"}, {"coastal_arrival_prob": 62.0, "id": "H0057", "lat": 16.725, "lon": -64.575, "mci": 0.08848, "nfai": 0.09291, "weight": 0.115, "zone": "entry"}, {"coastal_arrival_prob": 62.5, "id": "H0058", "lat": 16.725, "lon": -64.475, "mci": 0.06061, "nfai": 0.06432, "weight": 0.0825, "zone": "entry"}, {"coastal_arrival_prob": 62.1, "id": "H0059", "lat": 16.725, "lon": -64.375, "mci": 0.04857, "nfai": 0.02994, "weight": 0.0525, "zone": "entry"}, {"coastal_arrival_prob": 64.8, "id": "H0060", "lat": 16.725, "lon": -64.325, "mci": 0.05067, "nfai": 0.07695, "weight": 0.0375, "zone": "entry"}, {"coastal_arrival_prob": 14.8, "id": "H0061", "lat": 16.725, "lon": -63.175, "mci": 0.06956, "nfai": 0.03186, "weight": 0.1125, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0062", "lat": 16.775, "lon": -65.225, "mci": 0.06063, "nfai": 0.02874, "weight": 0.04, "zone": "transit"}, {"coastal_arrival_prob": 100.0, "id": "H0063", "lat": 16.775, "lon": -64.875, "mci": 0.034, "nfai": 0.0355, "weight": 0.05, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0064", "lat": 16.775, "lon": -64.775, "mci": 0.07687, "nfai": 0.09035, "weight": 0.04, "zone": "entry"}, {"coastal_arrival_prob": 66.5, "id": "H0065", "lat": 16.775, "lon": -64.725, "mci": 0.04929, "nfai": 0.07086, "weight": 0.035, "zone": "entry"}, {"coastal_arrival_prob": 61.4, "id": "H0066", "lat": 16.775, "lon": -64.625, "mci": 0.08842, "nfai": 0.08788, "weight": 0.0475, "zone": "entry"}, {"coastal_arrival_prob": 61.5, "id": "H0067", "lat": 16.775, "lon": -64.575, "mci": 0.04588, "nfai": 0.03463, "weight": 0.0425, "zone": "entry"}, {"coastal_arrival_prob": 59.4, "id": "H0068", "lat": 16.775, "lon": -64.525, "mci": 0.10573, "nfai": 0.07975, "weight": 0.2925, "zone": "entry"}, {"coastal_arrival_prob": 59.3, "id": "H0069", "lat": 16.775, "lon": -64.475, "mci": 0.04788, "nfai": 0.03311, "weight": 0.0825, "zone": "entry"}, {"coastal_arrival_prob": 9.3, "id": "H0070", "lat": 16.775, "lon": -63.225, "mci": 0.09262, "nfai": 0.0809, "weight": 0.21, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0071", "lat": 16.775, "lon": -63.075, "mci": 0.075, "nfai": 0.05573, "weight": 0.01, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0072", "lat": 16.775, "lon": -63.025, "mci": 0.05778, "nfai": 0.03457, "weight": 0.0225, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0073", "lat": 16.825, "lon": -65.075, "mci": 0.10294, "nfai": 0.07895, "weight": 0.04381, "zone": "transit"}, {"coastal_arrival_prob": 100.0, "id": "H0074", "lat": 16.825, "lon": -65.025, "mci": 0.03, "nfai": 0.04401, "weight": 0.035, "zone": "transit"}, {"coastal_arrival_prob": 100.0, "id": "H0075", "lat": 16.825, "lon": -64.875, "mci": 0.04182, "nfai": 0.04013, "weight": 0.0275, "zone": "entry"}, {"coastal_arrival_prob": 57.3, "id": "H0076", "lat": 16.825, "lon": -64.525, "mci": 0.06857, "nfai": 0.03407, "weight": 0.035, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0077", "lat": 16.825, "lon": -64.475, "mci": 0.04, "nfai": 0.0207, "weight": 0.005, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0078", "lat": 16.825, "lon": -63.125, "mci": 0.12214, "nfai": 0.14676, "weight": 0.035, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0079", "lat": 16.875, "lon": -64.825, "mci": 0.10963, "nfai": 0.09126, "weight": 0.2, "zone": "entry"}, {"coastal_arrival_prob": 63.1, "id": "H0080", "lat": 16.875, "lon": -64.725, "mci": 0.026, "nfai": 0.02695, "weight": 0.025, "zone": "entry"}, {"coastal_arrival_prob": 60.4, "id": "H0081", "lat": 16.875, "lon": -64.675, "mci": 0.04716, "nfai": 0.03456, "weight": 0.1675, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0082", "lat": 16.925, "lon": -64.925, "mci": 0.05444, "nfai": 0.043, "weight": 0.0225, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0083", "lat": 16.925, "lon": -64.825, "mci": 0.09563, "nfai": 0.09532, "weight": 0.08, "zone": "entry"}, {"coastal_arrival_prob": 57.7, "id": "H0084", "lat": 16.925, "lon": -64.675, "mci": 0.07897, "nfai": 0.07169, "weight": 0.0725, "zone": "entry"}, {"coastal_arrival_prob": 54.6, "id": "H0085", "lat": 16.925, "lon": -64.625, "mci": 0.06486, "nfai": 0.05494, "weight": 0.0875, "zone": "entry"}, {"coastal_arrival_prob": 53.7, "id": "H0086", "lat": 16.925, "lon": -64.575, "mci": 0.0625, "nfai": 0.0511, "weight": 0.01, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0087", "lat": 16.925, "lon": -63.125, "mci": 0.0725, "nfai": 0.0984, "weight": 0.03008, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0088", "lat": 16.925, "lon": -63.075, "mci": 0.04, "nfai": 0.04103, "weight": 0.015, "zone": "entry"}, {"coastal_arrival_prob": 63.7, "id": "H0089", "lat": 16.975, "lon": -64.825, "mci": 0.04688, "nfai": 0.05253, "weight": 0.04, "zone": "entry"}, {"coastal_arrival_prob": 62.4, "id": "H0090", "lat": 16.975, "lon": -64.775, "mci": 0.0532, "nfai": 0.04698, "weight": 0.0625, "zone": "entry"}, {"coastal_arrival_prob": 58.5, "id": "H0091", "lat": 16.975, "lon": -64.725, "mci": 0.10136, "nfai": 0.07998, "weight": 0.1475, "zone": "entry"}, {"coastal_arrival_prob": 55.9, "id": "H0092", "lat": 16.975, "lon": -64.675, "mci": 0.07714, "nfai": 0.0531, "weight": 0.0175, "zone": "entry"}, {"coastal_arrival_prob": 51.2, "id": "H0093", "lat": 16.975, "lon": -64.575, "mci": 0.14743, "nfai": 0.12032, "weight": 0.0875, "zone": "entry"}, {"coastal_arrival_prob": 33.2, "id": "H0094", "lat": 16.975, "lon": -63.875, "mci": 0.04714, "nfai": 0.03488, "weight": 0.03535, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0095", "lat": 16.975, "lon": -63.825, "mci": 0.04, "nfai": 0.0557, "weight": 0.00269, "zone": "entry"}, {"coastal_arrival_prob": 58.6, "id": "H0096", "lat": 17.025, "lon": -64.725, "mci": 0.0725, "nfai": 0.05478, "weight": 0.01, "zone": "entry"}, {"coastal_arrival_prob": 56.6, "id": "H0097", "lat": 17.025, "lon": -64.675, "mci": 0.05875, "nfai": 0.04314, "weight": 0.04432, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0098", "lat": 17.025, "lon": -64.625, "mci": 0.075, "nfai": 0.05855, "weight": 0.005, "zone": "entry"}, {"coastal_arrival_prob": 51.2, "id": "H0099", "lat": 17.025, "lon": -64.575, "mci": 0.13879, "nfai": 0.10381, "weight": 0.145, "zone": "entry"}, {"coastal_arrival_prob": 49.5, "id": "H0100", "lat": 17.025, "lon": -64.525, "mci": 0.16065, "nfai": 0.1218, "weight": 0.115, "zone": "entry"}, {"coastal_arrival_prob": 46.9, "id": "H0101", "lat": 17.025, "lon": -64.475, "mci": 0.058, "nfai": 0.02408, "weight": 0.0125, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0102", "lat": 17.075, "lon": -64.725, "mci": 0.05333, "nfai": 0.04017, "weight": 0.0075, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0103", "lat": 17.075, "lon": -64.675, "mci": 0.03667, "nfai": 0.01673, "weight": 0.0075, "zone": "entry"}, {"coastal_arrival_prob": 50.5, "id": "H0104", "lat": 17.075, "lon": -64.625, "mci": 0.07571, "nfai": 0.07967, "weight": 0.0175, "zone": "entry"}, {"coastal_arrival_prob": 48.0, "id": "H0105", "lat": 17.075, "lon": -64.575, "mci": 0.04615, "nfai": 0.04891, "weight": 0.0325, "zone": "entry"}, {"coastal_arrival_prob": 47.6, "id": "H0106", "lat": 17.075, "lon": -64.525, "mci": 0.05412, "nfai": 0.05762, "weight": 0.0425, "zone": "entry"}, {"coastal_arrival_prob": 44.1, "id": "H0107", "lat": 17.075, "lon": -64.475, "mci": 0.06056, "nfai": 0.03688, "weight": 0.045, "zone": "entry"}, {"coastal_arrival_prob": 10.5, "id": "H0108", "lat": 17.075, "lon": -63.375, "mci": 0.12627, "nfai": 0.09611, "weight": 0.1275, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0109", "lat": 17.075, "lon": -63.325, "mci": 0.04417, "nfai": 0.02476, "weight": 0.09, "zone": "entry"}, {"coastal_arrival_prob": 11.8, "id": "H0110", "lat": 17.125, "lon": -63.675, "mci": 0.04429, "nfai": 0.03831, "weight": 0.0175, "zone": "entry"}, {"coastal_arrival_prob": 10.2, "id": "H0111", "lat": 17.125, "lon": -63.625, "mci": 0.045, "nfai": 0.04228, "weight": 0.01, "zone": "entry"}, {"coastal_arrival_prob": 8.1, "id": "H0112", "lat": 17.125, "lon": -63.575, "mci": 0.16111, "nfai": 0.07566, "weight": 0.09114, "zone": "entry"}, {"coastal_arrival_prob": 4.5, "id": "H0113", "lat": 17.125, "lon": -63.525, "mci": 0.11276, "nfai": 0.06111, "weight": 0.0725, "zone": "entry"}, {"coastal_arrival_prob": 3.9, "id": "H0114", "lat": 17.125, "lon": -63.475, "mci": 0.11465, "nfai": 0.0619, "weight": 0.215, "zone": "entry"}, {"coastal_arrival_prob": 6.4, "id": "H0115", "lat": 17.125, "lon": -63.425, "mci": 0.07226, "nfai": 0.05164, "weight": 0.0775, "zone": "entry"}, {"coastal_arrival_prob": 10.5, "id": "H0116", "lat": 17.125, "lon": -63.375, "mci": 0.06722, "nfai": 0.02014, "weight": 0.045, "zone": "entry"}, {"coastal_arrival_prob": 14.4, "id": "H0117", "lat": 17.175, "lon": -63.775, "mci": 0.09944, "nfai": 0.06304, "weight": 0.045, "zone": "entry"}, {"coastal_arrival_prob": 12.2, "id": "H0118", "lat": 17.175, "lon": -63.725, "mci": 0.12319, "nfai": 0.06125, "weight": 0.235, "zone": "entry"}, {"coastal_arrival_prob": 9.1, "id": "H0119", "lat": 17.175, "lon": -63.675, "mci": 0.19231, "nfai": 0.09413, "weight": 0.13542, "zone": "entry"}, {"coastal_arrival_prob": 7.5, "id": "H0120", "lat": 17.175, "lon": -63.625, "mci": 0.06071, "nfai": 0.0345, "weight": 0.03763, "zone": "entry"}, {"coastal_arrival_prob": 5.1, "id": "H0121", "lat": 17.175, "lon": -63.575, "mci": 0.07934, "nfai": 0.0456, "weight": 0.1525, "zone": "entry"}, {"coastal_arrival_prob": 3.1, "id": "H0122", "lat": 17.175, "lon": -63.525, "mci": 0.25295, "nfai": 0.12041, "weight": 0.2375, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0123", "lat": 17.175, "lon": -63.475, "mci": 0.13, "nfai": 0.041, "weight": 0.0075, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0124", "lat": 17.175, "lon": -63.175, "mci": 0.18364, "nfai": 0.13742, "weight": 0.1925, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0125", "lat": 17.175, "lon": -63.125, "mci": 0.2076, "nfai": 0.14303, "weight": 0.0625, "zone": "entry"}, {"coastal_arrival_prob": 16.5, "id": "H0126", "lat": 17.225, "lon": -63.925, "mci": 0.066, "nfai": 0.03525, "weight": 0.0375, "zone": "entry"}, {"coastal_arrival_prob": 12.7, "id": "H0127", "lat": 17.225, "lon": -63.825, "mci": 0.0875, "nfai": 0.07192, "weight": 0.0203, "zone": "entry"}, {"coastal_arrival_prob": 10.0, "id": "H0128", "lat": 17.225, "lon": -63.775, "mci": 0.05929, "nfai": 0.025, "weight": 0.035, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0129", "lat": 17.225, "lon": -63.725, "mci": 0.03, "nfai": 0.0099, "weight": 0.00256, "zone": "entry"}, {"coastal_arrival_prob": 3.9, "id": "H0130", "lat": 17.225, "lon": -63.575, "mci": 0.05083, "nfai": 0.03966, "weight": 0.03, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0131", "lat": 17.225, "lon": -63.475, "mci": 0.07, "nfai": 0.0199, "weight": 0.0025, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0132", "lat": 17.225, "lon": -63.225, "mci": 0.09684, "nfai": 0.08309, "weight": 0.1425, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0133", "lat": 17.225, "lon": -63.175, "mci": 0.1825, "nfai": 0.12572, "weight": 0.1, "zone": "entry"}, {"coastal_arrival_prob": 22.0, "id": "H0134", "lat": 17.275, "lon": -64.075, "mci": 0.03667, "nfai": 0.03301, "weight": 0.0225, "zone": "entry"}, {"coastal_arrival_prob": 20.0, "id": "H0135", "lat": 17.275, "lon": -64.025, "mci": 0.05129, "nfai": 0.03576, "weight": 0.0775, "zone": "entry"}, {"coastal_arrival_prob": 1.2, "id": "H0136", "lat": 17.275, "lon": -63.525, "mci": 0.16222, "nfai": 0.10388, "weight": 0.09023, "zone": "entry"}, {"coastal_arrival_prob": 8.9, "id": "H0137", "lat": 17.275, "lon": -63.475, "mci": 0.29909, "nfai": 0.15194, "weight": 0.05627, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0138", "lat": 17.275, "lon": -63.175, "mci": 0.04111, "nfai": 0.03584, "weight": 0.0225, "zone": "entry"}, {"coastal_arrival_prob": 2.5, "id": "H0139", "lat": 17.325, "lon": -63.625, "mci": 0.06292, "nfai": 0.03393, "weight": 0.1625, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0140", "lat": 17.325, "lon": -63.275, "mci": 0.1, "nfai": 0.07832, "weight": 0.07, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0141", "lat": 17.325, "lon": -63.225, "mci": 0.07087, "nfai": 0.06695, "weight": 0.0575, "zone": "entry"}, {"coastal_arrival_prob": 100.0, "id": "H0142", "lat": 17.575, "lon": -65.075, "mci": 0.03333, "nfai": 0.0386, "weight": 0.0375, "zone": "transit"}, {"coastal_arrival_prob": 53.7, "id": "H0143", "lat": 17.625, "lon": -64.875, "mci": 0.12184, "nfai": 0.07473, "weight": 0.10526, "zone": "entry"}, {"coastal_arrival_prob": 23.8, "id": "H0144", "lat": 18.125, "lon": -64.075, "mci": 0.062, "nfai": 0.0397, "weight": 0.02564, "zone": "entry"}, {"coastal_arrival_prob": 24.7, "id": "H0145", "lat": 18.125, "lon": -64.025, "mci": 0.06739, "nfai": 0.03366, "weight": 0.06069, "zone": "entry"}, {"coastal_arrival_prob": 25.6, "id": "H0146", "lat": 18.175, "lon": -64.025, "mci": 0.1169, "nfai": 0.05344, "weight": 0.21914, "zone": "entry"}, {"coastal_arrival_prob": 24.2, "id": "H0147", "lat": 18.175, "lon": -63.975, "mci": 0.075, "nfai": 0.03554, "weight": 0.055, "zone": "entry"}, {"coastal_arrival_prob": 25.3, "id": "H0148", "lat": 18.175, "lon": -63.925, "mci": 0.06469, "nfai": 0.03018, "weight": 0.08, "zone": "entry"}, {"coastal_arrival_prob": 48.5, "id": "H0149", "lat": 18.225, "lon": -64.775, "mci": 0.02667, "nfai": 0.02768, "weight": 0.03987, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0150", "lat": 18.575, "lon": -63.925, "mci": 0.04, "nfai": 0.04213, "weight": 0.0075, "zone": "entry"}, {"coastal_arrival_prob": 25.8, "id": "H0151", "lat": 18.575, "lon": -63.875, "mci": 0.10442, "nfai": 0.05187, "weight": 0.1075, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0152", "lat": 18.575, "lon": -63.825, "mci": 0.08, "nfai": 0.0328, "weight": 0.0025, "zone": "entry"}, {"coastal_arrival_prob": 23.0, "id": "H0153", "lat": 18.625, "lon": -63.825, "mci": 0.04409, "nfai": 0.02235, "weight": 0.05528, "zone": "entry"}, {"coastal_arrival_prob": 9.7, "id": "H0154", "lat": 18.675, "lon": -63.325, "mci": 0.14727, "nfai": 0.08964, "weight": 0.08271, "zone": "entry"}, {"coastal_arrival_prob": 7.9, "id": "H0155", "lat": 18.725, "lon": -63.325, "mci": 0.11714, "nfai": 0.06603, "weight": 0.03509, "zone": "entry"}, {"coastal_arrival_prob": 6.6, "id": "H0156", "lat": 18.725, "lon": -63.275, "mci": 0.06696, "nfai": 0.03792, "weight": 0.05793, "zone": "entry"}, {"coastal_arrival_prob": 5.2, "id": "H0157", "lat": 18.775, "lon": -63.325, "mci": 0.045, "nfai": 0.01128, "weight": 0.01036, "zone": "entry"}, {"coastal_arrival_prob": 3.6, "id": "H0158", "lat": 18.775, "lon": -63.275, "mci": 0.07, "nfai": 0.03688, "weight": 0.0229, "zone": "entry"}, {"coastal_arrival_prob": 1.6, "id": "H0159", "lat": 18.775, "lon": -63.175, "mci": 0.15222, "nfai": 0.09396, "weight": 0.0225, "zone": "entry"}, {"coastal_arrival_prob": 0.5, "id": "H0160", "lat": 18.825, "lon": -63.175, "mci": 0.12, "nfai": 0.06712, "weight": 0.01259, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0161", "lat": 18.825, "lon": -63.125, "mci": 0.06, "nfai": 0.01635, "weight": 0.01005, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0162", "lat": 18.825, "lon": -63.075, "mci": 0.08231, "nfai": 0.02445, "weight": 0.0325, "zone": "entry"}, {"coastal_arrival_prob": 21.6, "id": "H0163", "lat": 19.425, "lon": -64.475, "mci": 0.04889, "nfai": 0.02521, "weight": 0.0225, "zone": "entry"}], "invasion_index": 0.1613, "origin": {"backtrack_days": 14, "model": "lagrangian_backtrack_euler", "most_likely_region": "ACR", "region_fractions": {"ACR": 1.0, "GASB": 0.0, "GSR": 0.0, "NSS": 0.0, "NW_GoM": 0.0, "SSS": 0.5503}}, "primary_indicator": "NFAI", "severity": "medium", "source_region": "ACR", "trend": "decreasing", "upstream": {"active": true, "bounds": {"lat_max": 22, "lat_min": 10, "lon_max": -55, "lon_min": -70}, "coverage_pct": 0.9248, "description": "Antilles Current Region \u2014 validated sole upstream source", "region": "ACR", "valid_pct": 37.48}, "valid_pct": 26.31}, "2025-05-16": {"FAI_mean": 0.02094, "MCI_mean": 0.12167, "MNDWI_mean": null, "NDVI_mean": null, "NDWI_mean": null, "NFAI_mean": 0.02094, "alert": {"active": false, "conditions": {"bloom_present": false, "coastal_pathway": false, "origin_confirmed": false}, "confidence": null, "evidence": {"acr_origin_fraction": 1.0, "arrival_probability_pct": 54.2, "coastal_impact_pct": 0.0, "coverage_km2": 4, "coverage_pct": 0.024, "days_until_peak_impact": null, "pathway_source": "lagrangian", "s2_confirmed": null}, "message": null}, "alert_context": {"days_elapsed": 4, "forecast_window_days": 21, "message": "Day 4 of 21 \u2014 2025-05-12 alert still active. Model predicts peak coastal impact around 2025-05-30.", "predicted_centroid": {"lat": 17.8909, "lon": -67.2696}, "predicted_impact_pct": 7.35, "predicted_peak_date": "2025-05-30", "source_bloom_km2": 1029, "source_date": "2025-05-12"}, "aoi": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -63.0, "lon_min": -69.0, "name": "PR_approach_zone"}, "cloud_cover_pct": 92.19, "corridor": {"acr_upstream": {"active": false, "bounds": {"lat_max": 22, "lat_min": 10, "lon_max": -55, "lon_min": -70}, "coverage_pct": 0.186, "km_to_coast": 600, "label": "ACR Source (upstream)"}, "approach": {"active": false, "bounds": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -67, "lon_min": -69}, "hotspot_count": 0, "km_to_coast": 15, "label": "Near Approach / Mona Passage", "total_weight": 0}, "entry": {"active": true, "bounds": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -63, "lon_min": -65}, "hotspot_count": 3, "km_to_coast": 150, "label": "Eastern Entry (ACR inflow)", "total_weight": 0.087}, "transit": {"active": true, "bounds": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -65, "lon_min": -67}, "hotspot_count": 1, "km_to_coast": 50, "label": "Mid Corridor (approaching)", "total_weight": 0.052}}, "coverage_km2": 4, "coverage_pct": 0.024, "data_quality": "poor", "date": "2025-05-16", "detection_method": "dual_index_NFAI_MCI", "forecast": {"arrival_probability_pct": 54.2, "coastal_impact_7d": 0.0, "coastal_impact_pct": 0.0, "days_until_impact": null, "days_until_peak_impact": null, "drift_centroids": [{"day": 0, "lat": 18.1083, "lon": -64.3083}, {"day": 1, "lat": 18.1408, "lon": -64.3411}, {"day": 2, "lat": 18.1596, "lon": -64.382}, {"day": 3, "lat": 18.159, "lon": -64.4193}, {"day": 4, "lat": 18.1611, "lon": -64.4527}, {"day": 5, "lat": 18.1539, "lon": -64.5044}, {"day": 6, "lat": 18.1263, "lon": -64.4978}, {"day": 7, "lat": 18.1166, "lon": -64.507}], "impact_by_day": [{"day": 1, "impact_pct": 0.0}, {"day": 2, "impact_pct": 0.0}, {"day": 3, "impact_pct": 0.0}, {"day": 4, "impact_pct": 0.0}, {"day": 5, "impact_pct": 0.0}, {"day": 6, "impact_pct": 0.0}, {"day": 7, "impact_pct": 0.0}, {"day": 8, "impact_pct": 0.0}, {"day": 9, "impact_pct": 0.0}, {"day": 10, "impact_pct": 0.0}, {"day": 11, "impact_pct": 0.0}, {"day": 12, "impact_pct": 0.0}, {"day": 13, "impact_pct": 0.0}, {"day": 14, "impact_pct": 0.0}, {"day": 15, "impact_pct": 0.0}, {"day": 16, "impact_pct": 0.0}, {"day": 17, "impact_pct": 0.0}, {"day": 18, "impact_pct": 0.0}, {"day": 19, "impact_pct": 0.0}, {"day": 20, "impact_pct": 0.0}, {"day": 21, "impact_pct": 0.0}], "lead_time_days": 14, "model": "lagrangian_forward_euler", "p_acr_lagged": 54.2, "p_presence": 1.9, "sample_trajectories": [{"coastal_arrival_prob": 64.7, "hotspot_id": "H0003", "path": [{"day": 0, "lat": 18.725, "lon": -65.825}, {"day": 1, "lat": 18.7878, "lon": -65.8192}, {"day": 2, "lat": 18.8211, "lon": -65.8415}, {"day": 3, "lat": 18.8582, "lon": -65.8818}, {"day": 4, "lat": 18.9145, "lon": -65.9131}, {"day": 5, "lat": 18.9771, "lon": -65.953}, {"day": 6, "lat": 19.0161, "lon": -65.9555}, {"day": 7, "lat": 19.1087, "lon": -65.968}]}, {"coastal_arrival_prob": 18.0, "hotspot_id": "H0004", "path": [{"day": 0, "lat": 19.075, "lon": -64.075}, {"day": 1, "lat": 19.1387, "lon": -64.1591}, {"day": 2, "lat": 19.2093, "lon": -64.2449}, {"day": 3, "lat": 19.2539, "lon": -64.3026}, {"day": 4, "lat": 19.3332, "lon": -64.3999}, {"day": 5, "lat": 19.3897, "lon": -64.4611}, {"day": 6, "lat": 19.4415, "lon": -64.5094}, {"day": 7, "lat": 19.518, "lon": -64.5857}]}, {"coastal_arrival_prob": 0.0, "hotspot_id": "H0001", "path": [{"day": 0, "lat": 16.525, "lon": -63.025}, {"day": 1, "lat": 16.4958, "lon": -63.0449}, {"day": 2, "lat": 16.4484, "lon": -63.0597}, {"day": 3, "lat": 16.3648, "lon": -63.0734}, {"day": 4, "lat": 16.2357, "lon": -63.0451}, {"day": 5, "lat": 16.0951, "lon": -63.0992}, {"day": 6, "lat": 15.9212, "lon": -63.0286}, {"day": 7, "lat": 15.723, "lon": -62.9673}]}]}, "hotspots": [{"coastal_arrival_prob": 0.0, "id": "H0001", "lat": 16.525, "lon": -63.025, "mci": 0.06071, "nfai": 0.02221, "weight": 0.035, "zone": "entry"}, {"coastal_arrival_prob": 0.0, "id": "H0002", "lat": 16.575, "lon": -63.025, "mci": 0.03, "nfai": 0.00725, "weight": 0.00943, "zone": "entry"}, {"coastal_arrival_prob": 64.7, "id": "H0003", "lat": 18.725, "lon": -65.825, "mci": 0.10286, "nfai": 0.02079, "weight": 0.0525, "zone": "transit"}, {"coastal_arrival_prob": 18.0, "id": "H0004", "lat": 19.075, "lon": -64.075, "mci": 0.20588, "nfai": 0.02168, "weight": 0.0425, "zone": "entry"}], "invasion_index": 0.006, "origin": {"backtrack_days": 14, "model": "lagrangian_backtrack_euler", "most_likely_region": "ACR", "region_fractions": {"ACR": 1.0, "GASB": 0.0, "GSR": 0.0, "NSS": 0.0, "NW_GoM": 0.0, "SSS": 0.6667}}, "primary_indicator": "NFAI", "severity": "low", "source_region": "ACR", "trend": "stable", "upstream": {"active": false, "bounds": {"lat_max": 22, "lat_min": 10, "lon_max": -55, "lon_min": -70}, "coverage_pct": 0.1856, "description": "Antilles Current Region \u2014 validated sole upstream source", "region": "ACR", "valid_pct": 27.82}, "valid_pct": 7.81}, "2025-05-17": {"FAI_mean": 0.0, "MCI_mean": 0.0, "MNDWI_mean": null, "NDVI_mean": null, "NDWI_mean": null, "NFAI_mean": 0.0, "alert": {"active": false, "conditions": {"bloom_present": false, "coastal_pathway": false, "origin_confirmed": false}, "confidence": null, "evidence": {"acr_origin_fraction": 0.0, "arrival_probability_pct": 55.3, "coastal_impact_pct": 0.0, "coverage_km2": 0, "coverage_pct": 0.0, "days_until_peak_impact": null, "pathway_source": "lagrangian", "s2_confirmed": null}, "message": null}, "alert_context": {"days_elapsed": 5, "forecast_window_days": 21, "message": "Day 5 of 21 \u2014 2025-05-12 alert still active. Model predicts peak coastal impact around 2025-05-30.", "predicted_centroid": {"lat": 17.9699, "lon": -67.3408}, "predicted_impact_pct": 7.35, "predicted_peak_date": "2025-05-30", "source_bloom_km2": 1029, "source_date": "2025-05-12"}, "aoi": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -63.0, "lon_min": -69.0, "name": "PR_approach_zone"}, "cloud_cover_pct": 99.0, "corridor": {"acr_upstream": {"active": false, "bounds": {"lat_max": 22, "lat_min": 10, "lon_max": -55, "lon_min": -70}, "coverage_pct": 0.05, "km_to_coast": 600, "label": "ACR Source (upstream)"}, "approach": {"active": false, "bounds": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -67, "lon_min": -69}, "hotspot_count": 0, "km_to_coast": 15, "label": "Near Approach / Mona Passage", "total_weight": 0}, "entry": {"active": false, "bounds": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -63, "lon_min": -65}, "hotspot_count": 0, "km_to_coast": 150, "label": "Eastern Entry (ACR inflow)", "total_weight": 0}, "transit": {"active": false, "bounds": {"lat_max": 19.5, "lat_min": 16.5, "lon_max": -65, "lon_min": -67}, "hotspot_count": 0, "km_to_coast": 50, "label": "Mid Corridor (approaching)", "total_weight": 0}}, "coverage_km2": 0, "coverage_pct": 0.0, "data_quality": "poor", "date": "2025-05-17", "detection_method": "dual_index_NFAI_MCI", "forecast": {"arrival_probability_pct": 55.3, "coastal_impact_7d": 0.0, "coastal_impact_pct": 0.0, "days_until_impact": null, "days_until_peak_impact": null, "drift_centroids": [], "impact_by_day": [], "lead_time_days": 14, "model": "lagrangian_forward_euler", "p_acr_lagged": 55.3, "p_presence": 0.0, "sample_trajectories": []}, "hotspots": [], "invasion_index": 0.0, "origin": {"backtrack_days": 14, "model": "lagrangian_backtrack_euler", "most_likely_region": null, "region_fractions": {"ACR": 0.0, "GASB": 0.0, "GSR": 0.0, "NSS": 0.0, "NW_GoM": 0.0, "SSS": 0.0}}, "primary_indicator": "NFAI", "severity": "low", "source_region": "ACR", "trend": "stable", "upstream": {"active": false, "bounds": {"lat_max": 22, "lat_min": 10, "lon_max": -55, "lon_min": -70}, "coverage_pct": 0.05, "description": "Antilles Current Region \u2014 validated sole upstream source", "region": "ACR", "valid_pct": 19.35}, "valid_pct": 1.0}}
+{
+  "2025-05-09": {
+    "date": "2025-05-09",
+    "FAI_mean": 0.07499,
+    "NDVI_mean": null,
+    "NDWI_mean": null,
+    "MNDWI_mean": null,
+    "severity": "medium",
+    "coverage_pct": 0.6452,
+    "invasion_index": 0.1613,
+    "trend": "decreasing",
+    "primary_indicator": "NFAI",
+    "NFAI_mean": 0.07499,
+    "MCI_mean": 0.10525,
+    "valid_pct": 26.31,
+    "cloud_cover_pct": 73.69,
+    "data_quality": "fair",
+    "coverage_km2": 357,
+    "detection_method": "dual_index_NFAI_MCI",
+    "source_region": "ACR",
+    "aoi": {
+      "name": "PR_approach_zone",
+      "lon_min": -69.0,
+      "lat_min": 16.5,
+      "lon_max": -63.0,
+      "lat_max": 19.5
+    },
+    "forecast": {
+      "arrival_probability_pct": 65.2,
+      "days_until_impact": 5,
+      "lead_time_days": 14,
+      "model": "lagrangian_forward_euler",
+      "p_acr_lagged": 52.4,
+      "p_presence": 65.2,
+      "days_until_peak_impact": 14,
+      "coastal_impact_pct": 18.12,
+      "coastal_impact_7d": 14.77,
+      "impact_by_day": [
+        {
+          "day": 1,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 2,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 3,
+          "impact_pct": 0.67
+        },
+        {
+          "day": 4,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 5,
+          "impact_pct": 7.38
+        },
+        {
+          "day": 6,
+          "impact_pct": 11.41
+        },
+        {
+          "day": 7,
+          "impact_pct": 14.77
+        },
+        {
+          "day": 8,
+          "impact_pct": 15.44
+        },
+        {
+          "day": 9,
+          "impact_pct": 15.44
+        },
+        {
+          "day": 10,
+          "impact_pct": 16.78
+        },
+        {
+          "day": 11,
+          "impact_pct": 14.77
+        },
+        {
+          "day": 12,
+          "impact_pct": 15.44
+        },
+        {
+          "day": 13,
+          "impact_pct": 16.11
+        },
+        {
+          "day": 14,
+          "impact_pct": 18.12
+        },
+        {
+          "day": 15,
+          "impact_pct": 16.78
+        },
+        {
+          "day": 16,
+          "impact_pct": 16.11
+        },
+        {
+          "day": 17,
+          "impact_pct": 15.44
+        },
+        {
+          "day": 18,
+          "impact_pct": 14.77
+        },
+        {
+          "day": 19,
+          "impact_pct": 14.77
+        },
+        {
+          "day": 20,
+          "impact_pct": 14.77
+        },
+        {
+          "day": 21,
+          "impact_pct": 14.77
+        }
+      ],
+      "drift_centroids": [
+        {
+          "day": 0,
+          "lat": 17.0659,
+          "lon": -64.17
+        },
+        {
+          "day": 1,
+          "lat": 17.2266,
+          "lon": -64.2836
+        },
+        {
+          "day": 2,
+          "lat": 17.4038,
+          "lon": -64.3952
+        },
+        {
+          "day": 3,
+          "lat": 17.5686,
+          "lon": -64.4666
+        },
+        {
+          "day": 4,
+          "lat": 17.7268,
+          "lon": -64.5622
+        },
+        {
+          "day": 5,
+          "lat": 17.8691,
+          "lon": -64.6433
+        },
+        {
+          "day": 6,
+          "lat": 17.9908,
+          "lon": -64.6738
+        },
+        {
+          "day": 7,
+          "lat": 18.0682,
+          "lon": -64.7192
+        }
+      ],
+      "sample_trajectories": [
+        {
+          "hotspot_id": "H0142",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 17.575,
+              "lon": -65.075
+            },
+            {
+              "day": 1,
+              "lat": 17.7187,
+              "lon": -65.2679
+            },
+            {
+              "day": 2,
+              "lat": 17.9071,
+              "lon": -65.4565
+            },
+            {
+              "day": 3,
+              "lat": 18.013,
+              "lon": -65.5322
+            },
+            {
+              "day": 4,
+              "lat": 18.1195,
+              "lon": -65.5608
+            },
+            {
+              "day": 5,
+              "lat": 18.2002,
+              "lon": -65.5771
+            },
+            {
+              "day": 6,
+              "lat": 18.3014,
+              "lon": -65.4936
+            },
+            {
+              "day": 7,
+              "lat": 18.3605,
+              "lon": -65.5617
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0051",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.725,
+              "lon": -65.275
+            },
+            {
+              "day": 1,
+              "lat": 16.7841,
+              "lon": -65.3151
+            },
+            {
+              "day": 2,
+              "lat": 16.86,
+              "lon": -65.4582
+            },
+            {
+              "day": 3,
+              "lat": 16.9307,
+              "lon": -65.54
+            },
+            {
+              "day": 4,
+              "lat": 17.0432,
+              "lon": -65.6822
+            },
+            {
+              "day": 5,
+              "lat": 17.1346,
+              "lon": -65.837
+            },
+            {
+              "day": 6,
+              "lat": 17.2475,
+              "lon": -65.9268
+            },
+            {
+              "day": 7,
+              "lat": 17.3367,
+              "lon": -66.0699
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0006",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.525,
+              "lon": -64.775
+            },
+            {
+              "day": 1,
+              "lat": 16.7284,
+              "lon": -64.9436
+            },
+            {
+              "day": 2,
+              "lat": 17.0231,
+              "lon": -65.1614
+            },
+            {
+              "day": 3,
+              "lat": 17.2427,
+              "lon": -65.2953
+            },
+            {
+              "day": 4,
+              "lat": 17.4703,
+              "lon": -65.4354
+            },
+            {
+              "day": 5,
+              "lat": 17.6986,
+              "lon": -65.6298
+            },
+            {
+              "day": 6,
+              "lat": 17.8285,
+              "lon": -65.8094
+            },
+            {
+              "day": 7,
+              "lat": 17.869,
+              "lon": -65.9884
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0007",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.525,
+              "lon": -64.725
+            },
+            {
+              "day": 1,
+              "lat": 16.7284,
+              "lon": -64.8936
+            },
+            {
+              "day": 2,
+              "lat": 17.0231,
+              "lon": -65.1114
+            },
+            {
+              "day": 3,
+              "lat": 17.2965,
+              "lon": -65.2588
+            },
+            {
+              "day": 4,
+              "lat": 17.5735,
+              "lon": -65.4056
+            },
+            {
+              "day": 5,
+              "lat": 17.7854,
+              "lon": -65.6104
+            },
+            {
+              "day": 6,
+              "lat": 17.9341,
+              "lon": -65.7551
+            },
+            {
+              "day": 7,
+              "lat": 17.9667,
+              "lon": -65.8951
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0004",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.525,
+              "lon": -64.875
+            },
+            {
+              "day": 1,
+              "lat": 16.643,
+              "lon": -64.9874
+            },
+            {
+              "day": 2,
+              "lat": 16.8815,
+              "lon": -65.1836
+            },
+            {
+              "day": 3,
+              "lat": 17.0915,
+              "lon": -65.3241
+            },
+            {
+              "day": 4,
+              "lat": 17.3057,
+              "lon": -65.4706
+            },
+            {
+              "day": 5,
+              "lat": 17.5026,
+              "lon": -65.6472
+            },
+            {
+              "day": 6,
+              "lat": 17.659,
+              "lon": -65.796
+            },
+            {
+              "day": 7,
+              "lat": 17.739,
+              "lon": -65.9846
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0017",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.575,
+              "lon": -64.825
+            },
+            {
+              "day": 1,
+              "lat": 16.7683,
+              "lon": -64.9694
+            },
+            {
+              "day": 2,
+              "lat": 17.0351,
+              "lon": -65.1638
+            },
+            {
+              "day": 3,
+              "lat": 17.2547,
+              "lon": -65.2977
+            },
+            {
+              "day": 4,
+              "lat": 17.4823,
+              "lon": -65.4378
+            },
+            {
+              "day": 5,
+              "lat": 17.7107,
+              "lon": -65.6322
+            },
+            {
+              "day": 6,
+              "lat": 17.8262,
+              "lon": -65.8033
+            },
+            {
+              "day": 7,
+              "lat": 17.8667,
+              "lon": -65.9822
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0016",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.575,
+              "lon": -64.925
+            },
+            {
+              "day": 1,
+              "lat": 16.7244,
+              "lon": -65.0385
+            },
+            {
+              "day": 2,
+              "lat": 16.9911,
+              "lon": -65.2329
+            },
+            {
+              "day": 3,
+              "lat": 17.1522,
+              "lon": -65.3496
+            },
+            {
+              "day": 4,
+              "lat": 17.3756,
+              "lon": -65.4905
+            },
+            {
+              "day": 5,
+              "lat": 17.5701,
+              "lon": -65.6786
+            },
+            {
+              "day": 6,
+              "lat": 17.7156,
+              "lon": -65.849
+            },
+            {
+              "day": 7,
+              "lat": 17.783,
+              "lon": -66.0316
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0014",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.525,
+              "lon": -64.175
+            },
+            {
+              "day": 1,
+              "lat": 16.5398,
+              "lon": -64.3382
+            },
+            {
+              "day": 2,
+              "lat": 16.6155,
+              "lon": -64.4579
+            },
+            {
+              "day": 3,
+              "lat": 16.6899,
+              "lon": -64.5706
+            },
+            {
+              "day": 4,
+              "lat": 16.7958,
+              "lon": -64.7146
+            },
+            {
+              "day": 5,
+              "lat": 16.918,
+              "lon": -64.9128
+            },
+            {
+              "day": 6,
+              "lat": 17.0666,
+              "lon": -65.0785
+            },
+            {
+              "day": 7,
+              "lat": 17.1749,
+              "lon": -65.2905
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0018",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.575,
+              "lon": -64.775
+            },
+            {
+              "day": 1,
+              "lat": 16.8071,
+              "lon": -64.946
+            },
+            {
+              "day": 2,
+              "lat": 17.1177,
+              "lon": -65.1519
+            },
+            {
+              "day": 3,
+              "lat": 17.3429,
+              "lon": -65.2827
+            },
+            {
+              "day": 4,
+              "lat": 17.62,
+              "lon": -65.4295
+            },
+            {
+              "day": 5,
+              "lat": 17.8318,
+              "lon": -65.6344
+            },
+            {
+              "day": 6,
+              "lat": 17.9304,
+              "lon": -65.7952
+            },
+            {
+              "day": 7,
+              "lat": 17.9331,
+              "lon": -65.932
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0022",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.575,
+              "lon": -64.575
+            },
+            {
+              "day": 1,
+              "lat": 16.7451,
+              "lon": -64.7658
+            },
+            {
+              "day": 2,
+              "lat": 16.9819,
+              "lon": -64.9894
+            },
+            {
+              "day": 3,
+              "lat": 17.281,
+              "lon": -65.146
+            },
+            {
+              "day": 4,
+              "lat": 17.5934,
+              "lon": -65.2971
+            },
+            {
+              "day": 5,
+              "lat": 17.8328,
+              "lon": -65.4782
+            },
+            {
+              "day": 6,
+              "lat": 17.9911,
+              "lon": -65.5818
+            },
+            {
+              "day": 7,
+              "lat": 18.0588,
+              "lon": -65.6069
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0019",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.575,
+              "lon": -64.725
+            },
+            {
+              "day": 1,
+              "lat": 16.8071,
+              "lon": -64.896
+            },
+            {
+              "day": 2,
+              "lat": 17.1177,
+              "lon": -65.1019
+            },
+            {
+              "day": 3,
+              "lat": 17.398,
+              "lon": -65.2385
+            },
+            {
+              "day": 4,
+              "lat": 17.6638,
+              "lon": -65.3909
+            },
+            {
+              "day": 5,
+              "lat": 17.8561,
+              "lon": -65.5952
+            },
+            {
+              "day": 6,
+              "lat": 17.9848,
+              "lon": -65.7316
+            },
+            {
+              "day": 7,
+              "lat": 18.0108,
+              "lon": -65.7816
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0020",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.575,
+              "lon": -64.675
+            },
+            {
+              "day": 1,
+              "lat": 16.8,
+              "lon": -64.8618
+            },
+            {
+              "day": 2,
+              "lat": 17.0902,
+              "lon": -65.0764
+            },
+            {
+              "day": 3,
+              "lat": 17.3705,
+              "lon": -65.213
+            },
+            {
+              "day": 4,
+              "lat": 17.6476,
+              "lon": -65.3598
+            },
+            {
+              "day": 5,
+              "lat": 17.8609,
+              "lon": -65.5356
+            },
+            {
+              "day": 6,
+              "lat": 18.0192,
+              "lon": -65.6393
+            },
+            {
+              "day": 7,
+              "lat": 18.0713,
+              "lon": -65.6842
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0021",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.575,
+              "lon": -64.625
+            },
+            {
+              "day": 1,
+              "lat": 16.8,
+              "lon": -64.8118
+            },
+            {
+              "day": 2,
+              "lat": 17.0902,
+              "lon": -65.0264
+            },
+            {
+              "day": 3,
+              "lat": 17.3963,
+              "lon": -65.1641
+            },
+            {
+              "day": 4,
+              "lat": 17.6921,
+              "lon": -65.3104
+            },
+            {
+              "day": 5,
+              "lat": 17.9054,
+              "lon": -65.4862
+            },
+            {
+              "day": 6,
+              "lat": 18.0162,
+              "lon": -65.5922
+            },
+            {
+              "day": 7,
+              "lat": 18.0839,
+              "lon": -65.6173
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0025",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.575,
+              "lon": -64.375
+            },
+            {
+              "day": 1,
+              "lat": 16.6419,
+              "lon": -64.5634
+            },
+            {
+              "day": 2,
+              "lat": 16.7798,
+              "lon": -64.7622
+            },
+            {
+              "day": 3,
+              "lat": 16.9706,
+              "lon": -64.9616
+            },
+            {
+              "day": 4,
+              "lat": 17.2279,
+              "lon": -65.1781
+            },
+            {
+              "day": 5,
+              "lat": 17.503,
+              "lon": -65.3887
+            },
+            {
+              "day": 6,
+              "lat": 17.7744,
+              "lon": -65.5014
+            },
+            {
+              "day": 7,
+              "lat": 17.9548,
+              "lon": -65.5905
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0024",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.575,
+              "lon": -64.425
+            },
+            {
+              "day": 1,
+              "lat": 16.6419,
+              "lon": -64.6134
+            },
+            {
+              "day": 2,
+              "lat": 16.7798,
+              "lon": -64.8122
+            },
+            {
+              "day": 3,
+              "lat": 17.0128,
+              "lon": -65.0205
+            },
+            {
+              "day": 4,
+              "lat": 17.2701,
+              "lon": -65.2371
+            },
+            {
+              "day": 5,
+              "lat": 17.5627,
+              "lon": -65.4445
+            },
+            {
+              "day": 6,
+              "lat": 17.8206,
+              "lon": -65.5499
+            },
+            {
+              "day": 7,
+              "lat": 17.9518,
+              "lon": -65.6531
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0075",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.825,
+              "lon": -64.875
+            },
+            {
+              "day": 1,
+              "lat": 17.0532,
+              "lon": -64.9715
+            },
+            {
+              "day": 2,
+              "lat": 17.3684,
+              "lon": -65.1402
+            },
+            {
+              "day": 3,
+              "lat": 17.5858,
+              "lon": -65.297
+            },
+            {
+              "day": 4,
+              "lat": 17.7815,
+              "lon": -65.4828
+            },
+            {
+              "day": 5,
+              "lat": 17.94,
+              "lon": -65.6977
+            },
+            {
+              "day": 6,
+              "lat": 18.0093,
+              "lon": -65.8479
+            },
+            {
+              "day": 7,
+              "lat": 18.0226,
+              "lon": -65.9127
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0079",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.875,
+              "lon": -64.825
+            },
+            {
+              "day": 1,
+              "lat": 17.1592,
+              "lon": -64.9436
+            },
+            {
+              "day": 2,
+              "lat": 17.4786,
+              "lon": -65.1162
+            },
+            {
+              "day": 3,
+              "lat": 17.6948,
+              "lon": -65.2774
+            },
+            {
+              "day": 4,
+              "lat": 17.9077,
+              "lon": -65.4411
+            },
+            {
+              "day": 5,
+              "lat": 18.0293,
+              "lon": -65.5715
+            },
+            {
+              "day": 6,
+              "lat": 18.1013,
+              "lon": -65.6314
+            },
+            {
+              "day": 7,
+              "lat": 18.1437,
+              "lon": -65.6411
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0083",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.925,
+              "lon": -64.825
+            },
+            {
+              "day": 1,
+              "lat": 17.222,
+              "lon": -64.9301
+            },
+            {
+              "day": 2,
+              "lat": 17.5266,
+              "lon": -65.1105
+            },
+            {
+              "day": 3,
+              "lat": 17.7428,
+              "lon": -65.2717
+            },
+            {
+              "day": 4,
+              "lat": 17.9374,
+              "lon": -65.4126
+            },
+            {
+              "day": 5,
+              "lat": 18.059,
+              "lon": -65.543
+            },
+            {
+              "day": 6,
+              "lat": 18.1566,
+              "lon": -65.5325
+            },
+            {
+              "day": 7,
+              "lat": 18.2023,
+              "lon": -65.5109
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0082",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.925,
+              "lon": -64.925
+            },
+            {
+              "day": 1,
+              "lat": 17.1636,
+              "lon": -65.0145
+            },
+            {
+              "day": 2,
+              "lat": 17.4771,
+              "lon": -65.1852
+            },
+            {
+              "day": 3,
+              "lat": 17.6783,
+              "lon": -65.3804
+            },
+            {
+              "day": 4,
+              "lat": 17.8306,
+              "lon": -65.5821
+            },
+            {
+              "day": 5,
+              "lat": 17.9559,
+              "lon": -65.7879
+            },
+            {
+              "day": 6,
+              "lat": 17.9897,
+              "lon": -65.9448
+            },
+            {
+              "day": 7,
+              "lat": 17.9897,
+              "lon": -65.9448
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0073",
+          "coastal_arrival_prob": 100.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.825,
+              "lon": -65.075
+            },
+            {
+              "day": 1,
+              "lat": 16.9298,
+              "lon": -65.1411
+            },
+            {
+              "day": 2,
+              "lat": 17.1082,
+              "lon": -65.278
+            },
+            {
+              "day": 3,
+              "lat": 17.2775,
+              "lon": -65.3957
+            },
+            {
+              "day": 4,
+              "lat": 17.4573,
+              "lon": -65.5281
+            },
+            {
+              "day": 5,
+              "lat": 17.6518,
+              "lon": -65.7162
+            },
+            {
+              "day": 6,
+              "lat": 17.7501,
+              "lon": -65.9157
+            },
+            {
+              "day": 7,
+              "lat": 17.7937,
+              "lon": -66.1172
+            }
+          ]
+        }
+      ]
+    },
+    "upstream": {
+      "region": "ACR",
+      "bounds": {
+        "lon_min": -70,
+        "lat_min": 10,
+        "lon_max": -55,
+        "lat_max": 22
+      },
+      "coverage_pct": 0.9248,
+      "valid_pct": 37.48,
+      "active": true,
+      "description": "Antilles Current Region \u2014 validated sole upstream source"
+    },
+    "corridor": {
+      "entry": {
+        "label": "Eastern Entry (ACR inflow)",
+        "bounds": {
+          "lon_min": -65,
+          "lat_min": 16.5,
+          "lon_max": -63,
+          "lat_max": 19.5
+        },
+        "km_to_coast": 150,
+        "hotspot_count": 150,
+        "total_weight": 11.714,
+        "active": true
+      },
+      "transit": {
+        "label": "Mid Corridor (approaching)",
+        "bounds": {
+          "lon_min": -67,
+          "lat_min": 16.5,
+          "lon_max": -65,
+          "lat_max": 19.5
+        },
+        "km_to_coast": 50,
+        "hotspot_count": 13,
+        "total_weight": 0.611,
+        "active": true
+      },
+      "approach": {
+        "label": "Near Approach / Mona Passage",
+        "bounds": {
+          "lon_min": -69,
+          "lat_min": 16.5,
+          "lon_max": -67,
+          "lat_max": 19.5
+        },
+        "km_to_coast": 15,
+        "hotspot_count": 0,
+        "total_weight": 0,
+        "active": false
+      },
+      "acr_upstream": {
+        "label": "ACR Source (upstream)",
+        "bounds": {
+          "lon_min": -70,
+          "lat_min": 10,
+          "lon_max": -55,
+          "lat_max": 22
+        },
+        "km_to_coast": 600,
+        "coverage_pct": 0.925,
+        "active": true
+      }
+    },
+    "hotspots": [
+      {
+        "id": "H0001",
+        "lat": 16.525,
+        "lon": -65.175,
+        "nfai": 0.03827,
+        "mci": 0.044,
+        "weight": 0.0375,
+        "zone": "transit",
+        "coastal_arrival_prob": 85.2
+      },
+      {
+        "id": "H0002",
+        "lat": 16.525,
+        "lon": -65.125,
+        "nfai": 0.06852,
+        "mci": 0.07514,
+        "weight": 0.0925,
+        "zone": "transit",
+        "coastal_arrival_prob": 87.1
+      },
+      {
+        "id": "H0003",
+        "lat": 16.525,
+        "lon": -65.075,
+        "nfai": 0.0581,
+        "mci": 0.0625,
+        "weight": 0.04336,
+        "zone": "transit",
+        "coastal_arrival_prob": 87.9
+      },
+      {
+        "id": "H0004",
+        "lat": 16.525,
+        "lon": -64.875,
+        "nfai": 0.09196,
+        "mci": 0.09662,
+        "weight": 0.1625,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0005",
+        "lat": 16.525,
+        "lon": -64.825,
+        "nfai": 0.06642,
+        "mci": 0.07071,
+        "weight": 0.3175,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0006",
+        "lat": 16.525,
+        "lon": -64.775,
+        "nfai": 0.09384,
+        "mci": 0.11759,
+        "weight": 0.27,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0007",
+        "lat": 16.525,
+        "lon": -64.725,
+        "nfai": 0.11732,
+        "mci": 0.14086,
+        "weight": 0.0875,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0008",
+        "lat": 16.525,
+        "lon": -64.675,
+        "nfai": 0.01533,
+        "mci": 0.04333,
+        "weight": 0.015,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0009",
+        "lat": 16.525,
+        "lon": -64.625,
+        "nfai": 0.03508,
+        "mci": 0.04223,
+        "weight": 0.28,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0010",
+        "lat": 16.525,
+        "lon": -64.525,
+        "nfai": 0.02786,
+        "mci": 0.04,
+        "weight": 0.02828,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0011",
+        "lat": 16.525,
+        "lon": -64.475,
+        "nfai": 0.0052,
+        "mci": 0.01,
+        "weight": 0.00262,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0012",
+        "lat": 16.525,
+        "lon": -64.325,
+        "nfai": 0.06858,
+        "mci": 0.07714,
+        "weight": 0.2275,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0013",
+        "lat": 16.525,
+        "lon": -64.225,
+        "nfai": 0.03857,
+        "mci": 0.06667,
+        "weight": 0.03,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0014",
+        "lat": 16.525,
+        "lon": -64.175,
+        "nfai": 0.1805,
+        "mci": 0.31443,
+        "weight": 0.17588,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0015",
+        "lat": 16.525,
+        "lon": -63.375,
+        "nfai": 0.07962,
+        "mci": 0.10837,
+        "weight": 0.1075,
+        "zone": "entry",
+        "coastal_arrival_prob": 15.3
+      },
+      {
+        "id": "H0016",
+        "lat": 16.575,
+        "lon": -64.925,
+        "nfai": 0.0942,
+        "mci": 0.07632,
+        "weight": 0.0475,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0017",
+        "lat": 16.575,
+        "lon": -64.825,
+        "nfai": 0.02438,
+        "mci": 0.03118,
+        "weight": 0.0425,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0018",
+        "lat": 16.575,
+        "lon": -64.775,
+        "nfai": 0.0616,
+        "mci": 0.0625,
+        "weight": 0.18,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0019",
+        "lat": 16.575,
+        "lon": -64.725,
+        "nfai": 0.06904,
+        "mci": 0.06746,
+        "weight": 0.1475,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0020",
+        "lat": 16.575,
+        "lon": -64.675,
+        "nfai": 0.05221,
+        "mci": 0.07549,
+        "weight": 0.305,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0021",
+        "lat": 16.575,
+        "lon": -64.625,
+        "nfai": 0.0335,
+        "mci": 0.0488,
+        "weight": 0.0625,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0022",
+        "lat": 16.575,
+        "lon": -64.575,
+        "nfai": 0.05217,
+        "mci": 0.04167,
+        "weight": 0.015,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0023",
+        "lat": 16.575,
+        "lon": -64.525,
+        "nfai": 0.04258,
+        "mci": 0.05607,
+        "weight": 0.14,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0024",
+        "lat": 16.575,
+        "lon": -64.425,
+        "nfai": 0.16618,
+        "mci": 0.22171,
+        "weight": 0.1847,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0025",
+        "lat": 16.575,
+        "lon": -64.375,
+        "nfai": 0.09195,
+        "mci": 0.10035,
+        "weight": 0.1425,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0026",
+        "lat": 16.575,
+        "lon": -64.325,
+        "nfai": 0.07895,
+        "mci": 0.08941,
+        "weight": 0.2525,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0027",
+        "lat": 16.575,
+        "lon": -64.275,
+        "nfai": 0.06275,
+        "mci": 0.05875,
+        "weight": 0.02,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0028",
+        "lat": 16.575,
+        "lon": -64.225,
+        "nfai": 0.08872,
+        "mci": 0.10333,
+        "weight": 0.045,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0029",
+        "lat": 16.575,
+        "lon": -63.425,
+        "nfai": 0.07656,
+        "mci": 0.08184,
+        "weight": 0.095,
+        "zone": "entry",
+        "coastal_arrival_prob": 21.8
+      },
+      {
+        "id": "H0030",
+        "lat": 16.575,
+        "lon": -63.375,
+        "nfai": 0.02403,
+        "mci": 0.056,
+        "weight": 0.025,
+        "zone": "entry",
+        "coastal_arrival_prob": 18.1
+      },
+      {
+        "id": "H0031",
+        "lat": 16.575,
+        "lon": -63.225,
+        "nfai": 0.03068,
+        "mci": 0.068,
+        "weight": 0.05,
+        "zone": "entry",
+        "coastal_arrival_prob": 8.4
+      },
+      {
+        "id": "H0032",
+        "lat": 16.625,
+        "lon": -65.075,
+        "nfai": 0.04918,
+        "mci": 0.028,
+        "weight": 0.01587,
+        "zone": "transit",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0033",
+        "lat": 16.625,
+        "lon": -65.025,
+        "nfai": 0.16741,
+        "mci": 0.30958,
+        "weight": 0.12121,
+        "zone": "transit",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0034",
+        "lat": 16.625,
+        "lon": -64.975,
+        "nfai": 0.0606,
+        "mci": 0.025,
+        "weight": 0.005,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0035",
+        "lat": 16.625,
+        "lon": -64.925,
+        "nfai": 0.07892,
+        "mci": 0.09385,
+        "weight": 0.03283,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0036",
+        "lat": 16.625,
+        "lon": -64.575,
+        "nfai": 0.05584,
+        "mci": 0.0605,
+        "weight": 0.05,
+        "zone": "entry",
+        "coastal_arrival_prob": 66.0
+      },
+      {
+        "id": "H0037",
+        "lat": 16.625,
+        "lon": -64.475,
+        "nfai": 0.04924,
+        "mci": 0.036,
+        "weight": 0.0625,
+        "zone": "entry",
+        "coastal_arrival_prob": 65.9
+      },
+      {
+        "id": "H0038",
+        "lat": 16.625,
+        "lon": -64.375,
+        "nfai": 0.09927,
+        "mci": 0.13865,
+        "weight": 0.24,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0039",
+        "lat": 16.625,
+        "lon": -64.225,
+        "nfai": 0.03001,
+        "mci": 0.06692,
+        "weight": 0.0325,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0040",
+        "lat": 16.625,
+        "lon": -63.175,
+        "nfai": 0.027,
+        "mci": 0.04,
+        "weight": 0.0025,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0041",
+        "lat": 16.625,
+        "lon": -63.125,
+        "nfai": 0.04206,
+        "mci": 0.0913,
+        "weight": 0.0575,
+        "zone": "entry",
+        "coastal_arrival_prob": 14.8
+      },
+      {
+        "id": "H0042",
+        "lat": 16.675,
+        "lon": -65.025,
+        "nfai": 0.09506,
+        "mci": 0.082,
+        "weight": 0.01479,
+        "zone": "transit",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0043",
+        "lat": 16.675,
+        "lon": -64.975,
+        "nfai": 0.09565,
+        "mci": 0.085,
+        "weight": 0.00512,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0044",
+        "lat": 16.675,
+        "lon": -64.825,
+        "nfai": 0.20576,
+        "mci": 0.28623,
+        "weight": 0.15404,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0045",
+        "lat": 16.675,
+        "lon": -64.775,
+        "nfai": 0.11235,
+        "mci": 0.11818,
+        "weight": 0.11733,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0046",
+        "lat": 16.675,
+        "lon": -64.725,
+        "nfai": 0.04802,
+        "mci": 0.02333,
+        "weight": 0.01515,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0047",
+        "lat": 16.675,
+        "lon": -64.325,
+        "nfai": 0.14144,
+        "mci": 0.10125,
+        "weight": 0.02,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0048",
+        "lat": 16.675,
+        "lon": -63.225,
+        "nfai": 0.02782,
+        "mci": 0.052,
+        "weight": 0.0125,
+        "zone": "entry",
+        "coastal_arrival_prob": 7.6
+      },
+      {
+        "id": "H0049",
+        "lat": 16.675,
+        "lon": -63.175,
+        "nfai": 0.07037,
+        "mci": 0.10761,
+        "weight": 0.4075,
+        "zone": "entry",
+        "coastal_arrival_prob": 11.5
+      },
+      {
+        "id": "H0050",
+        "lat": 16.675,
+        "lon": -63.125,
+        "nfai": 0.03199,
+        "mci": 0.07227,
+        "weight": 0.11,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0051",
+        "lat": 16.725,
+        "lon": -65.275,
+        "nfai": 0.0244,
+        "mci": 0.04778,
+        "weight": 0.03125,
+        "zone": "transit",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0052",
+        "lat": 16.725,
+        "lon": -65.225,
+        "nfai": 0.07876,
+        "mci": 0.14778,
+        "weight": 0.0675,
+        "zone": "transit",
+        "coastal_arrival_prob": 87.3
+      },
+      {
+        "id": "H0053",
+        "lat": 16.725,
+        "lon": -65.175,
+        "nfai": 0.09722,
+        "mci": 0.13636,
+        "weight": 0.03064,
+        "zone": "transit",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0054",
+        "lat": 16.725,
+        "lon": -64.725,
+        "nfai": 0.0963,
+        "mci": 0.103,
+        "weight": 0.025,
+        "zone": "entry",
+        "coastal_arrival_prob": 66.9
+      },
+      {
+        "id": "H0055",
+        "lat": 16.725,
+        "lon": -64.675,
+        "nfai": 0.09054,
+        "mci": 0.0836,
+        "weight": 0.0625,
+        "zone": "entry",
+        "coastal_arrival_prob": 64.8
+      },
+      {
+        "id": "H0056",
+        "lat": 16.725,
+        "lon": -64.625,
+        "nfai": 0.0984,
+        "mci": 0.09759,
+        "weight": 0.0725,
+        "zone": "entry",
+        "coastal_arrival_prob": 61.5
+      },
+      {
+        "id": "H0057",
+        "lat": 16.725,
+        "lon": -64.575,
+        "nfai": 0.09291,
+        "mci": 0.08848,
+        "weight": 0.115,
+        "zone": "entry",
+        "coastal_arrival_prob": 62.0
+      },
+      {
+        "id": "H0058",
+        "lat": 16.725,
+        "lon": -64.475,
+        "nfai": 0.06432,
+        "mci": 0.06061,
+        "weight": 0.0825,
+        "zone": "entry",
+        "coastal_arrival_prob": 62.5
+      },
+      {
+        "id": "H0059",
+        "lat": 16.725,
+        "lon": -64.375,
+        "nfai": 0.02994,
+        "mci": 0.04857,
+        "weight": 0.0525,
+        "zone": "entry",
+        "coastal_arrival_prob": 62.1
+      },
+      {
+        "id": "H0060",
+        "lat": 16.725,
+        "lon": -64.325,
+        "nfai": 0.07695,
+        "mci": 0.05067,
+        "weight": 0.0375,
+        "zone": "entry",
+        "coastal_arrival_prob": 64.8
+      },
+      {
+        "id": "H0061",
+        "lat": 16.725,
+        "lon": -63.175,
+        "nfai": 0.03186,
+        "mci": 0.06956,
+        "weight": 0.1125,
+        "zone": "entry",
+        "coastal_arrival_prob": 14.8
+      },
+      {
+        "id": "H0062",
+        "lat": 16.775,
+        "lon": -65.225,
+        "nfai": 0.02874,
+        "mci": 0.06063,
+        "weight": 0.04,
+        "zone": "transit",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0063",
+        "lat": 16.775,
+        "lon": -64.875,
+        "nfai": 0.0355,
+        "mci": 0.034,
+        "weight": 0.05,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0064",
+        "lat": 16.775,
+        "lon": -64.775,
+        "nfai": 0.09035,
+        "mci": 0.07687,
+        "weight": 0.04,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0065",
+        "lat": 16.775,
+        "lon": -64.725,
+        "nfai": 0.07086,
+        "mci": 0.04929,
+        "weight": 0.035,
+        "zone": "entry",
+        "coastal_arrival_prob": 66.5
+      },
+      {
+        "id": "H0066",
+        "lat": 16.775,
+        "lon": -64.625,
+        "nfai": 0.08788,
+        "mci": 0.08842,
+        "weight": 0.0475,
+        "zone": "entry",
+        "coastal_arrival_prob": 61.4
+      },
+      {
+        "id": "H0067",
+        "lat": 16.775,
+        "lon": -64.575,
+        "nfai": 0.03463,
+        "mci": 0.04588,
+        "weight": 0.0425,
+        "zone": "entry",
+        "coastal_arrival_prob": 61.5
+      },
+      {
+        "id": "H0068",
+        "lat": 16.775,
+        "lon": -64.525,
+        "nfai": 0.07975,
+        "mci": 0.10573,
+        "weight": 0.2925,
+        "zone": "entry",
+        "coastal_arrival_prob": 59.4
+      },
+      {
+        "id": "H0069",
+        "lat": 16.775,
+        "lon": -64.475,
+        "nfai": 0.03311,
+        "mci": 0.04788,
+        "weight": 0.0825,
+        "zone": "entry",
+        "coastal_arrival_prob": 59.3
+      },
+      {
+        "id": "H0070",
+        "lat": 16.775,
+        "lon": -63.225,
+        "nfai": 0.0809,
+        "mci": 0.09262,
+        "weight": 0.21,
+        "zone": "entry",
+        "coastal_arrival_prob": 9.3
+      },
+      {
+        "id": "H0071",
+        "lat": 16.775,
+        "lon": -63.075,
+        "nfai": 0.05573,
+        "mci": 0.075,
+        "weight": 0.01,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0072",
+        "lat": 16.775,
+        "lon": -63.025,
+        "nfai": 0.03457,
+        "mci": 0.05778,
+        "weight": 0.0225,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0073",
+        "lat": 16.825,
+        "lon": -65.075,
+        "nfai": 0.07895,
+        "mci": 0.10294,
+        "weight": 0.04381,
+        "zone": "transit",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0074",
+        "lat": 16.825,
+        "lon": -65.025,
+        "nfai": 0.04401,
+        "mci": 0.03,
+        "weight": 0.035,
+        "zone": "transit",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0075",
+        "lat": 16.825,
+        "lon": -64.875,
+        "nfai": 0.04013,
+        "mci": 0.04182,
+        "weight": 0.0275,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0076",
+        "lat": 16.825,
+        "lon": -64.525,
+        "nfai": 0.03407,
+        "mci": 0.06857,
+        "weight": 0.035,
+        "zone": "entry",
+        "coastal_arrival_prob": 57.3
+      },
+      {
+        "id": "H0077",
+        "lat": 16.825,
+        "lon": -64.475,
+        "nfai": 0.0207,
+        "mci": 0.04,
+        "weight": 0.005,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0078",
+        "lat": 16.825,
+        "lon": -63.125,
+        "nfai": 0.14676,
+        "mci": 0.12214,
+        "weight": 0.035,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0079",
+        "lat": 16.875,
+        "lon": -64.825,
+        "nfai": 0.09126,
+        "mci": 0.10963,
+        "weight": 0.2,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0080",
+        "lat": 16.875,
+        "lon": -64.725,
+        "nfai": 0.02695,
+        "mci": 0.026,
+        "weight": 0.025,
+        "zone": "entry",
+        "coastal_arrival_prob": 63.1
+      },
+      {
+        "id": "H0081",
+        "lat": 16.875,
+        "lon": -64.675,
+        "nfai": 0.03456,
+        "mci": 0.04716,
+        "weight": 0.1675,
+        "zone": "entry",
+        "coastal_arrival_prob": 60.4
+      },
+      {
+        "id": "H0082",
+        "lat": 16.925,
+        "lon": -64.925,
+        "nfai": 0.043,
+        "mci": 0.05444,
+        "weight": 0.0225,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0083",
+        "lat": 16.925,
+        "lon": -64.825,
+        "nfai": 0.09532,
+        "mci": 0.09563,
+        "weight": 0.08,
+        "zone": "entry",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0084",
+        "lat": 16.925,
+        "lon": -64.675,
+        "nfai": 0.07169,
+        "mci": 0.07897,
+        "weight": 0.0725,
+        "zone": "entry",
+        "coastal_arrival_prob": 57.7
+      },
+      {
+        "id": "H0085",
+        "lat": 16.925,
+        "lon": -64.625,
+        "nfai": 0.05494,
+        "mci": 0.06486,
+        "weight": 0.0875,
+        "zone": "entry",
+        "coastal_arrival_prob": 54.6
+      },
+      {
+        "id": "H0086",
+        "lat": 16.925,
+        "lon": -64.575,
+        "nfai": 0.0511,
+        "mci": 0.0625,
+        "weight": 0.01,
+        "zone": "entry",
+        "coastal_arrival_prob": 53.7
+      },
+      {
+        "id": "H0087",
+        "lat": 16.925,
+        "lon": -63.125,
+        "nfai": 0.0984,
+        "mci": 0.0725,
+        "weight": 0.03008,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0088",
+        "lat": 16.925,
+        "lon": -63.075,
+        "nfai": 0.04103,
+        "mci": 0.04,
+        "weight": 0.015,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0089",
+        "lat": 16.975,
+        "lon": -64.825,
+        "nfai": 0.05253,
+        "mci": 0.04688,
+        "weight": 0.04,
+        "zone": "entry",
+        "coastal_arrival_prob": 63.7
+      },
+      {
+        "id": "H0090",
+        "lat": 16.975,
+        "lon": -64.775,
+        "nfai": 0.04698,
+        "mci": 0.0532,
+        "weight": 0.0625,
+        "zone": "entry",
+        "coastal_arrival_prob": 62.4
+      },
+      {
+        "id": "H0091",
+        "lat": 16.975,
+        "lon": -64.725,
+        "nfai": 0.07998,
+        "mci": 0.10136,
+        "weight": 0.1475,
+        "zone": "entry",
+        "coastal_arrival_prob": 58.5
+      },
+      {
+        "id": "H0092",
+        "lat": 16.975,
+        "lon": -64.675,
+        "nfai": 0.0531,
+        "mci": 0.07714,
+        "weight": 0.0175,
+        "zone": "entry",
+        "coastal_arrival_prob": 55.9
+      },
+      {
+        "id": "H0093",
+        "lat": 16.975,
+        "lon": -64.575,
+        "nfai": 0.12032,
+        "mci": 0.14743,
+        "weight": 0.0875,
+        "zone": "entry",
+        "coastal_arrival_prob": 51.2
+      },
+      {
+        "id": "H0094",
+        "lat": 16.975,
+        "lon": -63.875,
+        "nfai": 0.03488,
+        "mci": 0.04714,
+        "weight": 0.03535,
+        "zone": "entry",
+        "coastal_arrival_prob": 33.2
+      },
+      {
+        "id": "H0095",
+        "lat": 16.975,
+        "lon": -63.825,
+        "nfai": 0.0557,
+        "mci": 0.04,
+        "weight": 0.00269,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0096",
+        "lat": 17.025,
+        "lon": -64.725,
+        "nfai": 0.05478,
+        "mci": 0.0725,
+        "weight": 0.01,
+        "zone": "entry",
+        "coastal_arrival_prob": 58.6
+      },
+      {
+        "id": "H0097",
+        "lat": 17.025,
+        "lon": -64.675,
+        "nfai": 0.04314,
+        "mci": 0.05875,
+        "weight": 0.04432,
+        "zone": "entry",
+        "coastal_arrival_prob": 56.6
+      },
+      {
+        "id": "H0098",
+        "lat": 17.025,
+        "lon": -64.625,
+        "nfai": 0.05855,
+        "mci": 0.075,
+        "weight": 0.005,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0099",
+        "lat": 17.025,
+        "lon": -64.575,
+        "nfai": 0.10381,
+        "mci": 0.13879,
+        "weight": 0.145,
+        "zone": "entry",
+        "coastal_arrival_prob": 51.2
+      },
+      {
+        "id": "H0100",
+        "lat": 17.025,
+        "lon": -64.525,
+        "nfai": 0.1218,
+        "mci": 0.16065,
+        "weight": 0.115,
+        "zone": "entry",
+        "coastal_arrival_prob": 49.5
+      },
+      {
+        "id": "H0101",
+        "lat": 17.025,
+        "lon": -64.475,
+        "nfai": 0.02408,
+        "mci": 0.058,
+        "weight": 0.0125,
+        "zone": "entry",
+        "coastal_arrival_prob": 46.9
+      },
+      {
+        "id": "H0102",
+        "lat": 17.075,
+        "lon": -64.725,
+        "nfai": 0.04017,
+        "mci": 0.05333,
+        "weight": 0.0075,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0103",
+        "lat": 17.075,
+        "lon": -64.675,
+        "nfai": 0.01673,
+        "mci": 0.03667,
+        "weight": 0.0075,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0104",
+        "lat": 17.075,
+        "lon": -64.625,
+        "nfai": 0.07967,
+        "mci": 0.07571,
+        "weight": 0.0175,
+        "zone": "entry",
+        "coastal_arrival_prob": 50.5
+      },
+      {
+        "id": "H0105",
+        "lat": 17.075,
+        "lon": -64.575,
+        "nfai": 0.04891,
+        "mci": 0.04615,
+        "weight": 0.0325,
+        "zone": "entry",
+        "coastal_arrival_prob": 48.0
+      },
+      {
+        "id": "H0106",
+        "lat": 17.075,
+        "lon": -64.525,
+        "nfai": 0.05762,
+        "mci": 0.05412,
+        "weight": 0.0425,
+        "zone": "entry",
+        "coastal_arrival_prob": 47.6
+      },
+      {
+        "id": "H0107",
+        "lat": 17.075,
+        "lon": -64.475,
+        "nfai": 0.03688,
+        "mci": 0.06056,
+        "weight": 0.045,
+        "zone": "entry",
+        "coastal_arrival_prob": 44.1
+      },
+      {
+        "id": "H0108",
+        "lat": 17.075,
+        "lon": -63.375,
+        "nfai": 0.09611,
+        "mci": 0.12627,
+        "weight": 0.1275,
+        "zone": "entry",
+        "coastal_arrival_prob": 10.5
+      },
+      {
+        "id": "H0109",
+        "lat": 17.075,
+        "lon": -63.325,
+        "nfai": 0.02476,
+        "mci": 0.04417,
+        "weight": 0.09,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0110",
+        "lat": 17.125,
+        "lon": -63.675,
+        "nfai": 0.03831,
+        "mci": 0.04429,
+        "weight": 0.0175,
+        "zone": "entry",
+        "coastal_arrival_prob": 11.8
+      },
+      {
+        "id": "H0111",
+        "lat": 17.125,
+        "lon": -63.625,
+        "nfai": 0.04228,
+        "mci": 0.045,
+        "weight": 0.01,
+        "zone": "entry",
+        "coastal_arrival_prob": 10.2
+      },
+      {
+        "id": "H0112",
+        "lat": 17.125,
+        "lon": -63.575,
+        "nfai": 0.07566,
+        "mci": 0.16111,
+        "weight": 0.09114,
+        "zone": "entry",
+        "coastal_arrival_prob": 8.1
+      },
+      {
+        "id": "H0113",
+        "lat": 17.125,
+        "lon": -63.525,
+        "nfai": 0.06111,
+        "mci": 0.11276,
+        "weight": 0.0725,
+        "zone": "entry",
+        "coastal_arrival_prob": 4.5
+      },
+      {
+        "id": "H0114",
+        "lat": 17.125,
+        "lon": -63.475,
+        "nfai": 0.0619,
+        "mci": 0.11465,
+        "weight": 0.215,
+        "zone": "entry",
+        "coastal_arrival_prob": 3.9
+      },
+      {
+        "id": "H0115",
+        "lat": 17.125,
+        "lon": -63.425,
+        "nfai": 0.05164,
+        "mci": 0.07226,
+        "weight": 0.0775,
+        "zone": "entry",
+        "coastal_arrival_prob": 6.4
+      },
+      {
+        "id": "H0116",
+        "lat": 17.125,
+        "lon": -63.375,
+        "nfai": 0.02014,
+        "mci": 0.06722,
+        "weight": 0.045,
+        "zone": "entry",
+        "coastal_arrival_prob": 10.5
+      },
+      {
+        "id": "H0117",
+        "lat": 17.175,
+        "lon": -63.775,
+        "nfai": 0.06304,
+        "mci": 0.09944,
+        "weight": 0.045,
+        "zone": "entry",
+        "coastal_arrival_prob": 14.4
+      },
+      {
+        "id": "H0118",
+        "lat": 17.175,
+        "lon": -63.725,
+        "nfai": 0.06125,
+        "mci": 0.12319,
+        "weight": 0.235,
+        "zone": "entry",
+        "coastal_arrival_prob": 12.2
+      },
+      {
+        "id": "H0119",
+        "lat": 17.175,
+        "lon": -63.675,
+        "nfai": 0.09413,
+        "mci": 0.19231,
+        "weight": 0.13542,
+        "zone": "entry",
+        "coastal_arrival_prob": 9.1
+      },
+      {
+        "id": "H0120",
+        "lat": 17.175,
+        "lon": -63.625,
+        "nfai": 0.0345,
+        "mci": 0.06071,
+        "weight": 0.03763,
+        "zone": "entry",
+        "coastal_arrival_prob": 7.5
+      },
+      {
+        "id": "H0121",
+        "lat": 17.175,
+        "lon": -63.575,
+        "nfai": 0.0456,
+        "mci": 0.07934,
+        "weight": 0.1525,
+        "zone": "entry",
+        "coastal_arrival_prob": 5.1
+      },
+      {
+        "id": "H0122",
+        "lat": 17.175,
+        "lon": -63.525,
+        "nfai": 0.12041,
+        "mci": 0.25295,
+        "weight": 0.2375,
+        "zone": "entry",
+        "coastal_arrival_prob": 3.1
+      },
+      {
+        "id": "H0123",
+        "lat": 17.175,
+        "lon": -63.475,
+        "nfai": 0.041,
+        "mci": 0.13,
+        "weight": 0.0075,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0124",
+        "lat": 17.175,
+        "lon": -63.175,
+        "nfai": 0.13742,
+        "mci": 0.18364,
+        "weight": 0.1925,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0125",
+        "lat": 17.175,
+        "lon": -63.125,
+        "nfai": 0.14303,
+        "mci": 0.2076,
+        "weight": 0.0625,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0126",
+        "lat": 17.225,
+        "lon": -63.925,
+        "nfai": 0.03525,
+        "mci": 0.066,
+        "weight": 0.0375,
+        "zone": "entry",
+        "coastal_arrival_prob": 16.5
+      },
+      {
+        "id": "H0127",
+        "lat": 17.225,
+        "lon": -63.825,
+        "nfai": 0.07192,
+        "mci": 0.0875,
+        "weight": 0.0203,
+        "zone": "entry",
+        "coastal_arrival_prob": 12.7
+      },
+      {
+        "id": "H0128",
+        "lat": 17.225,
+        "lon": -63.775,
+        "nfai": 0.025,
+        "mci": 0.05929,
+        "weight": 0.035,
+        "zone": "entry",
+        "coastal_arrival_prob": 10.0
+      },
+      {
+        "id": "H0129",
+        "lat": 17.225,
+        "lon": -63.725,
+        "nfai": 0.0099,
+        "mci": 0.03,
+        "weight": 0.00256,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0130",
+        "lat": 17.225,
+        "lon": -63.575,
+        "nfai": 0.03966,
+        "mci": 0.05083,
+        "weight": 0.03,
+        "zone": "entry",
+        "coastal_arrival_prob": 3.9
+      },
+      {
+        "id": "H0131",
+        "lat": 17.225,
+        "lon": -63.475,
+        "nfai": 0.0199,
+        "mci": 0.07,
+        "weight": 0.0025,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0132",
+        "lat": 17.225,
+        "lon": -63.225,
+        "nfai": 0.08309,
+        "mci": 0.09684,
+        "weight": 0.1425,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0133",
+        "lat": 17.225,
+        "lon": -63.175,
+        "nfai": 0.12572,
+        "mci": 0.1825,
+        "weight": 0.1,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0134",
+        "lat": 17.275,
+        "lon": -64.075,
+        "nfai": 0.03301,
+        "mci": 0.03667,
+        "weight": 0.0225,
+        "zone": "entry",
+        "coastal_arrival_prob": 22.0
+      },
+      {
+        "id": "H0135",
+        "lat": 17.275,
+        "lon": -64.025,
+        "nfai": 0.03576,
+        "mci": 0.05129,
+        "weight": 0.0775,
+        "zone": "entry",
+        "coastal_arrival_prob": 20.0
+      },
+      {
+        "id": "H0136",
+        "lat": 17.275,
+        "lon": -63.525,
+        "nfai": 0.10388,
+        "mci": 0.16222,
+        "weight": 0.09023,
+        "zone": "entry",
+        "coastal_arrival_prob": 1.2
+      },
+      {
+        "id": "H0137",
+        "lat": 17.275,
+        "lon": -63.475,
+        "nfai": 0.15194,
+        "mci": 0.29909,
+        "weight": 0.05627,
+        "zone": "entry",
+        "coastal_arrival_prob": 8.9
+      },
+      {
+        "id": "H0138",
+        "lat": 17.275,
+        "lon": -63.175,
+        "nfai": 0.03584,
+        "mci": 0.04111,
+        "weight": 0.0225,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0139",
+        "lat": 17.325,
+        "lon": -63.625,
+        "nfai": 0.03393,
+        "mci": 0.06292,
+        "weight": 0.1625,
+        "zone": "entry",
+        "coastal_arrival_prob": 2.5
+      },
+      {
+        "id": "H0140",
+        "lat": 17.325,
+        "lon": -63.275,
+        "nfai": 0.07832,
+        "mci": 0.1,
+        "weight": 0.07,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0141",
+        "lat": 17.325,
+        "lon": -63.225,
+        "nfai": 0.06695,
+        "mci": 0.07087,
+        "weight": 0.0575,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0142",
+        "lat": 17.575,
+        "lon": -65.075,
+        "nfai": 0.0386,
+        "mci": 0.03333,
+        "weight": 0.0375,
+        "zone": "transit",
+        "coastal_arrival_prob": 100.0
+      },
+      {
+        "id": "H0143",
+        "lat": 17.625,
+        "lon": -64.875,
+        "nfai": 0.07473,
+        "mci": 0.12184,
+        "weight": 0.10526,
+        "zone": "entry",
+        "coastal_arrival_prob": 53.7
+      },
+      {
+        "id": "H0144",
+        "lat": 18.125,
+        "lon": -64.075,
+        "nfai": 0.0397,
+        "mci": 0.062,
+        "weight": 0.02564,
+        "zone": "entry",
+        "coastal_arrival_prob": 23.8
+      },
+      {
+        "id": "H0145",
+        "lat": 18.125,
+        "lon": -64.025,
+        "nfai": 0.03366,
+        "mci": 0.06739,
+        "weight": 0.06069,
+        "zone": "entry",
+        "coastal_arrival_prob": 24.7
+      },
+      {
+        "id": "H0146",
+        "lat": 18.175,
+        "lon": -64.025,
+        "nfai": 0.05344,
+        "mci": 0.1169,
+        "weight": 0.21914,
+        "zone": "entry",
+        "coastal_arrival_prob": 25.6
+      },
+      {
+        "id": "H0147",
+        "lat": 18.175,
+        "lon": -63.975,
+        "nfai": 0.03554,
+        "mci": 0.075,
+        "weight": 0.055,
+        "zone": "entry",
+        "coastal_arrival_prob": 24.2
+      },
+      {
+        "id": "H0148",
+        "lat": 18.175,
+        "lon": -63.925,
+        "nfai": 0.03018,
+        "mci": 0.06469,
+        "weight": 0.08,
+        "zone": "entry",
+        "coastal_arrival_prob": 25.3
+      },
+      {
+        "id": "H0149",
+        "lat": 18.225,
+        "lon": -64.775,
+        "nfai": 0.02768,
+        "mci": 0.02667,
+        "weight": 0.03987,
+        "zone": "entry",
+        "coastal_arrival_prob": 48.5
+      },
+      {
+        "id": "H0150",
+        "lat": 18.575,
+        "lon": -63.925,
+        "nfai": 0.04213,
+        "mci": 0.04,
+        "weight": 0.0075,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0151",
+        "lat": 18.575,
+        "lon": -63.875,
+        "nfai": 0.05187,
+        "mci": 0.10442,
+        "weight": 0.1075,
+        "zone": "entry",
+        "coastal_arrival_prob": 25.8
+      },
+      {
+        "id": "H0152",
+        "lat": 18.575,
+        "lon": -63.825,
+        "nfai": 0.0328,
+        "mci": 0.08,
+        "weight": 0.0025,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0153",
+        "lat": 18.625,
+        "lon": -63.825,
+        "nfai": 0.02235,
+        "mci": 0.04409,
+        "weight": 0.05528,
+        "zone": "entry",
+        "coastal_arrival_prob": 23.0
+      },
+      {
+        "id": "H0154",
+        "lat": 18.675,
+        "lon": -63.325,
+        "nfai": 0.08964,
+        "mci": 0.14727,
+        "weight": 0.08271,
+        "zone": "entry",
+        "coastal_arrival_prob": 9.7
+      },
+      {
+        "id": "H0155",
+        "lat": 18.725,
+        "lon": -63.325,
+        "nfai": 0.06603,
+        "mci": 0.11714,
+        "weight": 0.03509,
+        "zone": "entry",
+        "coastal_arrival_prob": 7.9
+      },
+      {
+        "id": "H0156",
+        "lat": 18.725,
+        "lon": -63.275,
+        "nfai": 0.03792,
+        "mci": 0.06696,
+        "weight": 0.05793,
+        "zone": "entry",
+        "coastal_arrival_prob": 6.6
+      },
+      {
+        "id": "H0157",
+        "lat": 18.775,
+        "lon": -63.325,
+        "nfai": 0.01128,
+        "mci": 0.045,
+        "weight": 0.01036,
+        "zone": "entry",
+        "coastal_arrival_prob": 5.2
+      },
+      {
+        "id": "H0158",
+        "lat": 18.775,
+        "lon": -63.275,
+        "nfai": 0.03688,
+        "mci": 0.07,
+        "weight": 0.0229,
+        "zone": "entry",
+        "coastal_arrival_prob": 3.6
+      },
+      {
+        "id": "H0159",
+        "lat": 18.775,
+        "lon": -63.175,
+        "nfai": 0.09396,
+        "mci": 0.15222,
+        "weight": 0.0225,
+        "zone": "entry",
+        "coastal_arrival_prob": 1.6
+      },
+      {
+        "id": "H0160",
+        "lat": 18.825,
+        "lon": -63.175,
+        "nfai": 0.06712,
+        "mci": 0.12,
+        "weight": 0.01259,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.5
+      },
+      {
+        "id": "H0161",
+        "lat": 18.825,
+        "lon": -63.125,
+        "nfai": 0.01635,
+        "mci": 0.06,
+        "weight": 0.01005,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0162",
+        "lat": 18.825,
+        "lon": -63.075,
+        "nfai": 0.02445,
+        "mci": 0.08231,
+        "weight": 0.0325,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0163",
+        "lat": 19.425,
+        "lon": -64.475,
+        "nfai": 0.02521,
+        "mci": 0.04889,
+        "weight": 0.0225,
+        "zone": "entry",
+        "coastal_arrival_prob": 21.6
+      }
+    ],
+    "origin": {
+      "backtrack_days": 14,
+      "most_likely_region": "ACR",
+      "region_fractions": {
+        "NW_GoM": 0.0,
+        "GSR": 0.0,
+        "NSS": 0.0,
+        "SSS": 0.5503,
+        "ACR": 1.0,
+        "GASB": 0.0
+      },
+      "model": "lagrangian_backtrack_euler"
+    },
+    "alert": {
+      "active": true,
+      "confidence": "medium",
+      "message": "Confirmed Sargassum bloom (~357 km\u00b2) on a trajectory to reach Puerto Rico's south coast in approximately ~14 days. Origin traced to Antilles Current Region.",
+      "conditions": {
+        "bloom_present": true,
+        "coastal_pathway": true,
+        "origin_confirmed": true
+      },
+      "evidence": {
+        "coverage_pct": 0.6452,
+        "coverage_km2": 357,
+        "days_until_peak_impact": 14,
+        "coastal_impact_pct": 18.12,
+        "arrival_probability_pct": 65.2,
+        "acr_origin_fraction": 1.0,
+        "pathway_source": "lagrangian",
+        "s2_confirmed": null
+      }
+    }
+  },
+  "2025-05-16": {
+    "date": "2025-05-16",
+    "FAI_mean": 0.02094,
+    "NDVI_mean": null,
+    "NDWI_mean": null,
+    "MNDWI_mean": null,
+    "severity": "low",
+    "coverage_pct": 0.024,
+    "invasion_index": 0.006,
+    "trend": "stable",
+    "primary_indicator": "NFAI",
+    "NFAI_mean": 0.02094,
+    "MCI_mean": 0.12167,
+    "valid_pct": 7.81,
+    "cloud_cover_pct": 92.19,
+    "data_quality": "poor",
+    "coverage_km2": 4,
+    "detection_method": "dual_index_NFAI_MCI",
+    "source_region": "ACR",
+    "aoi": {
+      "name": "PR_approach_zone",
+      "lon_min": -69.0,
+      "lat_min": 16.5,
+      "lon_max": -63.0,
+      "lat_max": 19.5
+    },
+    "forecast": {
+      "arrival_probability_pct": 54.2,
+      "days_until_impact": null,
+      "lead_time_days": 14,
+      "model": "lagrangian_forward_euler",
+      "p_acr_lagged": 54.2,
+      "p_presence": 1.9,
+      "days_until_peak_impact": null,
+      "coastal_impact_pct": 0.0,
+      "coastal_impact_7d": 0.0,
+      "impact_by_day": [
+        {
+          "day": 1,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 2,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 3,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 4,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 5,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 6,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 7,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 8,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 9,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 10,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 11,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 12,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 13,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 14,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 15,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 16,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 17,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 18,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 19,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 20,
+          "impact_pct": 0.0
+        },
+        {
+          "day": 21,
+          "impact_pct": 0.0
+        }
+      ],
+      "drift_centroids": [
+        {
+          "day": 0,
+          "lat": 18.1083,
+          "lon": -64.3083
+        },
+        {
+          "day": 1,
+          "lat": 18.1408,
+          "lon": -64.3411
+        },
+        {
+          "day": 2,
+          "lat": 18.1596,
+          "lon": -64.382
+        },
+        {
+          "day": 3,
+          "lat": 18.159,
+          "lon": -64.4193
+        },
+        {
+          "day": 4,
+          "lat": 18.1611,
+          "lon": -64.4527
+        },
+        {
+          "day": 5,
+          "lat": 18.1539,
+          "lon": -64.5044
+        },
+        {
+          "day": 6,
+          "lat": 18.1263,
+          "lon": -64.4978
+        },
+        {
+          "day": 7,
+          "lat": 18.1166,
+          "lon": -64.507
+        }
+      ],
+      "sample_trajectories": [
+        {
+          "hotspot_id": "H0003",
+          "coastal_arrival_prob": 64.7,
+          "path": [
+            {
+              "day": 0,
+              "lat": 18.725,
+              "lon": -65.825
+            },
+            {
+              "day": 1,
+              "lat": 18.7878,
+              "lon": -65.8192
+            },
+            {
+              "day": 2,
+              "lat": 18.8211,
+              "lon": -65.8415
+            },
+            {
+              "day": 3,
+              "lat": 18.8582,
+              "lon": -65.8818
+            },
+            {
+              "day": 4,
+              "lat": 18.9145,
+              "lon": -65.9131
+            },
+            {
+              "day": 5,
+              "lat": 18.9771,
+              "lon": -65.953
+            },
+            {
+              "day": 6,
+              "lat": 19.0161,
+              "lon": -65.9555
+            },
+            {
+              "day": 7,
+              "lat": 19.1087,
+              "lon": -65.968
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0004",
+          "coastal_arrival_prob": 18.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 19.075,
+              "lon": -64.075
+            },
+            {
+              "day": 1,
+              "lat": 19.1387,
+              "lon": -64.1591
+            },
+            {
+              "day": 2,
+              "lat": 19.2093,
+              "lon": -64.2449
+            },
+            {
+              "day": 3,
+              "lat": 19.2539,
+              "lon": -64.3026
+            },
+            {
+              "day": 4,
+              "lat": 19.3332,
+              "lon": -64.3999
+            },
+            {
+              "day": 5,
+              "lat": 19.3897,
+              "lon": -64.4611
+            },
+            {
+              "day": 6,
+              "lat": 19.4415,
+              "lon": -64.5094
+            },
+            {
+              "day": 7,
+              "lat": 19.518,
+              "lon": -64.5857
+            }
+          ]
+        },
+        {
+          "hotspot_id": "H0001",
+          "coastal_arrival_prob": 0.0,
+          "path": [
+            {
+              "day": 0,
+              "lat": 16.525,
+              "lon": -63.025
+            },
+            {
+              "day": 1,
+              "lat": 16.4958,
+              "lon": -63.0449
+            },
+            {
+              "day": 2,
+              "lat": 16.4484,
+              "lon": -63.0597
+            },
+            {
+              "day": 3,
+              "lat": 16.3648,
+              "lon": -63.0734
+            },
+            {
+              "day": 4,
+              "lat": 16.2357,
+              "lon": -63.0451
+            },
+            {
+              "day": 5,
+              "lat": 16.0951,
+              "lon": -63.0992
+            },
+            {
+              "day": 6,
+              "lat": 15.9212,
+              "lon": -63.0286
+            },
+            {
+              "day": 7,
+              "lat": 15.723,
+              "lon": -62.9673
+            }
+          ]
+        }
+      ]
+    },
+    "upstream": {
+      "region": "ACR",
+      "bounds": {
+        "lon_min": -70,
+        "lat_min": 10,
+        "lon_max": -55,
+        "lat_max": 22
+      },
+      "coverage_pct": 0.1856,
+      "valid_pct": 27.82,
+      "active": false,
+      "description": "Antilles Current Region \u2014 validated sole upstream source"
+    },
+    "corridor": {
+      "entry": {
+        "label": "Eastern Entry (ACR inflow)",
+        "bounds": {
+          "lon_min": -65,
+          "lat_min": 16.5,
+          "lon_max": -63,
+          "lat_max": 19.5
+        },
+        "km_to_coast": 150,
+        "hotspot_count": 3,
+        "total_weight": 0.087,
+        "active": true
+      },
+      "transit": {
+        "label": "Mid Corridor (approaching)",
+        "bounds": {
+          "lon_min": -67,
+          "lat_min": 16.5,
+          "lon_max": -65,
+          "lat_max": 19.5
+        },
+        "km_to_coast": 50,
+        "hotspot_count": 1,
+        "total_weight": 0.052,
+        "active": true
+      },
+      "approach": {
+        "label": "Near Approach / Mona Passage",
+        "bounds": {
+          "lon_min": -69,
+          "lat_min": 16.5,
+          "lon_max": -67,
+          "lat_max": 19.5
+        },
+        "km_to_coast": 15,
+        "hotspot_count": 0,
+        "total_weight": 0,
+        "active": false
+      },
+      "acr_upstream": {
+        "label": "ACR Source (upstream)",
+        "bounds": {
+          "lon_min": -70,
+          "lat_min": 10,
+          "lon_max": -55,
+          "lat_max": 22
+        },
+        "km_to_coast": 600,
+        "coverage_pct": 0.186,
+        "active": false
+      }
+    },
+    "hotspots": [
+      {
+        "id": "H0001",
+        "lat": 16.525,
+        "lon": -63.025,
+        "nfai": 0.02221,
+        "mci": 0.06071,
+        "weight": 0.035,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0002",
+        "lat": 16.575,
+        "lon": -63.025,
+        "nfai": 0.00725,
+        "mci": 0.03,
+        "weight": 0.00943,
+        "zone": "entry",
+        "coastal_arrival_prob": 0.0
+      },
+      {
+        "id": "H0003",
+        "lat": 18.725,
+        "lon": -65.825,
+        "nfai": 0.02079,
+        "mci": 0.10286,
+        "weight": 0.0525,
+        "zone": "transit",
+        "coastal_arrival_prob": 64.7
+      },
+      {
+        "id": "H0004",
+        "lat": 19.075,
+        "lon": -64.075,
+        "nfai": 0.02168,
+        "mci": 0.20588,
+        "weight": 0.0425,
+        "zone": "entry",
+        "coastal_arrival_prob": 18.0
+      }
+    ],
+    "origin": {
+      "backtrack_days": 14,
+      "most_likely_region": "ACR",
+      "region_fractions": {
+        "NW_GoM": 0.0,
+        "GSR": 0.0,
+        "NSS": 0.0,
+        "SSS": 0.6667,
+        "ACR": 1.0,
+        "GASB": 0.0
+      },
+      "model": "lagrangian_backtrack_euler"
+    },
+    "alert": {
+      "active": false,
+      "confidence": null,
+      "message": null,
+      "conditions": {
+        "bloom_present": false,
+        "coastal_pathway": false,
+        "origin_confirmed": false
+      },
+      "evidence": {
+        "coverage_pct": 0.024,
+        "coverage_km2": 4,
+        "days_until_peak_impact": null,
+        "coastal_impact_pct": 0.0,
+        "arrival_probability_pct": 54.2,
+        "acr_origin_fraction": 1.0,
+        "pathway_source": "lagrangian",
+        "s2_confirmed": null
+      }
+    },
+    "alert_context": {
+      "source_date": "2025-05-12",
+      "days_elapsed": 4,
+      "forecast_window_days": 21,
+      "predicted_impact_pct": 7.35,
+      "predicted_peak_date": "2025-05-30",
+      "predicted_centroid": {
+        "lat": 17.8909,
+        "lon": -67.2696
+      },
+      "source_bloom_km2": 1029,
+      "message": "Day 4 of 21 \u2014 2025-05-12 alert still active. Model predicts peak coastal impact around 2025-05-30."
+    }
+  },
+  "2025-05-17": {
+    "date": "2025-05-17",
+    "FAI_mean": 0.0,
+    "NDVI_mean": null,
+    "NDWI_mean": null,
+    "MNDWI_mean": null,
+    "severity": "low",
+    "coverage_pct": 0.0,
+    "invasion_index": 0.0,
+    "trend": "stable",
+    "primary_indicator": "NFAI",
+    "NFAI_mean": 0.0,
+    "MCI_mean": 0.0,
+    "valid_pct": 1.0,
+    "cloud_cover_pct": 99.0,
+    "data_quality": "poor",
+    "coverage_km2": 0,
+    "detection_method": "dual_index_NFAI_MCI",
+    "source_region": "ACR",
+    "aoi": {
+      "name": "PR_approach_zone",
+      "lon_min": -69.0,
+      "lat_min": 16.5,
+      "lon_max": -63.0,
+      "lat_max": 19.5
+    },
+    "forecast": {
+      "arrival_probability_pct": 55.3,
+      "days_until_impact": null,
+      "lead_time_days": 14,
+      "model": "lagrangian_forward_euler",
+      "p_acr_lagged": 55.3,
+      "p_presence": 0.0,
+      "days_until_peak_impact": null,
+      "coastal_impact_pct": 0.0,
+      "coastal_impact_7d": 0.0,
+      "impact_by_day": [],
+      "drift_centroids": [],
+      "sample_trajectories": []
+    },
+    "upstream": {
+      "region": "ACR",
+      "bounds": {
+        "lon_min": -70,
+        "lat_min": 10,
+        "lon_max": -55,
+        "lat_max": 22
+      },
+      "coverage_pct": 0.05,
+      "valid_pct": 19.35,
+      "active": false,
+      "description": "Antilles Current Region \u2014 validated sole upstream source"
+    },
+    "corridor": {
+      "entry": {
+        "label": "Eastern Entry (ACR inflow)",
+        "bounds": {
+          "lon_min": -65,
+          "lat_min": 16.5,
+          "lon_max": -63,
+          "lat_max": 19.5
+        },
+        "km_to_coast": 150,
+        "hotspot_count": 0,
+        "total_weight": 0,
+        "active": false
+      },
+      "transit": {
+        "label": "Mid Corridor (approaching)",
+        "bounds": {
+          "lon_min": -67,
+          "lat_min": 16.5,
+          "lon_max": -65,
+          "lat_max": 19.5
+        },
+        "km_to_coast": 50,
+        "hotspot_count": 0,
+        "total_weight": 0,
+        "active": false
+      },
+      "approach": {
+        "label": "Near Approach / Mona Passage",
+        "bounds": {
+          "lon_min": -69,
+          "lat_min": 16.5,
+          "lon_max": -67,
+          "lat_max": 19.5
+        },
+        "km_to_coast": 15,
+        "hotspot_count": 0,
+        "total_weight": 0,
+        "active": false
+      },
+      "acr_upstream": {
+        "label": "ACR Source (upstream)",
+        "bounds": {
+          "lon_min": -70,
+          "lat_min": 10,
+          "lon_max": -55,
+          "lat_max": 22
+        },
+        "km_to_coast": 600,
+        "coverage_pct": 0.05,
+        "active": false
+      }
+    },
+    "hotspots": [],
+    "origin": {
+      "backtrack_days": 14,
+      "most_likely_region": null,
+      "region_fractions": {
+        "NW_GoM": 0.0,
+        "GSR": 0.0,
+        "NSS": 0.0,
+        "SSS": 0.0,
+        "ACR": 0.0,
+        "GASB": 0.0
+      },
+      "model": "lagrangian_backtrack_euler"
+    },
+    "alert": {
+      "active": false,
+      "confidence": null,
+      "message": null,
+      "conditions": {
+        "bloom_present": false,
+        "coastal_pathway": false,
+        "origin_confirmed": false
+      },
+      "evidence": {
+        "coverage_pct": 0.0,
+        "coverage_km2": 0,
+        "days_until_peak_impact": null,
+        "coastal_impact_pct": 0.0,
+        "arrival_probability_pct": 55.3,
+        "acr_origin_fraction": 0.0,
+        "pathway_source": "lagrangian",
+        "s2_confirmed": null
+      }
+    },
+    "alert_context": {
+      "source_date": "2025-05-12",
+      "days_elapsed": 5,
+      "forecast_window_days": 21,
+      "predicted_impact_pct": 7.35,
+      "predicted_peak_date": "2025-05-30",
+      "predicted_centroid": {
+        "lat": 17.9699,
+        "lon": -67.3408
+      },
+      "source_bloom_km2": 1029,
+      "message": "Day 5 of 21 \u2014 2025-05-12 alert still active. Model predicts peak coastal impact around 2025-05-30."
+    }
+  }
+}
